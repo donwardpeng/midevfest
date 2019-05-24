@@ -1,5 +1,6 @@
 import 'package:flutter_web/material.dart';
 import 'theme.dart';
+import 'flutter_swiper.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,10 +16,22 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  final String title;
   MyHomePage({Key key, this.title}) : super(key: key);
 
-  final String title;
+ @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return HomePageState();
+  }
+}
+class HomePageState extends State<MyHomePage>{
+
+  List<String> imagesList = ['devfest2018_photo_1.jpg','devfest2018_photo_2.jpg', 'devfest2018_photo_3.jpg' ];
+ 
+
+  // Map fi;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +45,7 @@ class MyHomePage extends StatelessWidget {
             fit: BoxFit.scaleDown,
           ),
           title: Text(
-            title,
+            widget.title,
             style:
                 Theme.of(context).textTheme.subtitle.apply(color: Colors.white),
           ),
@@ -68,28 +81,49 @@ class MyHomePage extends StatelessWidget {
                 // horizontal).
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-              Padding(padding: EdgeInsets.fromLTRB(0, 40, 0, 5)),
+              Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5)),
+              Expanded(
+              flex: 5,
+              child: 
+              Swiper(
+                  autoplay: true,
+                 // onIndexChanged: (n) => setState(() => fi = imagesList[n]),
+                  itemCount: imagesList.length,
+                  itemBuilder: (cx, i) {
+                    return Container(
+                        margin: EdgeInsets.only(top: 40, bottom: 24),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child:
+                              Image.asset(imagesList[i], fit: BoxFit.cover)),
+                        );
+                  },
+                  viewportFraction: .85,
+                  scale: .9)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
                       width: 600,
                       height: 300,
-                      child: Card(child: Image.asset('midevfest_logo.png'))),
+                      child: Card(child: Image.asset('midevfest_logo.png'), elevation: 24,)),
                   SizedBox(
                     width: 500,
                     height: 300,
                     child: Card(
+                      elevation: 24,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Sept 21, 2019',
+                          'More Details Coming Soon!',
                           style: Theme.of(context).textTheme.subtitle,
                         ),
-                        Text(
-                          'Little Caesars Corporate Center',
-                          style: Theme.of(context).textTheme.subtitle,
-                        )
+                        // Text(
+                        //   '',
+                        //   style: Theme.of(context).textTheme.subtitle,
+                        // )
                       ],
                     )),
                   ),
