@@ -22,22 +22,16 @@ class MyHomePage extends StatefulWidget {
 
  @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return HomePageState();
   }
 }
 class HomePageState extends State<MyHomePage>{
 
   List<String> imagesList = ['devfest2018_photo_1.jpg','devfest2018_photo_2.jpg', 'devfest2018_photo_3.jpg' ];
- 
-
   // Map fi;
 
   @override
   Widget build(BuildContext context) {
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
         appBar: AppBar(
           leading: Image.asset(
@@ -62,44 +56,42 @@ class HomePageState extends State<MyHomePage>{
           ],
         ),
         body: Center(
-            // Center is a layout widget. It takes a single child and positions it
-            // in the middle of the parent.
             child: Column(
-                // Column is also layout widget. It takes a list of children and
-                // arranges them vertically. By default, it sizes itself to fit its
-                // children horizontally, and tries to be as tall as its parent.
-                //
-                // Invoke "debug painting" (choose the "Toggle Debug Paint" action
-                // from the Flutter Inspector in Android Studio, or the "Toggle Debug
-                // Paint" command in Visual Studio Code) to see the wireframe for each
-                // widget.
-                //
-                // Column has various properties to control how it sizes itself and
-                // how it positions its children. Here we use mainAxisAlignment to
-                // center the children vertically; the main axis here is the vertical
-                // axis because Columns are vertical (the cross axis would be
-                // horizontal).
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
               Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5)),
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(
+                      width: 600,
+                      height: 300,
+                      child: Card(child: Image.asset('midevfest_logo.png'), elevation: 24,)),
               Expanded(
-              flex: 5,
+              flex: 4,
               child: 
               Swiper(
                   autoplay: true,
+                  // outer: true,
+                  layout: SwiperLayout.TINDER,
+                  itemHeight: 350,
+                  itemWidth: 350,
+                  // scrollDirection: Axis.vertical,
                  // onIndexChanged: (n) => setState(() => fi = imagesList[n]),
                   itemCount: imagesList.length,
                   itemBuilder: (cx, i) {
                     return Container(
-                        margin: EdgeInsets.only(top: 40, bottom: 24),
+                        margin: EdgeInsets.only(top: 8, bottom: 8),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(10),
                           child:
                               Image.asset(imagesList[i], fit: BoxFit.cover)),
                         );
                   },
                   viewportFraction: .85,
-                  scale: .9)),
+                  scale: .9)
+                  )
+                  ,]),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
