@@ -38,17 +38,18 @@ class HomePageState extends State<MyHomePage> {
 
   Map<String, dynamic> stringResources;
 
-
-  void readStrings() async {
-    String data = await DefaultAssetBundle.of(context).loadString("main_page_string_en.json");
+  Future<Map<String, dynamic>> readStrings() async {
+    String data = await DefaultAssetBundle.of(context)
+        .loadString("main_page_string_en.json");
     print("Here is the data read in" + data);
     stringResources = json.decode(data);
-    print("Here is the value in String Resources = " + stringResources['devFestName']);
+    print("Here is the value in String Resources = " +
+        stringResources['devFestName']);
+    return stringResources;
   }
 
   @override
   void initState() {
-    readStrings();
     super.initState();
   }
 
@@ -140,11 +141,24 @@ class HomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-            
-                        Text(
-                            'test',
-                            style: Theme.of(context).textTheme.subtitle,
-                        ),
+                        FutureBuilder(
+                            future: stringResources == null ? readStrings() : null,
+                            builder: (BuildContext context,
+                                AsyncSnapshot<Map<String, dynamic>> snapshot) {
+                              switch (snapshot.connectionState) {
+                                case ConnectionState.waiting:
+                                  return new Text('Loading....');
+                                default:
+                                  if (snapshot.hasError)
+                                    return Text('Error: ${snapshot.error}');
+                                  else
+                                    return Text(
+                                      '${snapshot.data['devFestName']}',
+                                      style:
+                                          Theme.of(context).textTheme.subtitle,
+                                    );
+                              }
+                            }),
                         // Text(
                         //   '',
                         //   style: Theme.of(context).textTheme.subtitle,
