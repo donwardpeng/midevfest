@@ -1,0 +1,5 @@
+class EN_Strings {
+  static String devFestName = 'Michigan DevFest 2019';
+  static String devFestNameMainPageBlurb =
+      'The Detroit, and Ann Arbor Google Developer Groups are teaming up to bring you the Michigan DevFest on Sept 21, 2019 in downtown Detroit. We’d love to have you speak at the event\n\nThis is our 7th annual DevFest and we aim to put together a great day of networking and knowledge sharing for all involved. This year we want to up the ante and grow attendance from ~100 technologists to 250+ technologists. We need your help to make this happen!\n\nWe are looking for presentations relating to Google technologies, software, and design, with a particular focus on Android, Flutter, Machine Learning, Google Cloud Platform, Google Assistant, Wear OS by Google, Progressive Web Apps, Material Design and Kotlin. Additionally we are interested in general computer science presentations related to Machine Learning, Software Development Practices and Cloud Computing (across any platform).';
+}

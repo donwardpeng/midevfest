@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter_web/material.dart';
 import 'theme.dart';
 import 'flutter_swiper.dart';
+import './config_values/en_strings.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Michigan DevFest 2019',
+      title: EN_Strings.devFestName,
       theme: buildTheme('summer'),
-      home: MyHomePage(title: 'Michigan DevFest 2019'),
+      home: MyHomePage(title: EN_Strings.devFestName),
     );
   }
 }
@@ -56,6 +57,7 @@ class HomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
           leading: Image.asset(
             'gdg.png',
@@ -78,6 +80,18 @@ class HomePageState extends State<MyHomePage> {
             )
           ],
         ),
+        bottomNavigationBar: BottomAppBar(
+            shape: CircularNotchedRectangle(),
+            child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.dashboard),
+                    tooltip: 'Everything',
+                    onPressed: () {},
+                  ),
+                ])),
         body: Center(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: <
@@ -125,47 +139,30 @@ class HomePageState extends State<MyHomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
-                  width: 600,
-                  height: 300,
-                  child: Card(
-                    child: Image.asset('midevfest_logo.png'),
-                    elevation: 24,
-                  )),
-              SizedBox(
-                width: 500,
-                height: 300,
-                child: Card(
-                    elevation: 24,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        FutureBuilder(
-                            future: stringResources == null ? readStrings() : null,
-                            builder: (BuildContext context,
-                                AsyncSnapshot<Map<String, dynamic>> snapshot) {
-                              switch (snapshot.connectionState) {
-                                case ConnectionState.waiting:
-                                  return new Text('Loading....');
-                                default:
-                                  if (snapshot.hasError)
-                                    return Text('Error: ${snapshot.error}');
-                                  else
-                                    return Text(
-                                      '${snapshot.data['devFestName']}',
-                                      style:
-                                          Theme.of(context).textTheme.subtitle,
-                                    );
-                              }
-                            }),
-                        // Text(
-                        //   '',
-                        //   style: Theme.of(context).textTheme.subtitle,
-                        // )
-                      ],
-                    )),
-              ),
+              Expanded(
+                  flex: 4,
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                    child: SizedBox(
+                      width: 800,
+                      height: 300,
+                      child: Card(
+                          elevation: 24,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                                child: Text(
+                                  EN_Strings.devFestNameMainPageBlurb,
+                                  style: Theme.of(context).textTheme.subtitle,
+                                ),
+                              )
+                            ],
+                          )),
+                    ),
+                  ))
             ],
           )
         ] // This trailing comma makes auto-formatting nicer for build methods.

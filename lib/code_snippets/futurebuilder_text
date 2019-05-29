@@ -1,0 +1,23 @@
+
+                          // FutureBuilder(
+                          //     future: stringResources == null ? readStrings() : null,
+                          //     builder: (BuildContext context,
+                          //         AsyncSnapshot<Map<String, dynamic>> snapshot) {
+                          //       switch (snapshot.connectionState) {
+                          //         case ConnectionState.waiting:
+                          //           return new Text('Loading....');
+                          //         default:
+                          //           if (snapshot.hasError)
+                          //             return Text('Error: ${snapshot.error}');
+                          //           else
+                          //             return Text(
+                          //               '${snapshot.data['devFestName']}',
+                          //               style:
+                          //                   Theme.of(context).textTheme.subtitle,
+                          //             );
+                          //       }
+                          //     }),
+                          // Text(
+                          //   '',
+                          //   style: Theme.of(context).textTheme.subtitle,
+                          // )
