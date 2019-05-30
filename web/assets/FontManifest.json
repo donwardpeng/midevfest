@@ -1,18 +1,34 @@
 [
   {
-    "family": "Pacifico",
-    "fonts": [
-      {
-        "asset": "fonts/Pacifico-Regular.ttf"
-      }
-    ]
-  },
-  {
     "family": "Montserrat",
     "fonts": [
       {
         "asset": "fonts/Montserrat-Medium.ttf"
       }
     ]
-  }
+    },
+    {
+    "family": "Ubuntu",
+    "fonts": [
+      {
+        "asset": "fonts/Ubuntu-Regular.ttf"
+      }
+    ]
+  },
+    {
+    "family": "RobotoCondensed-Light",
+    "fonts": [
+      {
+        "asset": "fonts/RobotoCondensed-Light.ttf"
+      }
+    ]
+  },
+  {
+  "family": "RobotoCondensed-Regular",
+  "fonts": [
+    {
+      "asset": "fonts/RobotoCondensed-Regular.ttf"
+    }
+  ]
+}
 ]

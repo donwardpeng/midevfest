@@ -4,6 +4,7 @@ import 'package:flutter_web/material.dart';
 import 'theme.dart';
 import 'flutter_swiper.dart';
 import './config_values/en_strings.dart';
+import './plugins/url_launcher.dart';
 
 void main() => runApp(MyApp());
 
@@ -70,27 +71,33 @@ class HomePageState extends State<MyHomePage> {
           ),
           actions: <Widget>[
             OutlineButton(
-              child: Text(
-                'Call For Papers',
-                style: Theme.of(context)
-                    .textTheme
-                    .subtitle
-                    .apply(color: Colors.white),
-              ),
-            )
+                child: Text(
+                  'Call For Papers',
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle
+                      .apply(color: Colors.white),
+                ),
+                onPressed: () {
+                  print('button pressed');
+                  launch('https://www.papercall.io/midevfest2019', forceWebView: true);
+                })
           ],
         ),
         bottomNavigationBar: BottomAppBar(
             shape: CircularNotchedRectangle(),
+            color: Colors.lightBlue,
             child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.dashboard),
-                    tooltip: 'Everything',
-                    onPressed: () {},
-                  ),
+                  Text(
+                    'Brought to you by Ann Arbor and Detroit Google Developers Groups',
+                    style: Theme.of(context)
+                        .textTheme
+                        .body1
+                        .apply(color: Colors.white),
+                  )
                 ])),
         body: Center(
             child:
@@ -156,7 +163,7 @@ class HomePageState extends State<MyHomePage> {
                                 padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
                                 child: Text(
                                   EN_Strings.devFestNameMainPageBlurb,
-                                  style: Theme.of(context).textTheme.subtitle,
+                                  style: Theme.of(context).textTheme.body1,
                                 ),
                               )
                             ],
