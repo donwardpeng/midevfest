@@ -4,7 +4,7 @@ import 'package:flutter_web/material.dart';
 import 'theme.dart';
 import 'flutter_swiper.dart';
 import './config_values/en_strings.dart';
-import './plugins/url_launcher.dart';
+import 'dart:html';
 
 void main() => runApp(MyApp());
 
@@ -70,18 +70,20 @@ class HomePageState extends State<MyHomePage> {
                 Theme.of(context).textTheme.subtitle.apply(color: Colors.white),
           ),
           actions: <Widget>[
-            OutlineButton(
-                child: Text(
-                  'Call For Papers',
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle
-                      .apply(color: Colors.white),
-                ),
-                onPressed: () {
-                  print('button pressed');
-                  launch('https://www.papercall.io/midevfest2019', forceWebView: true);
-                })
+            InkWell(
+                child: OutlineButton(
+                    child: Text(
+                      'Call For Papers',
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle
+                          .apply(color: Colors.white),
+                    ),
+                    onPressed: () {
+                      // Use the dart:html window class to open a new browser window
+                      window.open('https://www.papercall.io/midevfest2019',
+                          'Call for Papers');
+                    }))
           ],
         ),
         bottomNavigationBar: BottomAppBar(
