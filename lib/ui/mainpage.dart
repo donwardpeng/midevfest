@@ -46,10 +46,15 @@ class HomePageState extends State<MainPage> {
     return Scaffold(
         backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
-          leading: Image.asset(
-            'gdg.png',
-            fit: BoxFit.scaleDown,
-          ),
+          leading: InkWell(
+              child: Image.asset('gdg.png', fit: BoxFit.scaleDown),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            MainPage(title: EN_Strings.devFestName)));
+              }),
           title: Text(
             widget.title,
             style:
@@ -57,7 +62,9 @@ class HomePageState extends State<MainPage> {
           ),
           actions: <Widget>[
             header_button(
-                buttonText: 'The Team', route: 'TeamPage.dart',),
+              buttonText: 'The Team',
+              route: 'TeamPage.dart',
+            ),
             header_button(
                 buttonText: 'Call For Papers',
                 url: 'https://www.papercall.io/midevfest2019',

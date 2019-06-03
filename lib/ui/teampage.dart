@@ -2,6 +2,8 @@ import 'package:flutter_web/material.dart';
 import '../config_values/en_strings.dart';
 import 'dart:html';
 import '../widgets/header_button.dart';
+import './mainpage.dart';
+import '../widgets/people_cardview.dart';
 
 class TeamPage extends StatefulWidget {
   final String title;
@@ -9,6 +11,7 @@ class TeamPage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
+    print('in create State');
     return TeamPageState();
   }
 }
@@ -16,18 +19,25 @@ class TeamPage extends StatefulWidget {
 class TeamPageState extends State<TeamPage> {
   @override
   void initState() {
+    print('in initState');
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    print('in build');
     return Scaffold(
         backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
-          leading: Image.asset(
-            'gdg.png',
-            fit: BoxFit.scaleDown,
-          ),
+          leading: InkWell(
+              child: Image.asset('gdg.png', fit: BoxFit.scaleDown),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            MainPage(title: EN_Strings.devFestName)));
+              }),
           title: Text(
             widget.title,
             style:
@@ -75,21 +85,11 @@ class TeamPageState extends State<TeamPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text('Test'),
-                    // Expanded(
-                    //     flex: 4,
-                    //     child: SizedBox(
-                    //         width: 500,
-                    //         height: 250,
-                    //         child: Container(
-                    //             width: 190.0,
-                    //             height: 190.0,
-                    //             decoration: new BoxDecoration(
-                    //                 shape: BoxShape.circle,
-                    //                 image: new DecorationImage(
-                    //                     fit: BoxFit.fill,
-                    //                     image: AssetImage(
-                    //                         "facebook.png"))))))
+                    peopleCardView(name: 'Todd Deland', image: 'people/todd_deland.jpg' ),
+                    peopleCardView(name: 'Dave Koziol', image: 'people/dave_koziol.jpg' ),
+                    peopleCardView(name: 'Jingran Wang', image: 'people/jingran_wang.jpeg' ),
+                    peopleCardView(name: 'Don Ward', image: 'people/don_ward.jpg' ),
+                    peopleCardView(name: 'Scott Weber', image: 'people/scott_weber.jpg' ),                    
                   ],
                 ))
           ],
