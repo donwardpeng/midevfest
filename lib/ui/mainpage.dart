@@ -125,25 +125,21 @@ class HomePageState extends State<MainPage> {
                   flex: 4,
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                    child: SizedBox(
-                      width: 800,
-                      height: 300,
-                      child: Card(
-                          elevation: 24,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                                child: Text(
-                                  EN_Strings.devFestNameMainPageBlurb,
-                                  style: Theme.of(context).textTheme.body1,
-                                ),
-                              )
-                            ],
-                          )),
-                    ),
+                    child: Card(
+                        elevation: 24,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                              child: Text(
+                                EN_Strings.devFestNameMainPageBlurb,
+                                style: Theme.of(context).textTheme.body1,
+                              ),
+                            )
+                          ],
+                        )),
                   ))
             ],
           )
