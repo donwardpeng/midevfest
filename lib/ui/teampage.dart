@@ -3,8 +3,11 @@ import '../config_values/en_strings.dart';
 import 'dart:html';
 import '../widgets/header_button.dart';
 import './mainpage.dart';
-import '../widgets/people_cardview.dart';
-import '../widgets/footer.dart';
+import '../helper/responsive_layout.dart';
+import '../widgets/main_page_large_body_footer.dart';
+import '../widgets/main_page_small_body_footer.dart';
+import '../widgets/team_page_small_body_layout.dart';
+import '../widgets/team_page_large_body_layout.dart';
 
 class TeamPage extends StatefulWidget {
   final String title;
@@ -27,8 +30,7 @@ class TeamPageState extends State<TeamPage> {
   @override
   Widget build(BuildContext context) {
     print('in build');
-    return 
-      Scaffold(
+    return Scaffold(
         backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
           leading: InkWell(
@@ -40,10 +42,15 @@ class TeamPageState extends State<TeamPage> {
                         builder: (context) =>
                             MainPage(title: EN_Strings.devFestName)));
               }),
-          title: Text(
-            widget.title,
-            style:
-                Theme.of(context).textTheme.subtitle.apply(color: Colors.white),
+          title: ResponsiveLayout(
+            largeChild: Text(
+              EN_Strings.devFestName,
+              style: Theme.of(context)
+                  .textTheme
+                  .subtitle
+                  .apply(color: Colors.white),
+            ),
+            smallChild: Text(''),
           ),
           actions: <Widget>[
             header_button(
@@ -56,24 +63,12 @@ class TeamPageState extends State<TeamPage> {
                 urlName: 'Call for Papers'),
           ],
         ),
-        bottomNavigationBar: FooterWidget(),
-        body: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-                padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    peopleCardView(name: 'Todd Deland', image: 'people/todd_deland.jpg' ),
-                    peopleCardView(name: 'Dave Koziol', image: 'people/dave_koziol.jpg' ),
-                    peopleCardView(name: 'Jingran Wang', image: 'people/jingran_wang.jpeg' ),
-                    peopleCardView(name: 'Don Ward', image: 'people/don_ward.jpg' ),
-                    peopleCardView(name: 'Scott Weber', image: 'people/scott_weber.jpg' ),                    
-                  ],
-                ))
-          ],
-        )));
+        bottomNavigationBar: ResponsiveLayout(
+            largeChild: MainPageLargeBodyFooterWidget(),
+            smallChild: MainPageSmallBodyFooterWidget()),
+        body: ResponsiveLayout(
+          largeChild: TeamPageLargeBodyWidget(),
+          smallChild: TeamPageSmallBodyWidget(),
+        ));
   }
 }
