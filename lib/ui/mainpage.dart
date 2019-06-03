@@ -5,6 +5,7 @@ import '../widgets/flutter_swiper.dart';
 import '../config_values/en_strings.dart';
 import 'dart:html';
 import '../widgets/header_button.dart';
+import '../widgets/footer.dart';
 
 class MainPage extends StatefulWidget {
   final String title;
@@ -56,7 +57,7 @@ class HomePageState extends State<MainPage> {
                             MainPage(title: EN_Strings.devFestName)));
               }),
           title: Text(
-            widget.title,
+            EN_Strings.devFestName,
             style:
                 Theme.of(context).textTheme.subtitle.apply(color: Colors.white),
           ),
@@ -71,34 +72,14 @@ class HomePageState extends State<MainPage> {
                 urlName: 'Call for Papers'),
           ],
         ),
-        bottomNavigationBar: BottomAppBar(
-            shape: CircularNotchedRectangle(),
-            color: Colors.lightBlue,
-            child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Text(
-                    EN_Strings.devFestMainPageFooterText,
-                    style: Theme.of(context)
-                        .textTheme
-                        .body1
-                        .apply(color: Colors.white),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                  ),
-                  IconButton(
-                    icon: Image.asset('facebook.png'),
-                  ),
-                  IconButton(icon: Image.asset('twitter.png'))
-                ])),
-        body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.start, children: <
-                        Widget>[
+        bottomNavigationBar: FooterWidget(),
+        body: SingleChildScrollView(
+            child: Center(
+                child:
+                    Column(mainAxisAlignment: MainAxisAlignment.start, children: <
+                            Widget>[
           Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+              padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -106,7 +87,7 @@ class HomePageState extends State<MainPage> {
                       flex: 4,
                       child: SizedBox(
                           width: 500,
-                          height: 250,
+                          height: 300,
                           child: Card(
                             child: Padding(
                                 padding: EdgeInsets.all(15),
@@ -167,6 +148,6 @@ class HomePageState extends State<MainPage> {
             ],
           )
         ] // This trailing comma makes auto-formatting nicer for build methods.
-                    )));
+                        ))));
   }
 }

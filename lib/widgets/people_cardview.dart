@@ -10,19 +10,20 @@ class peopleCardView extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    return Card(
-        child: Column(children: <Widget>[
-      Padding(
-          padding: EdgeInsets.all(15),
-          child: Container(
-              width: 125.0,
-              height: 125.0,
-              decoration: new BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: new DecorationImage(
-                      fit: BoxFit.fill,
-                      image: AssetImage(_image))))),
-      Text(_name)
-    ]));
+    return Padding(
+        padding: EdgeInsets.all(15),
+        child: Card(
+            child: Column(children: <Widget>[
+          Padding(
+              padding: EdgeInsets.all(15),
+              child: Container(
+                  width: 125.0,
+                  height: 125.0,
+                  decoration: new BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: new DecorationImage(
+                          fit: BoxFit.fill, image: AssetImage(_image))))),
+          Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5), child: Text(_name))
+        ])));
   }
 }

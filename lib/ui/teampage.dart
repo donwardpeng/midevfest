@@ -4,6 +4,7 @@ import 'dart:html';
 import '../widgets/header_button.dart';
 import './mainpage.dart';
 import '../widgets/people_cardview.dart';
+import '../widgets/footer.dart';
 
 class TeamPage extends StatefulWidget {
   final String title;
@@ -26,7 +27,8 @@ class TeamPageState extends State<TeamPage> {
   @override
   Widget build(BuildContext context) {
     print('in build');
-    return Scaffold(
+    return 
+      Scaffold(
         backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
           leading: InkWell(
@@ -54,28 +56,7 @@ class TeamPageState extends State<TeamPage> {
                 urlName: 'Call for Papers'),
           ],
         ),
-        bottomNavigationBar: BottomAppBar(
-            shape: CircularNotchedRectangle(),
-            color: Colors.lightBlue,
-            child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Text(
-                    EN_Strings.devFestMainPageFooterText,
-                    style: Theme.of(context)
-                        .textTheme
-                        .body1
-                        .apply(color: Colors.white),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                  ),
-                  IconButton(
-                    icon: Image.asset('facebook.png'),
-                  ),
-                  IconButton(icon: Image.asset('twitter.png'))
-                ])),
+        bottomNavigationBar: FooterWidget(),
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
