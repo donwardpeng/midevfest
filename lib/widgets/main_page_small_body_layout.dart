@@ -16,7 +16,7 @@ class MainPageSmallBodyLayout extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
           Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
+              padding: EdgeInsets.fromLTRB(20, 16, 20, 0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -39,7 +39,7 @@ class MainPageSmallBodyLayout extends StatelessWidget {
               Expanded(
                   flex: 4,
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
+                    padding: EdgeInsets.fromLTRB(20, 16, 20, 20),
                     child: SizedBox(
                       width: 800,
                       // height: 300,
