@@ -11,15 +11,21 @@ class MainPageLargeBodyFooterWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Padding(
+              Row(mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                Padding(
                   padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
-                  child: Text(
-                    'Powered by Flutter for Web',
-                    style: Theme.of(context)
-                        .textTheme
-                        .body1
-                        .apply(color: Colors.white),
-                  )),
+                  child: Container(color: Colors.white,
+                    child:FlutterLogo()),
+                ),
+                Text(
+                  'Powered by Flutter for Web',
+                  style: Theme.of(context)
+                      .textTheme
+                      .body1
+                      .apply(color: Colors.white),
+                )
+              ]),
               Padding(
                   padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                   child: Text(
