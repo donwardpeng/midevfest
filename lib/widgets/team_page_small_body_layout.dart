@@ -8,7 +8,7 @@ class TeamPageSmallBodyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,    
-      childAspectRatio: 0.8,
+      childAspectRatio: 0.9,
 
       children: <Widget>[
         FlipCard(

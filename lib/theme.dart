@@ -1,9 +1,9 @@
 import 'package:flutter_web/material.dart';
 
-ThemeData buildTheme(String season) {
+ThemeData buildTheme() {
   // We're going to define all of our font styles
   // in this method:
-  TextTheme _buildTextTheme(TextTheme base, String season) {
+  TextTheme _buildTextTheme(TextTheme base) {
     TextTheme newTheme = new TextTheme();
     
       newTheme = base.copyWith(
@@ -42,7 +42,7 @@ ThemeData buildTheme(String season) {
 
   // And apply changes on it:
   return base.copyWith(
-      textTheme: _buildTextTheme(base.textTheme, season),
+      textTheme: _buildTextTheme(base.textTheme),
       brightness: Brightness.light,
       accentColor: Colors.lightBlue);
 }

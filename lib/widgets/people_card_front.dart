@@ -4,6 +4,7 @@ import 'dart:html';
 class peopleCardView extends StatelessWidget {
   final double SMALL_ICON_SIZE = 30;
   final double LARGE_ICON_SIZE = 36;
+  double _headshotSize;
   double _iconSize;
   String _name;
   String _image;
@@ -22,6 +23,7 @@ class peopleCardView extends StatelessWidget {
     _github = github;
     _smallCard = smallCard;
     _iconSize = _smallCard ? SMALL_ICON_SIZE : LARGE_ICON_SIZE;
+    _headshotSize = smallCard ? 100: 150;
   }
   @override
   Widget build(BuildContext context) {
@@ -32,15 +34,15 @@ class peopleCardView extends StatelessWidget {
           Padding(
               padding: EdgeInsets.all(15),
               child: Container(
-                  width: 150.0,
-                  height: 150.0,
+                  width: _headshotSize,
+                  height: _headshotSize,
                   decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       image: new DecorationImage(
                           fit: BoxFit.fill, image: AssetImage(_image))))),
           Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5), child: Text(_name)),
           Padding(
-              padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[

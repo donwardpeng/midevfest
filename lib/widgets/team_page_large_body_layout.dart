@@ -2,13 +2,14 @@ import 'package:flutter_web/material.dart';
 import '../widgets/people_card_front.dart';
 import '../widgets/card_with_image.dart';
 import '../widgets/flip_card.dart';
+import '../config_values/en_strings.dart';
 
 class TeamPageLargeBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 4,
-      
+
       // mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         FlipCard(

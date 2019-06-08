@@ -8,9 +8,13 @@ import '../widgets/main_page_large_body_footer.dart';
 import '../widgets/main_page_small_body_footer.dart';
 import '../widgets/team_page_small_body_layout.dart';
 import '../widgets/team_page_large_body_layout.dart';
+import '../transitions/scale_route.dart';
+import '../widgets/state_widget.dart';
+import '../models/state.dart';
 
 class TeamPage extends StatefulWidget {
   final String title;
+
   TeamPage({Key key, this.title}) : super(key: key);
 
   @override
@@ -21,6 +25,8 @@ class TeamPage extends StatefulWidget {
 }
 
 class TeamPageState extends State<TeamPage> {
+  StateModel appState;
+
   @override
   void initState() {
     print('in initState');
@@ -29,18 +35,17 @@ class TeamPageState extends State<TeamPage> {
 
   @override
   Widget build(BuildContext context) {
-    print('in build');
+    appState = StateWidget.of(context).state;
+    appState.currentPage = StateModel.PAGES['team'];
+
     return Scaffold(
         backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
           leading: InkWell(
               child: Image.asset('gdg.png', fit: BoxFit.scaleDown),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            MainPage(title: EN_Strings.devFestName)));
+                Navigator.push(context,
+                    ScaleRoute(page: MainPage(title: EN_Strings.devFestName)));
               }),
           title: ResponsiveLayout(
             largeChild: Text(
@@ -56,6 +61,7 @@ class TeamPageState extends State<TeamPage> {
             header_button(
               buttonText: 'The Team',
               route: 'TeamPage.dart',
+              currentPage: appState.currentPage,
             ),
             header_button(
                 buttonText: 'Call For Papers',

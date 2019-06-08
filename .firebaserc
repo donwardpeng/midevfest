@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "midevfest"
+    "default": "midevfest",
+    "dev": "midevfest-dev"
   }
 }
