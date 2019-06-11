@@ -40,7 +40,7 @@ class peopleCardView extends StatelessWidget {
                       shape: BoxShape.circle,
                       image: new DecorationImage(
                           fit: BoxFit.fill, image: AssetImage(_image))))),
-          Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5), child: Text(_name)),
+          Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5), child: Text(_name, style:Theme.of(context).textTheme.title)),
           Padding(
               padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Row(

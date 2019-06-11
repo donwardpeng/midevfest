@@ -1,34 +1,18 @@
 [
   {
-    "family": "Montserrat",
+    "family": "Roboto-Light",
     "fonts": [
       {
-        "asset": "fonts/Montserrat-Medium.ttf"
+        "asset": "fonts/Roboto-Light.ttf"
       }
     ]
     },
     {
-    "family": "Ubuntu",
-    "fonts": [
-      {
-        "asset": "fonts/Ubuntu-Regular.ttf"
+      "family": "Roboto-Regular",
+      "fonts": [
+        {
+          "asset": "fonts/Roboto-Regular.ttf"
+        }
+      ]
       }
-    ]
-  },
-    {
-    "family": "RobotoCondensed-Light",
-    "fonts": [
-      {
-        "asset": "fonts/RobotoCondensed-Light.ttf"
-      }
-    ]
-  },
-  {
-  "family": "RobotoCondensed-Regular",
-  "fonts": [
-    {
-      "asset": "fonts/RobotoCondensed-Regular.ttf"
-    }
-  ]
-}
 ]

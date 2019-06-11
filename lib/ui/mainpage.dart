@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_web/material.dart';
-import '../widgets/main_page_large_body_footer.dart';
-import '../widgets/main_page_small_body_footer.dart';
-import '../widgets/main_page_large_body_layout.dart';
-import '../widgets/main_page_small_body_layout.dart';
+import '../ui/large_layout/main_page_footer.dart';
+import '../ui/large_layout/main_page_layout.dart';
+import '../ui/small_layout/main_page_footer.dart';
+import '../ui/small_layout/main_page_layout.dart';
 import '../config_values/en_strings.dart';
 import 'dart:html';
 import '../widgets/header_button.dart';
@@ -47,9 +47,9 @@ class HomePageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     appState = StateWidget.of(context).state;
-    appState.currentPage = 'main';
+    appState.currentPage = StateModel.PAGES['main'];
     return Scaffold(
-        backgroundColor: Colors.lightBlue[50],
+        backgroundColor: Colors.blue[50],
         appBar: AppBar(
           leading: InkWell(
               child: Image.asset('gdg.png', fit: BoxFit.scaleDown),

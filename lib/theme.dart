@@ -5,35 +5,38 @@ ThemeData buildTheme() {
   // in this method:
   TextTheme _buildTextTheme(TextTheme base) {
     TextTheme newTheme = new TextTheme();
-    
-      newTheme = base.copyWith(
-          headline: base.headline.copyWith(
-            fontFamily: 'Ubuntu',
-            fontSize: 55.0,
-            color: Colors.amber[200],
-          ),
-          display1: base.headline.copyWith(
-            fontFamily: 'Ubuntu',
-            fontSize: 36.0,
-            color: Colors.amber[200],
-          ),
-          title: base.title.copyWith(
-            fontFamily: 'Ubuntu',
-            fontSize: 20.0,
-            color: Colors.black,
-          ),
-          subtitle: base.subtitle.copyWith(
-            fontFamily: 'Montserrat',
-            fontSize: 20.0,
-            color: Colors.black,
-          ),
-          body1: base.body1.copyWith(
-            fontFamily: 'Ubuntu',
-            fontSize: 20.0,
-            color: Colors.black,
-          ),
-          button: base.button.copyWith(
-              fontFamily: 'Montserrat', fontSize: 16.0, color: Colors.white));
+
+    newTheme = base.copyWith(
+        headline: base.headline.copyWith(
+          fontFamily: 'Roboto-Light',
+          fontSize: 60.0,
+          color: Colors.black87,
+        ),
+        display1: base.headline.copyWith(
+          fontFamily: 'Roboto-Light',
+          fontSize: 36.0,
+          color: Colors.black87,
+        ),
+        //use this for the people's names
+        title: base.title.copyWith(
+          fontFamily: 'Roboto-Light',
+          fontSize: 24.0,
+          color: Colors.black,
+        ),
+        //use this for the header and footer
+        subtitle: base.subtitle.copyWith(
+          fontFamily: 'Roboto-Light',
+          fontSize: 20.0,
+          color: Colors.black,
+        ),
+        //use this for cards
+        body1: base.body1.copyWith(
+          fontFamily: 'Roboto-Regular',
+          fontSize: 22.0,
+          color: Colors.black,
+        ),
+        button: base.button.copyWith(
+            fontFamily: 'Roboto-Light', fontSize: 16.0, color: Colors.white));
     return newTheme;
   }
 
