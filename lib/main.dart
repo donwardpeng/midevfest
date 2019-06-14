@@ -4,19 +4,36 @@ import './config_values/en_strings.dart';
 import './ui/mainpage.dart';
 import './ui/teampage.dart';
 import './widgets/state_widget.dart';
-import 'package:firebase/firebase.dart';
-import 'package:firebase/firestore.dart' as fs;
+// import 'package:firebase/firebase.dart';
+// import 'package:firebase/firestore.dart' as fs;
 
-external void log(dynamic str);
+void main()=>  runApp(new StateWidget(child: MyApp()));
 
-void main() => runApp(new StateWidget(child: MyApp()));
+void readFromFirestore() {
+  // initializeApp(
+  //     apiKey: "AIzaSyB6wVoCJ1wT0lzDj9m2LKk_cYHJY53keYo",
+  //     authDomain: "midevfest-dev.firebaseapp.com",
+  //     databaseURL: "https://midevfest-dev.firebaseio.com",
+  //     projectId: "midevfest-dev",
+  //     storageBucket: "midevfest-dev.appspot.com",
+  //     messagingSenderId: "93056344953");
+
+//   fs.Firestore store = firestore();
+//   fs.CollectionReference ref = store.collection("team");
+
+//   ref.onSnapshot.listen((querySnapshot) {
+//     querySnapshot.docChanges().forEach((change) {
+//       if (change.type == "added") {
+//         // print('Got something - ' + change.doc.toString());
+//       }
+//     });
+//   });
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // log('Hello MIDevFest!');    
-    
     return MaterialApp(
       title: EN_Strings.devFestName,
       theme: buildTheme(),
