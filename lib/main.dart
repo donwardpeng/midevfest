@@ -4,10 +4,31 @@ import './config_values/en_strings.dart';
 import './ui/mainpage.dart';
 import './ui/teampage.dart';
 import './widgets/state_widget.dart';
+import './models/site_data.dart';
 // import 'package:firebase/firebase.dart';
 // import 'package:firebase/firestore.dart' as fs;
 
-void main()=>  runApp(new StateWidget(child: MyApp()));
+void main()=>  { 
+  runApp(new StateWidget(child: FutureBuilder<SiteData>(
+    future: readFromJson(),
+    builder: (BuildContext context, AsyncSnapshot<SiteData> snapshot) {
+      return snapshot.hasData
+          // ? MyApp(remoteConfig: snapshot.data)
+          ? MyApp()
+          : Container();
+    },
+    //new StateWidget(
+    //child: new MyApp(),
+    //)
+  )))
+  };
+
+Future<SiteData> readFromJson(){
+
+
+
+}
+
 
 void readFromFirestore() {
   // initializeApp(
