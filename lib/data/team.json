@@ -24,14 +24,26 @@
         "photoUrl": "/people/dave_koziol.jpg",
         "socials": [
           {
-            "icon": "gplus",
-            "link": "https://plus.google.com/+DaveKoziol",
-            "name": "Google+"
-          },
-          {
             "icon": "twitter",
             "link": "https://twitter.com/davekoziol",
             "name": "Twitter"
+          }
+        ],
+        "title": "Organizer"
+      },
+      {
+        "name": "Jingran Wang",
+        "photoUrl": "/people/jingran_wang.jpeg",
+        "socials": [
+          {
+            "icon": "twitter",
+            "link": "https://twitter.com/hikaritenchi",
+            "name": "Twitter"
+          },
+          {
+            "icon": "github",
+            "link": "https://github.com/hikaritenchi",
+            "name": "GitHub"
           }
         ],
         "title": "Organizer"
@@ -41,9 +53,9 @@
         "photoUrl": "/people/don_ward.jpg",
         "socials": [
           {
-            "icon": "gplus",
-            "link": "https://google.com/+DonWard",
-            "name": "Google+"
+            "icon": "twitter",
+            "link": "https://twitter.com/donwardpeng",
+            "name": "Twitter"
           },
           {
             "icon": "github",
@@ -57,11 +69,6 @@
         "name": "Scott Weber",
         "photoUrl": "/people/scott_weber.jpg",
         "socials": [
-          {
-            "icon": "gplus",
-            "link": "https://google.com/+ScottWeberD",
-            "name": "Google+"
-          },
           {
             "icon": "twitter",
             "link": "https://twitter.com/ScottDWeber",

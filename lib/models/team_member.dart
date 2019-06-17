@@ -1,5 +1,6 @@
 import 'socials.dart';
 
+
 class TeamMember{
   String _name;
   String _title;
