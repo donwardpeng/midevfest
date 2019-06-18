@@ -1,0 +1,20 @@
+import 'package:json_annotation/json_annotation.dart';
+import 'social.dart';
+
+part 'team_member.g.dart';
+
+@JsonSerializable()
+class TeamMember{
+TeamMember({this.name,
+  this.title,
+  this.photoUrl,
+  this.socials,
+  
+});
+final String name;
+final String title;
+final String photoUrl;
+final List<Social> socials;
+factory TeamMember.fromJson(Map<String, dynamic> json) => _$TeamMemberFromJson(json);
+  Map<String, dynamic> toJson() => _$TeamMemberToJson(this);
+}

@@ -8,11 +8,11 @@ part of 'teams.dart';
 
 Teams _$TeamsFromJson(Map<String, dynamic> json) {
   return Teams(
-      aListOfObjects: (json['aListOfObjects'] as List)
+      aListOfTeams: (json['aListOfTeams'] as List)
           ?.map((e) =>
               e == null ? null : Team.fromJson(e as Map<String, dynamic>))
           ?.toList());
 }
 
 Map<String, dynamic> _$TeamsToJson(Teams instance) =>
-    <String, dynamic>{'aListOfObjects': instance.aListOfObjects};
+    <String, dynamic>{'aListOfTeams': instance.aListOfTeams};

@@ -104,7 +104,7 @@ part 'teams.g.dart';
 @JsonSerializable()
 class Teams {
   Teams({
-    this.aListOfObjects,
+    this.aListOfTeams,
   });
 
   // final String aString;
@@ -114,7 +114,7 @@ class Teams {
   // final List<String> aListOfStrings;
   // final List<int> aListOfInts;
   // final List<double> aListOfDoubles;
-  final List<Team> aListOfObjects;
+  final List<Team> aListOfTeams;
 
 factory Teams.fromJson(Map<String, dynamic> json) => _$TeamsFromJson(json);
   Map<String, dynamic> toJson() => _$TeamsToJson(this);

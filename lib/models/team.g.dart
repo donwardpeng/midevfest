@@ -8,18 +8,12 @@ part of 'team.dart';
 
 Team _$TeamFromJson(Map<String, dynamic> json) {
   return Team(
-      name: json['name'] as String,
       title: json['title'] as String,
-      photoUrl: json['photoUrl'] as String,
-      socials: (json['socials'] as List)
+      members: (json['members'] as List)
           ?.map((e) =>
-              e == null ? null : Social.fromJson(e as Map<String, dynamic>))
+              e == null ? null : TeamMember.fromJson(e as Map<String, dynamic>))
           ?.toList());
 }
 
-Map<String, dynamic> _$TeamToJson(Team instance) => <String, dynamic>{
-      'name': instance.name,
-      'title': instance.title,
-      'photoUrl': instance.photoUrl,
-      'socials': instance.socials
-    };
+Map<String, dynamic> _$TeamToJson(Team instance) =>
+    <String, dynamic>{'title': instance.title, 'members': instance.members};
