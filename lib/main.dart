@@ -5,32 +5,46 @@ import './ui/mainpage.dart';
 import './widgets/state_widget.dart';
 import './models/teams.dart';
 import 'dart:convert';
+import 'dart:html';
 // import 'dart:io';
 // import 'package:firebase/firebase.dart';
 // import 'package:firebase/firestore.dart' as fs;
 
 void main()=>  { 
-  // runApp(new StateWidget(child: FutureBuilder<Teams>(
-  //   future: readFromJson(),
-  //   builder: (BuildContext context, AsyncSnapshot<Teams> snapshot) {
-  //     return snapshot.hasData
-  //         // ? MyApp(remoteConfig: snapshot.data)
-  //         ? MyApp()
-  //         : Container();
-  //   },
-    runApp(new StateWidget(
-    child: new MyApp(),
-    )
-  )
-  };
+  runApp(new StateWidget(child: FutureBuilder<Teams>(
+    future: readFromJson(),
+    builder: (BuildContext context, AsyncSnapshot<Teams> snapshot) {
+      return snapshot.hasData
+          // ? MyApp(remoteConfig: snapshot.data)
+          ? MyApp()
+          : Container();
+    },
+    // runApp(new StateWidget(
+    // child: new MyApp(),
+    // )
+  // )};
 
-// Future<Teams> readFromJson() async{
-// print ('here 1');
-// var result = json.decode(await new File('./data/team.json').readAsString());
+  )))};
+
+Future<Teams> readFromJson() async{
+print ('here 1');
+var teams;
+var path='assets/data/team.json';
+HttpRequest.getString(path).then((result){
+print('Request complete: $result');
+var resultFromJson = json.decode(result);
+print ('Json Type - ' + resultFromJson.runtimeType.toString());
+print ('Json Contents\n' + resultFromJson.toString());
+// teams = Teams.fromJson(resultFromJson);
+print ('here 3');
+
+});
+// => print('Request complete: $result'));
+// var result = json.decode();
 // print (result['title']);
 // var teams = Teams.fromJson(result);
-// return teams;
-// }
+return teams;
+}
 
 
 void readFromFirestore() {
