@@ -2,32 +2,35 @@ import 'package:flutter_web/material.dart';
 import 'theme.dart';
 import './config_values/en_strings.dart';
 import './ui/mainpage.dart';
-import './ui/teampage.dart';
 import './widgets/state_widget.dart';
-import './models/site_data.dart';
+import './models/teams.dart';
+import 'dart:convert';
+// import 'dart:io';
 // import 'package:firebase/firebase.dart';
 // import 'package:firebase/firestore.dart' as fs;
 
 void main()=>  { 
-  runApp(new StateWidget(child: FutureBuilder<SiteData>(
-    future: readFromJson(),
-    builder: (BuildContext context, AsyncSnapshot<SiteData> snapshot) {
-      return snapshot.hasData
-          // ? MyApp(remoteConfig: snapshot.data)
-          ? MyApp()
-          : Container();
-    },
-    //new StateWidget(
-    //child: new MyApp(),
-    //)
-  )))
+  // runApp(new StateWidget(child: FutureBuilder<Teams>(
+  //   future: readFromJson(),
+  //   builder: (BuildContext context, AsyncSnapshot<Teams> snapshot) {
+  //     return snapshot.hasData
+  //         // ? MyApp(remoteConfig: snapshot.data)
+  //         ? MyApp()
+  //         : Container();
+  //   },
+    runApp(new StateWidget(
+    child: new MyApp(),
+    )
+  )
   };
 
-Future<SiteData> readFromJson(){
-
-
-
-}
+// Future<Teams> readFromJson() async{
+// print ('here 1');
+// var result = json.decode(await new File('./data/team.json').readAsString());
+// print (result['title']);
+// var teams = Teams.fromJson(result);
+// return teams;
+// }
 
 
 void readFromFirestore() {
