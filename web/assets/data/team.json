@@ -1,92 +1,83 @@
-[
-  {
-    "title": "Core Team",
-    "members": [
-      {
-        "name": "Todd DeLand",
-        "photoUrl": "/people/todd_deland.jpg",
-        "socials": [
-          {
-            "icon": "twitter",
-            "link": "https://twitter.com/todddeland",
-            "name": "Twitter"
-          },
-          {
-            "icon": "github",
-            "link": "https://github.com/mynameistodd",
-            "name": "GitHub"
-          }
-        ],
-        "title": "Organizer"
-      },
-      {
-        "name": "Dave Koziol",
-        "photoUrl": "/people/dave_koziol.jpg",
-        "socials": [
-          {
-            "icon": "twitter",
-            "link": "https://twitter.com/davekoziol",
-            "name": "Twitter"
-          }
-        ],
-        "title": "Organizer"
-      },
-      {
-        "name": "Jingran Wang",
-        "photoUrl": "/people/jingran_wang.jpeg",
-        "socials": [
-          {
-            "icon": "twitter",
-            "link": "https://twitter.com/hikaritenchi",
-            "name": "Twitter"
-          },
-          {
-            "icon": "github",
-            "link": "https://github.com/hikaritenchi",
-            "name": "GitHub"
-          }
-        ],
-        "title": "Organizer"
-      },
-      {
-        "name": "Don Ward",
-        "photoUrl": "/people/don_ward.jpg",
-        "socials": [
-          {
-            "icon": "twitter",
-            "link": "https://twitter.com/donwardpeng",
-            "name": "Twitter"
-          },
-          {
-            "icon": "github",
-            "link": "https://github.com/donwardpeng",
-            "name": "GitHub"
-          }
-        ],
-        "title": "Organizer"
-      },
-      {
-        "name": "Scott Weber",
-        "photoUrl": "/people/scott_weber.jpg",
-        "socials": [
-          {
-            "icon": "twitter",
-            "link": "https://twitter.com/ScottDWeber",
-            "name": "Twitter"
-          },
-          {
-            "icon": "github",
-            "link": "https://github.com/scottdweber",
-            "name": "GitHub"
-          },
-          {
-            "icon": "website",
-            "link": "https://scottweber.com/",
-            "name": "Website"
-          }
-        ],
-        "title": "Organizer"
-      }
-    ]
-  }
-]
+{
+	"title": "Core Team",
+	"members": [{
+			"name": "Todd DeLand",
+			"photoUrl": "/people/todd_deland.jpg",
+			"socials": [{
+					"icon": "twitter",
+					"link": "https://twitter.com/todddeland",
+					"name": "Twitter"
+				},
+				{
+					"icon": "github",
+					"link": "https://github.com/mynameistodd",
+					"name": "GitHub"
+				}
+			],
+			"title": "Organizer"
+		},
+		{
+			"name": "Dave Koziol",
+			"photoUrl": "/people/dave_koziol.jpg",
+			"socials": [{
+				"icon": "twitter",
+				"link": "https://twitter.com/davekoziol",
+				"name": "Twitter"
+			}],
+			"title": "Organizer"
+		},
+		{
+			"name": "Jingran Wang",
+			"photoUrl": "/people/jingran_wang.jpeg",
+			"socials": [{
+					"icon": "twitter",
+					"link": "https://twitter.com/hikaritenchi",
+					"name": "Twitter"
+				},
+				{
+					"icon": "github",
+					"link": "https://github.com/hikaritenchi",
+					"name": "GitHub"
+				}
+			],
+			"title": "Organizer"
+		},
+		{
+			"name": "Don Ward",
+			"photoUrl": "/people/don_ward.jpg",
+			"socials": [{
+					"icon": "twitter",
+					"link": "https://twitter.com/donwardpeng",
+					"name": "Twitter"
+				},
+				{
+					"icon": "github",
+					"link": "https://github.com/donwardpeng",
+					"name": "GitHub"
+				}
+			],
+			"title": "Organizer"
+		},
+		{
+			"name": "Scott Weber",
+			"photoUrl": "/people/scott_weber.jpg",
+			"socials": [{
+					"icon": "twitter",
+					"link": "https://twitter.com/ScottDWeber",
+					"name": "Twitter"
+				},
+				{
+					"icon": "github",
+					"link": "https://github.com/scottdweber",
+					"name": "GitHub"
+				},
+				{
+					"icon": "website",
+					"link": "https://scottweber.com/",
+					"name": "Website"
+				}
+			],
+			"title": "Organizer"
+		}
+	]
+}

@@ -6,11 +6,10 @@ part 'team_member.g.dart';
 @JsonSerializable()
 class TeamMember{
 TeamMember({this.name,
-  this.title,
   this.photoUrl,
   this.socials,
-  
-});
+  this.title,
+  });
 final String name;
 final String title;
 final String photoUrl;

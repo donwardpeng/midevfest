@@ -3,75 +3,46 @@ import 'theme.dart';
 import './config_values/en_strings.dart';
 import './ui/mainpage.dart';
 import './widgets/state_widget.dart';
-import './models/teams.dart';
+import './models/team.dart';
 import 'dart:convert';
 import 'dart:html';
 // import 'dart:io';
 // import 'package:firebase/firebase.dart';
 // import 'package:firebase/firestore.dart' as fs;
 
-void main()=>  { 
-  runApp(new StateWidget(child: FutureBuilder<Teams>(
+void main() {
+  runApp(new StateWidget(
+      child: FutureBuilder<Team>(
     future: readFromJson(),
-    builder: (BuildContext context, AsyncSnapshot<Teams> snapshot) {
-      return snapshot.hasData
-          // ? MyApp(remoteConfig: snapshot.data)
-          ? MyApp()
-          : Container();
+    builder: (BuildContext context, AsyncSnapshot<Team> snapshot) {
+      print('Snapshot hasData? -> ' + snapshot.hasData.toString());
+
+      return snapshot.hasData ? MyApp(theTeam: snapshot.data) : Container();
     },
-    // runApp(new StateWidget(
-    // child: new MyApp(),
-    // )
-  // )};
-
-  )))};
-
-Future<Teams> readFromJson() async{
-print ('here 1');
-var teams;
-var path='assets/data/team.json';
-HttpRequest.getString(path).then((result){
-print('Request complete: $result');
-var resultFromJson = json.decode(result);
-print ('Json Type - ' + resultFromJson.runtimeType.toString());
-print ('Json Contents\n' + resultFromJson.toString());
-// teams = Teams.fromJson(resultFromJson);
-print ('here 3');
-
-});
-// => print('Request complete: $result'));
-// var result = json.decode();
-// print (result['title']);
-// var teams = Teams.fromJson(result);
-return teams;
+  )));
 }
 
-
-void readFromFirestore() {
-  // initializeApp(
-  //     apiKey: "AIzaSyB6wVoCJ1wT0lzDj9m2LKk_cYHJY53keYo",
-  //     authDomain: "midevfest-dev.firebaseapp.com",
-  //     databaseURL: "https://midevfest-dev.firebaseio.com",
-  //     projectId: "midevfest-dev",
-  //     storageBucket: "midevfest-dev.appspot.com",
-  //     messagingSenderId: "93056344953");
-
-//   fs.Firestore store = firestore();
-//   fs.CollectionReference ref = store.collection("team");
-
-//   ref.onSnapshot.listen((querySnapshot) {
-//     querySnapshot.docChanges().forEach((change) {
-//       if (change.type == "added") {
-//         // print('Got something - ' + change.doc.toString());
-//       }
-//     });
-//   });
+Future<Team> readFromJson() async {
+  print('here 1');
+  Team team;
+  var path = 'assets/data/team.json';
+  await HttpRequest.getString(path).then((result) {
+    var resultFromJson = jsonDecode(result);
+    team = Team.fromJson(resultFromJson);
+  });
+  return team;
 }
 
 class MyApp extends StatelessWidget {
+  Team theTeam;
+  MyApp({this.theTeam});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print('theTeam title ' + theTeam.title);
+    StateWidget.of(context).state.currentTeam = theTeam;
+    
     return MaterialApp(
       title: EN_Strings.devFestName,
       theme: buildTheme(),
