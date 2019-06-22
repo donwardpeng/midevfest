@@ -40,9 +40,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print('theTeam title ' + theTeam.title);
-    StateWidget.of(context).state.currentTeam = theTeam;
-    
+    // set the value of the team for the entire app
+    StateWidget.of(context).state.currentTeam = theTeam;    
     return MaterialApp(
       title: EN_Strings.devFestName,
       theme: buildTheme(),

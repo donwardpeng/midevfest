@@ -2,12 +2,11 @@ import 'dart:async';
 import 'package:flutter_web/foundation.dart';
 import 'package:flutter_web/material.dart';
 import '../models/state.dart';
-import '../models/team.dart';
 
 class StateWidget extends StatefulWidget {
   final StateModel state;
   final Widget child;
-  Team teamData;
+ 
 
   StateWidget({
     @required this.child,
@@ -20,10 +19,6 @@ class StateWidget extends StatefulWidget {
     return (context.inheritFromWidgetOfExactType(_StateDataWidget)
             as _StateDataWidget)
         .data;
-  }
-
-  void set setTeamData(Team team){
-    teamData = team;
   }
 
   @override

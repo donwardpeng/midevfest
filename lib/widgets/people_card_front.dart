@@ -23,7 +23,7 @@ class peopleCardView extends StatelessWidget {
     _github = github;
     _smallCard = smallCard;
     _iconSize = _smallCard ? SMALL_ICON_SIZE : LARGE_ICON_SIZE;
-    _headshotSize = smallCard ? 100: 150;
+    _headshotSize = smallCard ? 100 : 150;
   }
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,9 @@ class peopleCardView extends StatelessWidget {
                       shape: BoxShape.circle,
                       image: new DecorationImage(
                           fit: BoxFit.fill, image: AssetImage(_image))))),
-          Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5), child: Text(_name, style:Theme.of(context).textTheme.title)),
+          Padding(
+              padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+              child: Text(_name, style: Theme.of(context).textTheme.title)),
           Padding(
               padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Row(
@@ -56,7 +58,7 @@ class peopleCardView extends StatelessWidget {
                       window.open(_twitter, 'Twitter');
                     },
                   ),
-                  _github.contains('github')
+                  (_github != null && _github.contains('github'))
                       ? InkWell(
                           child: Image.asset(
                             'github.png',
