@@ -1,0 +1,80 @@
+{
+  "title": "sponsors",
+  "levels": [
+    {
+      "title": "Platinum",
+      "logos": [
+        {
+          "name": "Grand Circus",
+          "url": "https://www.grandcircus.co/",
+          "logoUrl": "/logos/GrandCircus.png",
+          "width": 170,
+          "height": 170
+        },
+        {
+          "name": "",
+          "url": "",
+          "logoUrl": "../images/logos/BlankSpace.png",
+          "width": 50
+        },
+        {
+          "name": "Arbormoon Software",
+          "url": "http://www.arbormoon.com/",
+          "logoUrl": "/logos/arbormoonlogo-full.png",
+          "width": 160,
+          "height": 160
+        }
+      ]
+    },
+    {
+      "title": "Gold",
+      "logos": [
+        {
+          "name": "Quicken Loans",
+          "url": "https://www.quickenloans.com/",
+          "logoUrl": "/logos/QuickenLoans.png",
+          "width": 170,
+          "height": 170
+        },
+        {
+          "name": "",
+          "url": "",
+          "logoUrl": "../images/logos/BlankSpace.png",
+          "width": 50
+        },
+        {
+          "name": "Google",
+          "url": "https://www.google.com/",
+          "logoUrl": "/logos/google.png",
+          "width": 170,
+          "height": 170
+        }
+      ]
+    },
+    {
+      "title": "Silver",
+      "logos": [
+        {
+          "name": "RIIS",
+          "url": "https://www.riis.com/",
+          "logoUrl": "/logos/RIIS.png",
+          "width": 170,
+          "height": 170
+        },
+        {
+          "name": "",
+          "url": "",
+          "logoUrl": "../images/logos/BlankSpace.png",
+          "width": 50
+        },
+        {
+          "name": "Little Caesars",
+          "url": "https://littlecaesars.com/en-us/",
+          "logoUrl": "/logos/Core_Caesar_RGB.png",
+          "width": 170,
+          "height": 170
+        }
+      ]
+    }
+  ]
+}

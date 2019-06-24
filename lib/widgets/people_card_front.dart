@@ -48,16 +48,18 @@ class peopleCardView extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  InkWell(
-                    child: Image.asset(
-                      'twitter.png',
-                      height: _iconSize,
-                      width: _iconSize,
-                    ),
-                    onTap: () {
-                      window.open(_twitter, 'Twitter');
-                    },
-                  ),
+                  (_twitter != null && _twitter.contains('twitter'))
+                      ? InkWell(
+                          child: Image.asset(
+                            'twitter.png',
+                            height: _iconSize,
+                            width: _iconSize,
+                          ),
+                          onTap: () {
+                            window.open(_twitter, 'Twitter');
+                          },
+                        )
+                      : Container(),
                   (_github != null && _github.contains('github'))
                       ? InkWell(
                           child: Image.asset(

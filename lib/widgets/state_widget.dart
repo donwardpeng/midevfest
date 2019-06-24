@@ -7,7 +7,6 @@ class StateWidget extends StatefulWidget {
   final StateModel state;
   final Widget child;
  
-
   StateWidget({
     @required this.child,
     this.state,
