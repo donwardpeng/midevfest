@@ -14,7 +14,8 @@ TeamMember _$TeamMemberFromJson(Map<String, dynamic> json) {
           ?.map((e) =>
               e == null ? null : Social.fromJson(e as Map<String, dynamic>))
           ?.toList(),
-      title: json['title'] as String);
+      title: json['title'] as String,
+      gdgLogoUrl: json['gdgLogoUrl'] as String);
 }
 
 Map<String, dynamic> _$TeamMemberToJson(TeamMember instance) =>
@@ -22,5 +23,6 @@ Map<String, dynamic> _$TeamMemberToJson(TeamMember instance) =>
       'name': instance.name,
       'title': instance.title,
       'photoUrl': instance.photoUrl,
+      'gdgLogoUrl': instance.gdgLogoUrl,
       'socials': instance.socials
     };

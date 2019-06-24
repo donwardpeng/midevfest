@@ -27,7 +27,7 @@ class TeamPageLargeBodyWidget extends StatelessWidget {
               smallCard: false,
             ),
             back: Container(
-              child: ImageCardView(image: '/logos/gdg_ann_arbor.jpeg'),
+              child: ImageCardView(image: member.gdgLogoUrl),
             ),
           ),
         ).toList()

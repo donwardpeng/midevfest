@@ -2,6 +2,8 @@ import 'package:flutter_web/material.dart';
 import '../../widgets/people_card_front.dart';
 import '../../widgets/card_with_image.dart';
 import '../../widgets/flip_card.dart';
+import '../../models/team_member.dart';
+import '../../widgets/state_widget.dart';
 
 class TeamPageSmallBodyWidget extends StatelessWidget {
   @override
@@ -10,73 +12,28 @@ class TeamPageSmallBodyWidget extends StatelessWidget {
       crossAxisCount: 2,    
       childAspectRatio: 0.9,
 
-      children: <Widget>[
-        FlipCard(
-          direction: FlipDirection.VERTICAL, // default
-          front: peopleCardView(
-            name: 'Todd Deland',
-            image: 'people/todd_deland.jpg',
-            twitter: 'https://twitter.com/todddeland',
-            github: 'https://github.com/mynameistodd',
-            smallCard: true,
+      children: StateWidget.of(context).state.currentTeam.members.map((member) => 
+          FlipCard(
+            direction: FlipDirection.VERTICAL, // default
+            front: peopleCardView(
+              name: member.name,
+              image: member.photoUrl,
+              twitter: getSocialURL('Twitter', member),
+              github: getSocialURL('GitHub', member),
+              smallCard: true,
+            ),
+            back: Container(
+              child: ImageCardView(image: member.gdgLogoUrl),
+            ),
           ),
-          back: Container(
-            child: ImageCardView(image: '/logos/gdg_ann_arbor.jpeg'),
-          ),
-        ),
-        FlipCard(
-          direction: FlipDirection.VERTICAL,
-          front: peopleCardView(
-            name: 'Dave Koziol',
-            image: 'people/dave_koziol.jpg',
-            twitter: 'https://twitter.com/davekoziol',
-            github: '',
-            smallCard: true,
-          ),
-          back: Container(
-            child: ImageCardView(image: '/logos/gdg_ann_arbor.jpeg'),
-          ),
-        ),
-        FlipCard(
-          direction: FlipDirection.VERTICAL,
-          front: peopleCardView(
-            name: 'Jingran Wang',
-            image: 'people/jingran_wang.jpeg',
-            twitter: 'https://twitter.com/hikaritenchi',
-            github: 'https://github.com/hikaritenchi',
-            smallCard: true,
-          ),
-          back: Container(
-            child: ImageCardView(image: '/logos/gdg_ann_arbor.jpeg'),
-          ),
-        ),
-        FlipCard(
-          direction: FlipDirection.VERTICAL,
-          front: peopleCardView(
-            name: 'Don Ward',
-            image: 'people/don_ward.jpg',
-            twitter: 'https://twitter.com/donwardpeng',
-            github: 'https://github.com/donwardpeng',
-            smallCard: true,
-          ),
-          back: Container(
-            child: ImageCardView(image: '/logos/gdg_detroit.png'),
-          ),
-        ),
-        FlipCard(
-          direction: FlipDirection.VERTICAL,
-          front: peopleCardView(
-            name: 'Scott Weber',
-            image: 'people/scott_weber.jpg',
-            twitter: 'https://twitter.com/ScottDWeber',
-            github: 'https://github.com/scottdweber',
-            smallCard: true,
-          ),
-          back: Container(
-            child: ImageCardView(image: '/logos/gdg_ann_arbor.jpeg'),
-          ),
-        ),
-      ],
+        ).toList()
     );
   }
+
+  String getSocialURL(String socialNetwork, TeamMember member){
+    String url;
+    member.socials.forEach((network) => url = (network.name == (socialNetwork)) ? network.link.toString() : url);
+    return url;
+  }
+
 }
