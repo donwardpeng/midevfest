@@ -1,9 +1,12 @@
 import 'package:flutter_web/material.dart';
+import 'package:midevfest/ui/sponsors_page.dart';
 import 'dart:html';
 
 import '../config_values/en_strings.dart';
-import 'package:midevfest/ui/teampage.dart';
+import '../ui/team_page.dart';
 import '../transitions/scale_route.dart';
+import '../values/constants.dart';
+import '../ui/sponsors_page.dart';
 
 class header_button extends StatelessWidget {
   String _buttonText = '';
@@ -40,9 +43,14 @@ class header_button extends StatelessWidget {
               if (_url != null && _url.contains('http')) {
                 // Use the dart:html window class to open a new browser window
                 window.open(_url, _urlName);
-              } else if (_currentPage != 'team') {
+              } else if (_route == Constants.PAGES['team']) {
                 Navigator.push(context,
                     ScaleRoute(page: TeamPage(title: EN_Strings.devFestName)));
+              } else if (_route == Constants.PAGES['sponsors']) {
+                Navigator.push(
+                    context,
+                    ScaleRoute(
+                        page: SponsorsPage(title: EN_Strings.devFestName)));
               }
             }));
   }

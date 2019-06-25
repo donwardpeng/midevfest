@@ -1,7 +1,7 @@
 import 'package:flutter_web/material.dart';
 import 'dart:html';
 
-class MainPageSmallBodyFooterWidget extends StatelessWidget {
+class SmallFooterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(

@@ -6,8 +6,6 @@ class StateModel {
   Team currentTeam;
   SponsorList sponsorList;
   
-static Map<String, String> PAGES = {'main': 'main', 'team': 'team'};
-
   StateModel({
     this.currentPage = '',
   });

@@ -5,4 +5,6 @@ class Constants{
   // static String TEAM_DATA_URL = 'assets/data/team.json';
   // static String SPONSOR_DATA_URL = 'assets/data/partners.json';
 
+static Map<String, String> PAGES = {'main': 'main', 'team': 'team', 'sponsors':'sponsors'};
+
 }

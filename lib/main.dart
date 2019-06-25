@@ -1,7 +1,7 @@
 import 'package:flutter_web/material.dart';
 import 'theme.dart';
 import './config_values/en_strings.dart';
-import './ui/mainpage.dart';
+import './ui/main_page.dart';
 import './widgets/state_widget.dart';
 import './models/team.dart';
 import './models/sponsor_list.dart';

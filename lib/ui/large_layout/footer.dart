@@ -2,7 +2,7 @@ import 'package:flutter_web/material.dart';
 import '../../config_values/en_strings.dart';
 import 'dart:html';
 
-class MainPageLargeBodyFooterWidget extends StatelessWidget {
+class LargeFooterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
