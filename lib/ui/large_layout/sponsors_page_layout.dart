@@ -16,18 +16,16 @@ class SponsorsPageLargeBodyWidget extends StatelessWidget {
         crossAxisCount: 3,
         // minAxisAlignment: MainAxisAlignment.center,
         children:         
-        StateWidget.of(context).state.currentTeam.members.map((member) => 
+        StateWidget.of(context).state.sponsorList.levels[0].sponsors.map((sponsor) => 
           FlipCard(
             direction: FlipDirection.VERTICAL, // default
             front: peopleCardView(
-              name: member.name,
-              image: member.photoUrl,
-              twitter: getSocialURL('Twitter', member),
-              github: getSocialURL('GitHub', member),
+              name: sponsor.name,
+              image: sponsor.logoUrl,
               smallCard: false,
             ),
             back: Container(
-              child: ImageCardView(image: member.gdgLogoUrl),
+              child: ImageCardView(image:sponsor.logoUrl),
             ),
           ),
         ).toList()
@@ -36,9 +34,4 @@ class SponsorsPageLargeBodyWidget extends StatelessWidget {
   }
   // ));}
 
-  String getSocialURL(String socialNetwork, TeamMember member){
-    String url;
-    member.socials.forEach((network) => url = (network.name == (socialNetwork)) ? network.link.toString() : url);
-    return url;
-  }
 }

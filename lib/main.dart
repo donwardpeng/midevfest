@@ -11,7 +11,6 @@ import 'dart:convert';
 import 'dart:html';
 import './values/constants.dart';
 
-
 // import 'dart:io';
 // import 'package:firebase/firebase.dart';
 // import 'package:firebase/firestore.dart' as fs;
@@ -23,7 +22,11 @@ void main() {
     builder: (BuildContext context, AsyncSnapshot<SiteData> snapshot) {
       print('Snapshot hasData? -> ' + snapshot.hasData.toString());
 
-      return snapshot.hasData ? MyApp(theTeam: snapshot.data.theTeam, sponsorList: snapshot.data.theSponsors) : Container();
+      return snapshot.hasData
+          ? MyApp(
+              theTeam: snapshot.data.theTeam,
+              sponsorList: snapshot.data.theSponsors)
+          : Container();
     },
   )));
 }
@@ -36,15 +39,18 @@ Future<SiteData> readFromJson() async {
   await HttpRequest.getString(path).then((result) {
     var resultFromJson = jsonDecode(result);
     team = Team.fromJson(resultFromJson);
+    print("Inside 1");
   });
   print('here 2');
-  path = Constants.SPONSOR_DATA_URL;
-  await HttpRequest.getString(path).then((result) {
-    var resultFromJson = jsonDecode(result);
+  var sponsorPath = Constants.SPONSOR_DATA_URL;
+  await HttpRequest.getString(sponsorPath).then((resultSponsor) {
+    var resultFromJson = jsonDecode(resultSponsor);
     sponsors = SponsorList.fromJson(resultFromJson);
+    print("Inside 2" + sponsors.toString());
   });
+  // print('Results from Sponsors Json - ' + sponsors.levels[0].name);
   print('here 3');
-  return SiteData(team,sponsors);
+  return SiteData(team, sponsors);
 }
 
 class MyApp extends StatelessWidget {
@@ -56,8 +62,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // set the value of the team for the entire app
-    StateWidget.of(context).state.currentTeam = theTeam; 
-    StateWidget.of(context).state.sponsorList = sponsorList; 
+    StateWidget.of(context).state.currentTeam = theTeam;
+    StateWidget.of(context).state.sponsorList = sponsorList;
 
     return MaterialApp(
       title: EN_Strings.devFestName,
