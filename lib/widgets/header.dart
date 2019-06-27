@@ -43,11 +43,15 @@ class Header {
           route: Constants.PAGES['team'],
           currentPage: appState.currentPage,
         ),
-         header_button(
+        header_button(
           buttonText: 'Sponsors',
-          route:  Constants.PAGES['sponsors'],
+          route: Constants.PAGES['sponsors'],
           currentPage: appState.currentPage,
         ),
+        header_button(
+            buttonText: 'Code of Conduct',
+            url: 'https://developers.google.com/events/gdd-india/code-of-conduct/',
+            urlName: 'Code of Conduct'),
         header_button(
             buttonText: 'Call For Papers',
             url: 'https://www.papercall.io/midevfest2019',
