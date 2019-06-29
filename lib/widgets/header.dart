@@ -50,7 +50,7 @@ class Header {
         ),
         header_button(
             buttonText: 'Code of Conduct',
-            url: 'https://developers.google.com/events/gdd-india/code-of-conduct/',
+            url: Constants.CODE_OF_CONDUCT_URL,
             urlName: 'Code of Conduct'),
         header_button(
             buttonText: 'Call For Papers',

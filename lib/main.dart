@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
     // set the value of the team for the entire app
     StateWidget.of(context).state.currentTeam = theTeam;
     StateWidget.of(context).state.sponsorList = sponsorList;
-
+    
     return MaterialApp(
       title: EN_Strings.devFestName,
       theme: buildTheme(),
