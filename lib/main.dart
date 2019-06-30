@@ -46,11 +46,10 @@ Future<SiteData> readFromJson() async {
   await HttpRequest.getString(sponsorPath).then((resultSponsor) {
     var resultFromJson = jsonDecode(resultSponsor);
     sponsors = SponsorList.fromJson(resultFromJson);
-    print("Inside 2" + sponsors.toString());
+    print("Inside 2 - " + sponsors.levels[0].logos[2].name);
   });
-  // print('Results from Sponsors Json - ' + sponsors.levels[0].name);
   print('here 3');
-  return SiteData(team, sponsors);
+  return SiteData(theTeam: team,theSponsors: sponsors);
 }
 
 class MyApp extends StatelessWidget {

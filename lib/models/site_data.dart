@@ -5,6 +5,6 @@ class SiteData{
   Team theTeam;
   SponsorList theSponsors;
 
-  SiteData(this.theTeam, this.theSponsors); 
+  SiteData({this.theTeam, this.theSponsors}); 
 
 }

@@ -3,9 +3,11 @@ import '../../config_values/en_strings.dart';
 
 class MainPageSmallBodyLayout extends StatelessWidget {
   List<String> imagesList = [
-    'devfest2018_photo_1.jpg',
-    'devfest2018_photo_2.jpg',
-    'devfest2018_photo_3.jpg'
+    'carousel/devfest2018_photo_1.jpg',
+    'carousel/devfest2018_photo_2.jpg',
+    'carousel/devfest2018_photo_3.jpg',
+    'carousel/devfest2018_photo_4.jpg',
+    'carousel/devfest2018_photo_5.png'
   ];
 
   @override

@@ -7,7 +7,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
     'carousel/devfest2018_photo_1.jpg',
     'carousel/devfest2018_photo_2.jpg',
     'carousel/devfest2018_photo_3.jpg',
-    'carousel/devfest2018_photo_4.jpg'
+    'carousel/devfest2018_photo_4.jpg',
+    'carousel/devfest2018_photo_5.png'
   ];
 
   @override

@@ -8,12 +8,12 @@ part of 'sponsor_level.dart';
 
 SponsorLevel _$SponsorLevelFromJson(Map<String, dynamic> json) {
   return SponsorLevel(
-      name: json['name'] as String,
-      sponsors: (json['sponsors'] as List)
+      title: json['title'] as String,
+      logos: (json['logos'] as List)
           ?.map((e) =>
               e == null ? null : Sponsor.fromJson(e as Map<String, dynamic>))
           ?.toList());
 }
 
 Map<String, dynamic> _$SponsorLevelToJson(SponsorLevel instance) =>
-    <String, dynamic>{'name': instance.name, 'sponsors': instance.sponsors};
+    <String, dynamic>{'title': instance.title, 'logos': instance.logos};
