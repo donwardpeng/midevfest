@@ -5,24 +5,25 @@
       "title": "Platinum",
       "logos": [
         {
-          "name": "Grand Circus",
-          "url": "https://www.grandcircus.co/",
-          "logoUrl": "/logos/GrandCircus.png",
-          "width": 170,
-          "height": 170
+          "name": "Google",
+          "url": "https://developers.google.com/",
+          "logoUrl": "/logos/google.png",
+          "width": 250,
+          "height": 250
         },
         {
-          "name": "",
-          "url": "",
-          "logoUrl": "../images/logos/BlankSpace.png",
-          "width": 50
+          "name": "Little Caesars",
+          "url": "https://littlecaesars.com/en-us/",
+          "logoUrl": "/logos/Core_Caesar_RGB.png",
+          "width": 250,
+          "height": 250
         },
         {
           "name": "Arbormoon Software",
           "url": "http://www.arbormoon.com/",
           "logoUrl": "/logos/arbormoonlogo-full.png",
-          "width": 160,
-          "height": 160
+          "width": 250,
+          "height": 250
         }
       ]
     },
@@ -39,7 +40,7 @@
         {
           "name": "",
           "url": "",
-          "logoUrl": "../images/logos/BlankSpace.png",
+          "logoUrl": "/logos/BlankSpace.png",
           "width": 50
         },
         {

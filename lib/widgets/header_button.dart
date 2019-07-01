@@ -47,10 +47,8 @@ class header_button extends StatelessWidget {
                 Navigator.push(context,
                     ScaleRoute(page: TeamPage(title: EN_Strings.devFestName)));
               } else if (_route == Constants.PAGES['sponsors']) {
-                Navigator.push(
-                    context,
-                    ScaleRoute(
-                        page: SponsorsPage(title: EN_Strings.devFestName)));
+                Navigator.push(context,
+                    ScaleRoute(page: SponsorsPage(title: EN_Strings.devFestName)));
               }
             }));
   }

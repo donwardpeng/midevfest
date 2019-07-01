@@ -3,7 +3,7 @@ import '../../widgets/state_widget.dart';
 import '../../models/state.dart';
 import 'dart:html';
 
-class SponsorsPageLargeBodyWidget extends StatelessWidget {
+class SponsorsPageSmallBodyWidget extends StatelessWidget {
   StateModel appState;
 
   @override
@@ -14,12 +14,9 @@ class SponsorsPageLargeBodyWidget extends StatelessWidget {
         'Results for StateWidget SponsorsList - ' + appState.sponsorList.title);
     return Stack(children: <Widget>[
       Padding(
-          padding: EdgeInsets.fromLTRB(24, 8, 8, 16),
-          child: Text('Sponsors', style: Theme.of(context).textTheme.headline)),
-      Padding(
-          padding: EdgeInsets.fromLTRB(8, 64, 8, 24),
+          padding: EdgeInsets.fromLTRB(8, 4, 8, 4),
           child: GridView.count(
-              crossAxisCount: 3,
+              crossAxisCount: 1,
               children: appState.sponsorList.levels[0].logos
                   .map((sponsor) => InkWell(
                       onTap: () {
