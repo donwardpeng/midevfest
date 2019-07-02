@@ -1,4 +1,5 @@
 import 'package:flutter_web/material.dart';
+import 'package:midevfest/ui/main_page.dart';
 import 'package:midevfest/ui/sponsors_page.dart';
 import 'dart:html';
 
@@ -14,27 +15,30 @@ class header_button extends StatelessWidget {
   String _urlName = '';
   String _route = 'empty';
   String _currentPage = '';
+  TextStyle _buttonTextStyle;
 
   header_button(
       {String buttonText,
       String url,
       String urlName,
       String route,
-      String currentPage}) {
+      String currentPage,
+      TextStyle buttonTextStyle}) {
     this._buttonText = buttonText;
     this._url = url;
     this._urlName = urlName;
     this._route = route;
     this._currentPage = currentPage;
+    this._buttonTextStyle = buttonTextStyle;
   }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        child: OutlineButton(
+        child: FlatButton(
             child: Text(
               _buttonText,
-              style: Theme.of(context)
+              style: _buttonTextStyle != null ? _buttonTextStyle : Theme.of(context)
                   .textTheme
                   .subtitle
                   .apply(color: Colors.white),
@@ -43,6 +47,9 @@ class header_button extends StatelessWidget {
               if (_url != null && _url.contains('http')) {
                 // Use the dart:html window class to open a new browser window
                 window.open(_url, _urlName);
+              } else if (_route == Constants.PAGES['main']) {
+                Navigator.push(context,
+                    ScaleRoute(page: MainPage(title: EN_Strings.devFestName)));
               } else if (_route == Constants.PAGES['team']) {
                 Navigator.push(context,
                     ScaleRoute(page: TeamPage(title: EN_Strings.devFestName)));

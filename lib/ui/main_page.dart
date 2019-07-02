@@ -10,6 +10,7 @@ import '../widgets/state_widget.dart';
 import '../models/state.dart';
 import '../widgets/header.dart';
 import '../values/constants.dart';
+import '../widgets/devfest_drawer.dart';
 
 class MainPage extends StatefulWidget {
   final String title;
@@ -46,12 +47,26 @@ class HomePageState extends State<MainPage> {
   Widget build(BuildContext context) {
     appState = StateWidget.of(context).state;
     appState.currentPage = Constants.PAGES['main'];
+    bool displayDrawer = appState.isSmallScreen(context);
+    final GlobalKey<ScaffoldState> _scaffoldKey =
+        new GlobalKey<ScaffoldState>();
+
     return Scaffold(
+        key: _scaffoldKey,
         backgroundColor: Colors.blue[50],
-        appBar: Header(context, appState.currentPage).getHeader(),
+        appBar: !displayDrawer
+            ? Header(context, appState.currentPage).getHeader()
+            : AppBar(
+                leading: InkWell(
+                    child: Image.asset('gdg.png', fit: BoxFit.scaleDown),
+                    onTap: () {
+                      _scaffoldKey.currentState.openDrawer();
+                    })),
+        drawer: displayDrawer
+            ? DevFestDrawer(context, appState.currentPage).getDrawer()
+            : Container(),
         bottomNavigationBar: ResponsiveLayout(
-            largeChild: LargeFooterWidget(),
-            smallChild: SmallFooterWidget()),
+            largeChild: LargeFooterWidget(), smallChild: SmallFooterWidget()),
         body: ResponsiveLayout(
           largeChild: MainPageLargeBodyLayout(),
           smallChild: MainPageSmallBodyLayout(),
