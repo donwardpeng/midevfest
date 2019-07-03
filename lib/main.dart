@@ -10,6 +10,7 @@ import './models/site_data.dart';
 import 'dart:convert';
 import 'dart:html';
 import './values/constants.dart';
+import './helper/firebase_cloud_storage_resolver.dart';
 
 // import 'dart:io';
 // import 'package:firebase/firebase.dart';
@@ -35,14 +36,14 @@ Future<SiteData> readFromJson() async {
   print('here 1');
   Team team;
   SponsorList sponsors;
-  var path = Constants.TEAM_DATA_URL;
+  var path = FirebaseCloudStorageURLResolver().getCloudStorageURL(Constants.DEVFEST_BUCKET, Constants.TEAM_DATA_URL);
   await HttpRequest.getString(path).then((result) {
     var resultFromJson = jsonDecode(result);
     team = Team.fromJson(resultFromJson);
     print("Inside 1");
   });
   print('here 2');
-  var sponsorPath = Constants.SPONSOR_DATA_URL;
+  var sponsorPath = FirebaseCloudStorageURLResolver().getCloudStorageURL(Constants.DEVFEST_BUCKET, Constants.SPONSOR_DATA_URL);
   await HttpRequest.getString(sponsorPath).then((resultSponsor) {
     var resultFromJson = jsonDecode(resultSponsor);
     sponsors = SponsorList.fromJson(resultFromJson);

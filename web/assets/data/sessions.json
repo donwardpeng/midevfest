@@ -1,0 +1,288 @@
+{
+  "101": {
+    "id": 101,
+    "title": "Doors Open & Registration",
+    "description": "Doors Open & Registration.",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Welcome"
+    ]
+  },
+  "102": {
+    "id": 102,
+    "title": "Doors Open & Registration",
+    "description": "Doors Open & Registration.",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Welcome"
+    ]
+  },
+  "201": {
+    "id": 201,
+    "title": "Introductions",
+    "description": "Introductions to the day.",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Welcome"
+    ]
+  },
+  "211": {
+    "id": 211,
+    "title": "Introductions",
+    "description": "Introductions to the day.",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Welcome"
+    ]
+  },
+  "202": {
+    "id": 202,
+    "title": "Lunch",
+    "description": "Lunch",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Lunch"
+    ]
+  },
+  "212": {
+    "id": 212,
+    "title": "Lunch",
+    "description": "Lunch",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Lunch"
+    ]
+  },
+  "203": {
+    "id": 203,
+    "title": "Wrap-Up",
+    "description": "Wrap-up and raffle",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Wrap-Up"
+    ]
+  },
+  "213": {
+    "id": 213,
+    "title": "Wrap-Up",
+    "description": "Wrap-up and raffle",
+    "speakers": [],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Wrap-Up"
+    ]
+  },
+  "301": {
+    "id": 301,
+    "title": "Taking your ML to production with Google Cloud ML Engine",
+    "description": "",
+    "speakers": [
+      9
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Machine Learning",
+      "GCP"
+    ]
+  },
+  "302": {
+    "id": 302,
+    "title": "Flutter Study Jam Wrap-Up (4/4)",
+    "description": "",
+    "speakers": [
+      11
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Flutter"
+    ]
+  },
+  "303": {
+    "id": 303,
+    "title": "I'm going to do machine learning with GCP! Ok, but how?",
+    "description": "",
+    "speakers": [
+      4
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Machine Learning",
+      "GCP"
+    ]
+  },
+  "304": {
+    "id": 304,
+    "title": "",
+    "description": "",
+    "speakers": [
+      
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Session"
+    ]
+  },
+  "305": {
+    "id": 305,
+    "title": "Using BigQuery ML and BigQuery GIS together to predict NYC taxi trip cost",
+    "description": "",
+    "speakers": [
+      1
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Machine Learning",
+      "Big Query"
+    ]
+  },
+  "306": {
+    "id": 306,
+    "title": "Codelab: Flutter Makes Wicked Animations Easier Than Ever!",
+    "description": "",
+    "speakers": [
+      3
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Flutter"
+    ]
+  },
+  "307": {
+    "id": 307,
+    "title": "Navigating the Sea of Serverless",
+    "description": "",
+    "speakers": [
+      5
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "GCP"
+    ]
+  },
+  "308": {
+    "id": 308,
+    "title": "Google A11y 101",
+    "description": "",
+    "speakers": [
+      6
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Accessibility"
+    ]
+  },
+  "309": {
+    "id": 309,
+    "title": "",
+    "description": "",
+    "speakers": [
+      
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Session"
+    ]
+  },
+  "310": {
+    "id": 310,
+    "title": "Getting started with FHIR",
+    "description": "",
+    "speakers": [
+      12
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "FHIR"
+    ]
+  },
+  "311": {
+    "id": 311,
+    "title": "AutoML: No Code No Problem",
+    "description": "",
+    "speakers": [
+      7
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Machine Learning"
+    ]
+  },
+  "312": {
+    "id": 312,
+    "title": "Everyday Animations in Android",
+    "description": "",
+    "speakers": [
+      8
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Android"
+    ]
+  },
+  "313": {
+    "id": 313,
+    "title": "Counting Sheep with Drones and AI",
+    "description": "",
+    "speakers": [
+      10
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Machine Learning"
+    ]
+  },
+  "314": {
+    "id": 314,
+    "title": "Living in a Material World: Everything Engineers + Designers Should Know About Google's Design System",
+    "description": "",
+    "speakers": [
+      2
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Material Design"
+    ]
+  },
+  "315": {
+    "id": 315,
+    "title": "Kotlin Up Java Down",
+    "description": "",
+    "speakers": [
+      13
+    ],
+    "language": "English",
+    "complexity": "",
+    "tags": [
+      "Android"
+    ]
+  }
+}
