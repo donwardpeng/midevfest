@@ -7,21 +7,21 @@
         {
           "name": "Google",
           "url": "https://developers.google.com/",
-          "logoUrl": "/logos/google.png",
+          "logoUrl": "images/partners/google.png",
           "width": 250,
           "height": 250
         },
         {
           "name": "Little Caesars",
           "url": "https://littlecaesars.com/en-us/",
-          "logoUrl": "/logos/Core_Caesar_RGB.png",
+          "logoUrl": "images/partners/Core_Caesar_RGB.png",
           "width": 250,
           "height": 250
         },
         {
           "name": "Arbormoon Software",
           "url": "http://www.arbormoon.com/",
-          "logoUrl": "/logos/arbormoonlogo-full.png",
+          "logoUrl": "images/partners/arbormoonlogo-full.png",
           "width": 250,
           "height": 250
         }

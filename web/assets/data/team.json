@@ -3,7 +3,7 @@
   "members": [
     {
       "name": "Todd DeLand",
-      "photoUrl": "/people/todd_deland.jpg",
+      "photoUrl": "images/team/people/todd_deland.jpg",
       "socials": [
         {
           "icon": "twitter",
@@ -21,7 +21,7 @@
     },
     {
       "name": "Dave Koziol",
-      "photoUrl": "/people/dave_koziol.jpg",
+      "photoUrl": "images/team/people/dave_koziol.jpg",
       "socials": [
         {
           "icon": "twitter",
@@ -34,7 +34,7 @@
     },
     {
       "name": "Jingran Wang",
-      "photoUrl": "/people/jingran_wang.jpeg",
+      "photoUrl": "images/team/people/jingran_wang.jpeg",
       "socials": [
         {
           "icon": "twitter",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Don Ward",
-      "photoUrl": "/people/don_ward.jpg",
+      "photoUrl": "images/team/people/don_ward.jpg",
       "socials": [
         {
           "icon": "twitter",
@@ -70,7 +70,7 @@
     },
     {
       "name": "Scott Weber",
-      "photoUrl": "/people/scott_weber.jpg",
+      "photoUrl": "images/team/people/scott_weber.jpg",
       "socials": [
         {
           "icon": "twitter",

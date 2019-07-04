@@ -1,5 +1,7 @@
 import 'package:flutter_web/material.dart';
 import 'dart:html';
+import '../helper/firebase_cloud_storage_resolver.dart';
+import '../values/constants.dart';
 
 class peopleCardView extends StatelessWidget {
   final double SMALL_ICON_SIZE = 30;
@@ -39,7 +41,10 @@ class peopleCardView extends StatelessWidget {
                   decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       image: new DecorationImage(
-                          fit: BoxFit.fill, image: AssetImage(_image))))),
+                          fit: BoxFit.fill,
+                          image: NetworkImage(FirebaseCloudStorageURLResolver()
+                              .getCloudStorageURL(
+                                  Constants.DEVFEST_BUCKET, _image)))))),
           Padding(
               padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
               child: Text(_name, style: Theme.of(context).textTheme.title)),

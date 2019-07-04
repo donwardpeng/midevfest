@@ -2,6 +2,9 @@ import 'package:flutter_web/material.dart';
 import '../../widgets/state_widget.dart';
 import '../../models/state.dart';
 import 'dart:html';
+import '../../helper/firebase_cloud_storage_resolver.dart';
+import '../../values/constants.dart';
+
 
 class SponsorsPageSmallBodyWidget extends StatelessWidget {
   StateModel appState;
@@ -29,8 +32,11 @@ class SponsorsPageSmallBodyWidget extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Image.asset(
-                                sponsor.logoUrl,
+                              Image.network(
+                                FirebaseCloudStorageURLResolver()
+                                    .getCloudStorageURL(
+                                        Constants.DEVFEST_BUCKET,
+                                        sponsor.logoUrl),
                                 width: sponsor.width.roundToDouble(),
                                 height: sponsor.height.roundToDouble(),
                                 alignment: Alignment.center,
