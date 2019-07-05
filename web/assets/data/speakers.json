@@ -1,285 +1,281 @@
 {
-    "1": {
-        "id": 1,
-        "featured": true,
-        "name": "Jason Rotole",
-        "title": "",
-        "company": "Google",
-        "companyLogo": "/images/logos/google.svg",
-        "country": "Detroit, Michigan, USA",
-        "photoUrl": "/images/people/jasonrotole.jpg",
-        "shortBio": "Jason Rotole has over 20 years of systems engineering and technical architecture experience...",
-        "bio": "Jason Rotole has over 20 years of systems engineering and technical architecture experience with a focus on data and analytics solutions in a private, hybrid and public cloud.  In his past, Jason has worked with large multinational organizations to solution and implement BigData solutions aimed at solving supply chain, customer and engineering challenges.  Jason currently works at Google helping organizations in the Great Lakes region to solve business problems using Google's cloud and analytic solutions.",
-        "tags": [
-            "Big Query",
-            "Machine Learning"
-        ],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "linkedin",
-                "name": "LinkedIn",
-                "link": "https://www.linkedin.com/in/jasonrotole/"
-            }
-        ]
+  "title": "Speakers",
+  "listOfSpeakers": [
+    {
+      "id": 1,
+      "featured": true,
+      "name": "Jason Rotole",
+      "title": "",
+      "company": "Google",
+      "companyLogo": "/images/logos/google.svg",
+      "country": "Detroit, Michigan, USA",
+      "photoUrl": "/images/people/jasonrotole.jpg",
+      "shortBio": "Jason Rotole has over 20 years of systems engineering and technical architecture experience...",
+      "bio": "Jason Rotole has over 20 years of systems engineering and technical architecture experience with a focus on data and analytics solutions in a private, hybrid and public cloud.  In his past, Jason has worked with large multinational organizations to solution and implement BigData solutions aimed at solving supply chain, customer and engineering challenges.  Jason currently works at Google helping organizations in the Great Lakes region to solve business problems using Google's cloud and analytic solutions.",
+      "tags": ["Big Query", "Machine Learning"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "linkedin",
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com/in/jasonrotole/"
+        }
+      ]
     },
-    "2": {
-        "id": 2,
-        "featured": true,
-        "name": "Scott Showalter",
-        "title": "",
-        "company": "Ford",
-        "companyLogo": "",
-        "country": "Detroit, Michigan, USA",
-        "photoUrl": "/images/people/scott_showalter.jpg",
-        "shortBio": "For over 10 years, Scott has been pushing teams to thrive at crafting experiences...",
-        "bio": "For over 10 years, Scott has been pushing teams to thrive at crafting experiences for users of digital and physical products in a diversity of industries including security, banking, dining, public safety, transit, mobility and social media. He does nothing without first making connections with real users, understanding their journey, empathizing with their needs, and considering how they think and work to accomplish their goals within the context of the problem space. Scott has a dynamic presentation style, delivering learning in many ways for many different types of learners, and he threads humor throughout everything he teaches to help drive every point home and make each memorable. He encourages the use of Lean UX alongside agile delivery to iteratively conceive, validate and deliver valuable components of an experience within complex adaptive systems. Scott speaks frequently at conferences, teaching people to build teams that can create the right products by showing them how to solve meaningful problems that people actually care about. He runs 4 active experience design  meetups across Ohio and Michigan that serve over a thousand designers, engineers and product leaders.",
-        "tags": ["Machine Learning"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/scottrageous"
-            }
-        ]
+    {
+      "id": 2,
+      "featured": true,
+      "name": "Scott Showalter",
+      "title": "",
+      "company": "Ford",
+      "companyLogo": "",
+      "country": "Detroit, Michigan, USA",
+      "photoUrl": "/images/people/scott_showalter.jpg",
+      "shortBio": "For over 10 years, Scott has been pushing teams to thrive at crafting experiences...",
+      "bio": "For over 10 years, Scott has been pushing teams to thrive at crafting experiences for users of digital and physical products in a diversity of industries including security, banking, dining, public safety, transit, mobility and social media. He does nothing without first making connections with real users, understanding their journey, empathizing with their needs, and considering how they think and work to accomplish their goals within the context of the problem space. Scott has a dynamic presentation style, delivering learning in many ways for many different types of learners, and he threads humor throughout everything he teaches to help drive every point home and make each memorable. He encourages the use of Lean UX alongside agile delivery to iteratively conceive, validate and deliver valuable components of an experience within complex adaptive systems. Scott speaks frequently at conferences, teaching people to build teams that can create the right products by showing them how to solve meaningful problems that people actually care about. He runs 4 active experience design  meetups across Ohio and Michigan that serve over a thousand designers, engineers and product leaders.",
+      "tags": ["Machine Learning"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/scottrageous"
+        }
+      ]
     },
-    "3": {
-        "id": 3,
-        "featured": true,
-        "name": "Scott Stoll",
-        "title": "",
-        "company": "Flutter Productions",
-        "companyLogo": "",
-        "country": "Greater Cleveland / Akron, Ohio. USA",
-        "photoUrl": "/images/people/scott_stoll.png",
-        "shortBio": "Scott is an American mobile application developer, author, speaker, trainer and Flutter evangelist.",
-        "bio": "Scott is an American mobile application developer, author, speaker, trainer and Flutter evangelist. A jack of most trades technical, his own past training ranges from 4000 hours of formal schooling as a U.S. Navy Electronics Technician to being a trained public speaker and self taught application developer.         Today, he is the creator and facilitator of \"HumpDayQandA\", a weekly \"Office Hours\" every Wednesday where anyone can come in for help with Flutter; which has advisers available in seven languages and counting. He is also one of several people behind the \"Flutter Community\" on Medium.com He is available for team training session and various talks including the ever-popular Flutter 101, \"Flutter: Beyond Hello World\", Animation, State Management Approaches and using Firebase with Flutter. He can be reached at scott@flutter.productions, @ScottS2017 on Twitter, is known as Scott in the FSG Slack group and can usually be found in the Flutter Community Zoom meeting at https://zoom.us/j/6592194465 , Monday - Friday between the hours of 12:00 and 21:00 UTC.",
-        "tags": ["Flutter"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/scottstoll2017"
-            }
-        ]
+    {
+      "id": 3,
+      "featured": true,
+      "name": "Scott Stoll",
+      "title": "",
+      "company": "Flutter Productions",
+      "companyLogo": "",
+      "country": "Greater Cleveland / Akron, Ohio. USA",
+      "photoUrl": "/images/people/scott_stoll.png",
+      "shortBio": "Scott is an American mobile application developer, author, speaker, trainer and Flutter evangelist.",
+      "bio": "Scott is an American mobile application developer, author, speaker, trainer and Flutter evangelist. A jack of most trades technical, his own past training ranges from 4000 hours of formal schooling as a U.S. Navy Electronics Technician to being a trained public speaker and self taught application developer.         Today, he is the creator and facilitator of \"HumpDayQandA\", a weekly \"Office Hours\" every Wednesday where anyone can come in for help with Flutter; which has advisers available in seven languages and counting. He is also one of several people behind the \"Flutter Community\" on Medium.com He is available for team training session and various talks including the ever-popular Flutter 101, \"Flutter: Beyond Hello World\", Animation, State Management Approaches and using Firebase with Flutter. He can be reached at scott@flutter.productions, @ScottS2017 on Twitter, is known as Scott in the FSG Slack group and can usually be found in the Flutter Community Zoom meeting at https://zoom.us/j/6592194465 , Monday - Friday between the hours of 12:00 and 21:00 UTC.",
+      "tags": ["Flutter"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/scottstoll2017"
+        }
+      ]
     },
-    "4": {
-        "id": 4,
-        "featured": true,
-        "name": "Keith Bourne",
-        "title": "",
-        "company": "Gradient Valley, Inc.",
-        "companyLogo": "",
-        "country": "Ann Arbor, Michigan, USA",
-        "photoUrl": "/images/people/keith_bourne.jpg",
-        "shortBio": "Keith Bourne is the founder of Gradient Valley, focused on machine learning consulting...",
-        "bio": "Keith Bourne is the founder of Gradient Valley, focused on machine learning consulting and development. He has been on the forefront of cutting edge technology since the 90’s, with extensive management and technical experience in web, mobile, and machine learning.  His focus has been on all aspects of building and selling incredible technology products and services, including a deep knowledge of user experience, agile programming methods, technology marketing, and most of the most popular programming languages and their capabilities. He holds an MBA from Babson College where he focused on technology entrepreneurship and marketing, which has provided a strong analytical base for approaching machine learning problems with an organization’s overall strategic direction in mind.  He has served in diverse roles in high growth start up environments, including Senior Software Engineer, Marketing Director, Chief Operations Officer, and Founder/Chief Executive Officer.",
-        "tags": ["GCP",
-            "Machine Learning"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/keithbourne"
-            },
-            {
-                "icon": "linkedin",
-                "name": "LinkedIn",
-                "link": "https://www.linkedin.com/in/keithbourne"
-            },
-            {
-                "icon": "website",
-                "name": "Website",
-                "link": "https://gradientvalley.com/"
-            }
-        ]
+    {
+      "id": 4,
+      "featured": true,
+      "name": "Keith Bourne",
+      "title": "",
+      "company": "Gradient Valley, Inc.",
+      "companyLogo": "",
+      "country": "Ann Arbor, Michigan, USA",
+      "photoUrl": "/images/people/keith_bourne.jpg",
+      "shortBio": "Keith Bourne is the founder of Gradient Valley, focused on machine learning consulting...",
+      "bio": "Keith Bourne is the founder of Gradient Valley, focused on machine learning consulting and development. He has been on the forefront of cutting edge technology since the 90’s, with extensive management and technical experience in web, mobile, and machine learning.  His focus has been on all aspects of building and selling incredible technology products and services, including a deep knowledge of user experience, agile programming methods, technology marketing, and most of the most popular programming languages and their capabilities. He holds an MBA from Babson College where he focused on technology entrepreneurship and marketing, which has provided a strong analytical base for approaching machine learning problems with an organization’s overall strategic direction in mind.  He has served in diverse roles in high growth start up environments, including Senior Software Engineer, Marketing Director, Chief Operations Officer, and Founder/Chief Executive Officer.",
+      "tags": ["GCP", "Machine Learning"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/keithbourne"
+        },
+        {
+          "icon": "linkedin",
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com/in/keithbourne"
+        },
+        {
+          "icon": "website",
+          "name": "Website",
+          "link": "https://gradientvalley.com/"
+        }
+      ]
     },
-    "5": {
-        "id": 5,
-        "featured": true,
-        "name": "Rick Ross",
-        "title": "",
-        "company": "Google",
-        "companyLogo": "/images/logos/google.svg",
-        "country": "Detroit, Michigan, USA",
-        "photoUrl": "/images/people/rick_ross.jpeg",
-        "shortBio": "Rick Ross works on the Google Cloud Platform team as a Customer Engineer where he helps...",
-        "bio": "Rick Ross works on the Google Cloud Platform team as a Customer Engineer where he helps Enterprises with their Cloud based Strategies. Leveraging his extensive architecture, development and consulting experience, he helps companies to understand the tradeoffs of various approaches. Rick is a published author and has spoken at technical conferences such as Dreamforce and MongoDB World in locations around the world.",
-        "tags": ["GCP"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/richardjrossjr"
-            }
-        ]
+    {
+      "id": 5,
+      "featured": true,
+      "name": "Rick Ross",
+      "title": "",
+      "company": "Google",
+      "companyLogo": "/images/logos/google.svg",
+      "country": "Detroit, Michigan, USA",
+      "photoUrl": "/images/people/rick_ross.jpeg",
+      "shortBio": "Rick Ross works on the Google Cloud Platform team as a Customer Engineer where he helps...",
+      "bio": "Rick Ross works on the Google Cloud Platform team as a Customer Engineer where he helps Enterprises with their Cloud based Strategies. Leveraging his extensive architecture, development and consulting experience, he helps companies to understand the tradeoffs of various approaches. Rick is a published author and has spoken at technical conferences such as Dreamforce and MongoDB World in locations around the world.",
+      "tags": ["GCP"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/richardjrossjr"
+        }
+      ]
     },
-    "6": {
-        "id": 6,
-        "featured": true,
-        "name": "Jeannette Washington",
-        "title": "",
-        "company": "Bearly Articulating",
-        "companyLogo": "",
-        "country": "Detroit, Michigan, USA",
-        "photoUrl": "/images/people/jeannette_washington.jpeg",
-        "shortBio": "I am a former Speech Language Pathologist. My expertise in the field of dyslexia...",
-        "bio": "I am a former Speech Language Pathologist. My expertise in the field of dyslexia has been solicited in The Washington Post alongside the cofounder of the Yale Center for Dyslexia & Creativity.  I have spoken at the Mississippi Dyslexia Symposium, Accessibility Camp Chicago and participated in a Diversity in WordPress Panel, to name a few. I boast the importance of accessibility, inclusivity and cognitive diversity in the tech industry.",
-        "tags": ["Accessibility"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/BearlyArtic"
-            }
-        ]
+    {
+      "id": 6,
+      "featured": true,
+      "name": "Jeannette Washington",
+      "title": "",
+      "company": "Bearly Articulating",
+      "companyLogo": "",
+      "country": "Detroit, Michigan, USA",
+      "photoUrl": "/images/people/jeannette_washington.jpeg",
+      "shortBio": "I am a former Speech Language Pathologist. My expertise in the field of dyslexia...",
+      "bio": "I am a former Speech Language Pathologist. My expertise in the field of dyslexia has been solicited in The Washington Post alongside the cofounder of the Yale Center for Dyslexia & Creativity.  I have spoken at the Mississippi Dyslexia Symposium, Accessibility Camp Chicago and participated in a Diversity in WordPress Panel, to name a few. I boast the importance of accessibility, inclusivity and cognitive diversity in the tech industry.",
+      "tags": ["Accessibility"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/BearlyArtic"
+        }
+      ]
     },
-    "7": {
-        "id": 7,
-        "featured": true,
-        "name": "Dan Baran",
-        "title": "",
-        "company": "GDG Chicago",
-        "companyLogo": "",
-        "country": "Chicago, Illinous, USA ",
-        "photoUrl": "/images/people/dan_baran.jpg",
-        "shortBio": "Dan Baran is the lead developer at Sun Chemical. He is focused on developing...",
-        "bio": "Dan Baran is the lead developer at Sun Chemical. He is focused on developing and maintaining their websites and apps. He is also the organizer of GDG Chicago. Technical related passions include data, data visualizations and has recently dug in to the world of Machine Learning.",
-        "tags": ["Machine Learning"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/defragger"
-            }
-        ]
+    {
+      "id": 7,
+      "featured": true,
+      "name": "Dan Baran",
+      "title": "",
+      "company": "GDG Chicago",
+      "companyLogo": "",
+      "country": "Chicago, Illinous, USA ",
+      "photoUrl": "/images/people/dan_baran.jpg",
+      "shortBio": "Dan Baran is the lead developer at Sun Chemical. He is focused on developing...",
+      "bio": "Dan Baran is the lead developer at Sun Chemical. He is focused on developing and maintaining their websites and apps. He is also the organizer of GDG Chicago. Technical related passions include data, data visualizations and has recently dug in to the world of Machine Learning.",
+      "tags": ["Machine Learning"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/defragger"
+        }
+      ]
     },
-    "8": {
-        "id": 8,
-        "featured": true,
-        "name": "David Truxall",
-        "title": "",
-        "company": "Perspecta",
-        "companyLogo": "",
-        "country": "Detroit, Michigan, USA",
-        "photoUrl": "/images/people/david_truxall.jpg",
-        "shortBio": "A long time resident of metro Detroit, Dr. Truxall has been slinging code for a...",
-        "bio": "A long time resident of metro Detroit, Dr. Truxall has been slinging code for a living since 1995, working with enterprise web technologies, modeling business processes, and building public web sites and mobile apps for some of the largest companies in North America. Always an enthusiast for troubleshooting systems, Trux has rescued numerous troubled applications and improved their performance. Co-author of the book _Android Best Practices_, he blogs about mobility and speaks at local conferences and user groups. Currently Trux is leading a development team at Perspecta, bringing mobile apps and their supporting systems to the public sector.",
-        "tags": ["Android"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/davetrux"
-            }
-        ]
+    {
+      "id": 8,
+      "featured": true,
+      "name": "David Truxall",
+      "title": "",
+      "company": "Perspecta",
+      "companyLogo": "",
+      "country": "Detroit, Michigan, USA",
+      "photoUrl": "/images/people/david_truxall.jpg",
+      "shortBio": "A long time resident of metro Detroit, Dr. Truxall has been slinging code for a...",
+      "bio": "A long time resident of metro Detroit, Dr. Truxall has been slinging code for a living since 1995, working with enterprise web technologies, modeling business processes, and building public web sites and mobile apps for some of the largest companies in North America. Always an enthusiast for troubleshooting systems, Trux has rescued numerous troubled applications and improved their performance. Co-author of the book _Android Best Practices_, he blogs about mobility and speaks at local conferences and user groups. Currently Trux is leading a development team at Perspecta, bringing mobile apps and their supporting systems to the public sector.",
+      "tags": ["Android"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/davetrux"
+        }
+      ]
     },
-    "9": {
-        "id": 9,
-        "featured": true,
-        "name": "Thomas Schultz",
-        "title": "",
-        "company": "Gradient Valley, Inc.",
-        "companyLogo": "",
-        "country": "Owosso, Michigan, USA",
-        "photoUrl": "/images/people/thomas_schultz.jpeg",
-        "shortBio": "I'm a Python engineer that is starting to dive into machine learning. I've worked for...",
-        "bio": "I'm a Python engineer that is starting to dive into machine learning. I've worked for several startups and also as a contractor for several years. I love machines with engines and machines you pedal. I'm always excited to talk about ideas and solutions to obstacles!",
-        "tags": ["Machine Learning"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/daspecster"
-            },
-            {
-                "icon": "website",
-                "name": "Website",
-                "link": "https://gradientvalley.com/"
-            }
-        ]
+    {
+      "id": 9,
+      "featured": true,
+      "name": "Thomas Schultz",
+      "title": "",
+      "company": "Gradient Valley, Inc.",
+      "companyLogo": "",
+      "country": "Owosso, Michigan, USA",
+      "photoUrl": "/images/people/thomas_schultz.jpeg",
+      "shortBio": "I'm a Python engineer that is starting to dive into machine learning. I've worked for...",
+      "bio": "I'm a Python engineer that is starting to dive into machine learning. I've worked for several startups and also as a contractor for several years. I love machines with engines and machines you pedal. I'm always excited to talk about ideas and solutions to obstacles!",
+      "tags": ["Machine Learning"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/daspecster"
+        },
+        {
+          "icon": "website",
+          "name": "Website",
+          "link": "https://gradientvalley.com/"
+        }
+      ]
     },
-    "10": {
-        "id": 10,
-        "featured": true,
-        "name": "Godfrey Nolan",
-        "title": "",
-        "company": "",
-        "companyLogo": "",
-        "country": "Detroit, Michigan, USA",
-        "photoUrl": "/images/people/godfrey_nolan.jpg",
-        "shortBio": "Godfrey Nolan is founder and president of RIIS LLC, a mobile development firm in Troy. He is also...",
-        "bio": "Godfrey Nolan is founder and president of RIIS LLC, a mobile development firm in Troy. He is also author of \"Agile Android\", \"Bulletproof Android\", \"Android Best Practices\", \"Decompiling Android\" and \"Decompiling Java.\" Godfrey has spoken at DroidCon, AnDevcon as well as JavaOne, ASP-Connections, VSLive, Codemash, Code PaLOUsa, 1DevDay and many local Java and .Net user groups on a wide range of topics such as Continuous Integration, Unit Testing and mobile security.",
-        "tags": ["Machine Learning"],
-        "badges": [],
-        "socials": []
+    {
+      "id": 10,
+      "featured": true,
+      "name": "Godfrey Nolan",
+      "title": "",
+      "company": "",
+      "companyLogo": "",
+      "country": "Detroit, Michigan, USA",
+      "photoUrl": "/images/people/godfrey_nolan.jpg",
+      "shortBio": "Godfrey Nolan is founder and president of RIIS LLC, a mobile development firm in Troy. He is also...",
+      "bio": "Godfrey Nolan is founder and president of RIIS LLC, a mobile development firm in Troy. He is also author of \"Agile Android\", \"Bulletproof Android\", \"Android Best Practices\", \"Decompiling Android\" and \"Decompiling Java.\" Godfrey has spoken at DroidCon, AnDevcon as well as JavaOne, ASP-Connections, VSLive, Codemash, Code PaLOUsa, 1DevDay and many local Java and .Net user groups on a wide range of topics such as Continuous Integration, Unit Testing and mobile security.",
+      "tags": ["Machine Learning"],
+      "badges": [],
+      "socials": []
     },
-    "11": {
-        "id": 11,
-        "featured": true,
-        "name": "Jingran Wang",
-        "title": "",
-        "company": "GDG Ann Arbor",
-        "companyLogo": "",
-        "country": "Ann Arbor, Michigan, USA",
-        "photoUrl": "/images/people/jingran_wang.jpeg",
-        "shortBio": "Android developer for 6 years, currently working with Flutter. I'm a big advocate of UX/UI in...",
-        "bio": "Android developer for 6 years, currently working with Flutter. I'm a big advocate of UX/UI in my work. GDG Ann Arbor Co-organizer, 5x I/O attendee.",
-        "tags": ["Flutter"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "twitter",
-                "name": "Twitter",
-                "link": "https://twitter.com/hikaritenchi"
-            }
-        ]
+    {
+      "id": 11,
+      "featured": true,
+      "name": "Jingran Wang",
+      "title": "",
+      "company": "GDG Ann Arbor",
+      "companyLogo": "",
+      "country": "Ann Arbor, Michigan, USA",
+      "photoUrl": "/images/people/jingran_wang.jpeg",
+      "shortBio": "Android developer for 6 years, currently working with Flutter. I'm a big advocate of UX/UI in...",
+      "bio": "Android developer for 6 years, currently working with Flutter. I'm a big advocate of UX/UI in my work. GDG Ann Arbor Co-organizer, 5x I/O attendee.",
+      "tags": ["Flutter"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/hikaritenchi"
+        }
+      ]
     },
-    "12": {
-        "id": 12,
-        "featured": true,
-        "name": "Kevin Maloy",
-        "title": "",
-        "company": "",
-        "companyLogo": "",
-        "country": "Washington D.C. Metro Area, USA",
-        "photoUrl": "/images/people/kevin_maloy.png",
-        "shortBio": "Kevin Maloy is a coder and a practicing, board certified Emergency Medicine physician with an interest...",
-        "bio": "Kevin Maloy is a coder and a practicing, board certified Emergency Medicine physician with an interest in end-user medical data visualization and data mining.  He likes everything js and open APIs like FHIR.  He also likes startups and teaches medical students how to ideate and hire to realize their tech ideas (see http://www.hackinghealthcaredc.org/).  He recently moved to Michigan, but still keeps ties to DC.",
-        "tags": ["FHIR"],
-        "badges": [],
-        "socials": [
-            {
-                "icon": "linkedin",
-                "name": "LinkedIn",
-                "link": "https://www.linkedin.com/in/maloykr"
-            }
-        ]
+    {
+      "id": 12,
+      "featured": true,
+      "name": "Kevin Maloy",
+      "title": "",
+      "company": "",
+      "companyLogo": "",
+      "country": "Washington D.C. Metro Area, USA",
+      "photoUrl": "/images/people/kevin_maloy.png",
+      "shortBio": "Kevin Maloy is a coder and a practicing, board certified Emergency Medicine physician with an interest...",
+      "bio": "Kevin Maloy is a coder and a practicing, board certified Emergency Medicine physician with an interest in end-user medical data visualization and data mining.  He likes everything js and open APIs like FHIR.  He also likes startups and teaches medical students how to ideate and hire to realize their tech ideas (see http://www.hackinghealthcaredc.org/).  He recently moved to Michigan, but still keeps ties to DC.",
+      "tags": ["FHIR"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "linkedin",
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com/in/maloykr"
+        }
+      ]
     },
-    "13": {
-        "id": 13,
-        "featured": true,
-        "name": "Ron Daugherty",
-        "title": "",
-        "company": "",
-        "companyLogo": "",
-        "country": "Ann Arbor, Michigan, USA",
-        "photoUrl": "",
-        "shortBio": "",
-        "bio": "",
-        "tags": ["Android"],
-        "badges": [],
-        "socials": [
-            {
-            }
-        ]
+    {
+      "id": 13,
+      "featured": true,
+      "name": "Ron Daugherty",
+      "title": "",
+      "company": "",
+      "companyLogo": "",
+      "country": "Ann Arbor, Michigan, USA",
+      "photoUrl": "",
+      "shortBio": "",
+      "bio": "",
+      "tags": ["Android"],
+      "badges": [],
+      "socials": [{}]
     }
+  ]
 }
