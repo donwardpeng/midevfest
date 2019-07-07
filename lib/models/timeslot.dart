@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import './session.dart';
 
 part 'timeslot.g.dart';
 
@@ -8,7 +7,7 @@ class Timeslot {
   Timeslot({this.startTime, this.endTime, this.sessions});
   final String startTime;
   final String endTime;
-  final List<Session> sessions;
+  final List<List<int>> sessions;
   factory Timeslot.fromJson(Map<String, dynamic> json) => _$TimeslotFromJson(json);
   Map<String, dynamic> toJson() => _$TimeslotToJson(this);
 }

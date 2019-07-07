@@ -19,7 +19,7 @@ class Speaker {
       this.tags,
       this.badges,
       this.socials});
-  final String id;
+  final int id;
   final bool featured;
   final String name;
   final String title;

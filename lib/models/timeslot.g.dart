@@ -11,8 +11,7 @@ Timeslot _$TimeslotFromJson(Map<String, dynamic> json) {
       startTime: json['startTime'] as String,
       endTime: json['endTime'] as String,
       sessions: (json['sessions'] as List)
-          ?.map((e) =>
-              e == null ? null : Session.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => (e as List)?.map((e) => e as int)?.toList())
           ?.toList());
 }
 

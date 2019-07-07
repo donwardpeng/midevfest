@@ -8,13 +8,10 @@ part of 'session.dart';
 
 Session _$SessionFromJson(Map<String, dynamic> json) {
   return Session(
-      id: json['id'] as String,
+      id: json['id'] as int,
       title: json['title'] as String,
       description: json['description'] as String,
-      speakers: (json['speakers'] as List)
-          ?.map((e) =>
-              e == null ? null : Speaker.fromJson(e as Map<String, dynamic>))
-          ?.toList(),
+      speakers: (json['speakers'] as List)?.map((e) => e as int)?.toList(),
       language: json['language'] as String,
       complexity: json['complexity'] as String,
       tags: (json['tags'] as List)?.map((e) => e as String)?.toList());

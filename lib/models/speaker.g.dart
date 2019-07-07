@@ -8,7 +8,7 @@ part of 'speaker.dart';
 
 Speaker _$SpeakerFromJson(Map<String, dynamic> json) {
   return Speaker(
-      id: json['id'] as String,
+      id: json['id'] as int,
       featured: json['featured'] as bool,
       name: json['name'] as String,
       title: json['title'] as String,
