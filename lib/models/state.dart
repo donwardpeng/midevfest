@@ -13,8 +13,8 @@ class StateModel {
   String currentPage;
   Team currentTeam;
   SponsorList sponsorList;
-  Map<String, Speaker> speakers; //key = id
-  Map<String, Session> sessions; //key = id
+  Map<int, Speaker> speakers; //key = id
+  Map<int, Session> sessions; //key = id
   GeneralInfo generalInfo;
   Map<String, Timeslot> timeslots; //key = start time
 

@@ -9,6 +9,9 @@ import './models/sponsor_list.dart';
 import './models/site_data.dart';
 import './models/speakers.dart';
 import './models/sessions.dart';
+import './models/session.dart';
+import './models/speaker.dart';
+import './models/timeslot.dart';
 
 import 'dart:convert';
 import 'dart:html';
@@ -29,8 +32,9 @@ void main() {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[CircularProgressIndicator(),
-                  // OutlineButton(child:Text('Loading'), onPressed: (){})
+                  children: <Widget>[
+                    CircularProgressIndicator(),
+                    // OutlineButton(child:Text('Loading'), onPressed: (){})
                   ]),
             );
     },
@@ -96,16 +100,52 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // set the value of the team for the entire app
-    StateWidget.of(context).state.currentTeam = theData.theTeam;
-    StateWidget.of(context).state.sponsorList = theData.theSponsors;
-
-    theData = null;
+    
+    mapDataToAppState(context);
 
     return MaterialApp(
       title: EN_Strings.devFestName,
       theme: buildTheme(),
       home: MainPage(title: EN_Strings.devFestName),
     );
+  }
+
+  void mapDataToAppState(BuildContext context) {
+    // set the value of the team for the entire app
+    StateWidget.of(context).state.currentTeam = theData.theTeam;
+    StateWidget.of(context).state.sponsorList = theData.theSponsors;
+    StateWidget.of(context).state.generalInfo = theData.theSchedule.generalInfo;
+
+    //map out the speakers
+    StateWidget.of(context).state.speakers = new Map<int, Speaker>();
+    for (Speaker speaker in theData.theSpeakers.listOfSpeakers) {
+      StateWidget.of(context)
+          .state
+          .speakers
+          .putIfAbsent(speaker.id, () => speaker);
+      print('added speaker id = ' + speaker.id.toString());
+    }
+
+    //map out the sessions
+    StateWidget.of(context).state.sessions = new Map<int, Session>();
+    for (Session session in theData.theSessions.listOfSessions) {
+      StateWidget.of(context)
+          .state
+          .sessions
+          .putIfAbsent(session.id, () => session);
+      print('added session id = ' + session.id.toString());
+    }
+
+    //map out the timeslots
+    StateWidget.of(context).state.timeslots = new Map<String, Timeslot>();
+    for (Timeslot timeslot in theData.theSchedule.timeslots) {
+      StateWidget.of(context)
+          .state
+          .timeslots
+          .putIfAbsent(timeslot.startTime, () => timeslot);
+      print('added timeslot start time= ' + timeslot.startTime);
+    }
+
+    theData = null;
   }
 }
