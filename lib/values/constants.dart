@@ -3,7 +3,7 @@ class Constants {
   static String DEVFEST_BUCKET = 'midevfest';
 
   //Flag to read from local json files vs Firebase Cloud Storage
-  static bool readJsonDataLocally = false; 
+  static bool readJsonDataLocally = true; 
 
   //Relative Paths to json files in Firebase Cloud Storage
   static String TEAM_DATA_URL = readJsonDataLocally ? 'assets/data/team.json': 'team.json';
@@ -21,6 +21,7 @@ class Constants {
     'main': 'main',
     'team': 'team',
     'code': 'code',
-    'sponsors': 'sponsors'
+    'sponsors': 'sponsors',
+    'speakers': 'speakers',
   };
 }

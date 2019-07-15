@@ -27,7 +27,7 @@ class SmallFooterWidget extends StatelessWidget {
                           'Powered by Flutter for Web',
                           style: Theme.of(context)
                               .textTheme
-                              .body1
+                              .display4
                               .apply(color: Colors.white),
                         )
                       ])),

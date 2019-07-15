@@ -8,6 +8,7 @@ import '../ui/team_page.dart';
 import '../transitions/scale_route.dart';
 import '../values/constants.dart';
 import '../ui/sponsors_page.dart';
+import '../ui/speakers_page.dart';
 
 class header_button extends StatelessWidget {
   String _buttonText = '';
@@ -38,10 +39,12 @@ class header_button extends StatelessWidget {
         child: FlatButton(
             child: Text(
               _buttonText,
-              style: _buttonTextStyle != null ? _buttonTextStyle : Theme.of(context)
-                  .textTheme
-                  .subtitle
-                  .apply(color: Colors.white),
+              style: _buttonTextStyle != null
+                  ? _buttonTextStyle
+                  : Theme.of(context)
+                      .textTheme
+                      .subtitle
+                      .apply(color: Colors.white),
             ),
             onPressed: () {
               if (_url != null && _url.contains('http')) {
@@ -54,8 +57,15 @@ class header_button extends StatelessWidget {
                 Navigator.push(context,
                     ScaleRoute(page: TeamPage(title: EN_Strings.devFestName)));
               } else if (_route == Constants.PAGES['sponsors']) {
-                Navigator.push(context,
-                    ScaleRoute(page: SponsorsPage(title: EN_Strings.devFestName)));
+                Navigator.push(
+                    context,
+                    ScaleRoute(
+                        page: SponsorsPage(title: EN_Strings.devFestName)));
+              } else if (_route == Constants.PAGES['speakers']) {
+                Navigator.push(
+                    context,
+                    ScaleRoute(
+                        page: SpeakerPage(title: EN_Strings.devFestName)));
               }
             }));
   }

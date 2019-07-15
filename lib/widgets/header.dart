@@ -32,14 +32,19 @@ class Header {
           EN_Strings.devFestName,
           style: Theme.of(theContext)
               .textTheme
-              .subtitle
+              .display4
               .apply(color: Colors.white),
         ),
         smallChild: Text(''),
       ),
       actions: <Widget>[
         header_button(
-          buttonText: 'The Team',
+          buttonText: 'Speakers',
+          route: Constants.PAGES['speakers'],
+          currentPage: appState.currentPage,
+        ),
+        header_button(
+          buttonText: 'Team',
           route: Constants.PAGES['team'],
           currentPage: appState.currentPage,
         ),

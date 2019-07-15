@@ -42,6 +42,14 @@ class DevFestDrawer {
                 .display1
                 .apply(color: Colors.blue)),
         header_button(
+            buttonText: 'speakers',
+            route: Constants.PAGES['speakers'],
+            currentPage: appState.currentPage,
+            buttonTextStyle: Theme.of(theContext)
+                .textTheme
+                .display1
+                .apply(color: Colors.blue)),
+        header_button(
             buttonText: 'team',
             route: Constants.PAGES['team'],
             currentPage: appState.currentPage,

@@ -26,7 +26,7 @@ class LargeFooterWidget extends StatelessWidget {
                       'Powered by Flutter for Web',
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .display4
                           .apply(color: Colors.white),
                     )
                   ])),
@@ -36,7 +36,7 @@ class LargeFooterWidget extends StatelessWidget {
                     EN_Strings.devFestMainPageFooterText,
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .display4
                         .apply(color: Colors.white),
                   )),
             ]));

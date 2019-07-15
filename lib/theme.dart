@@ -20,21 +20,28 @@ ThemeData buildTheme() {
         //use this for the people's names
         title: base.title.copyWith(
           fontFamily: 'Roboto-Light',
-          fontSize: 24.0,
+          fontSize: 28.0,
           color: Colors.black,
         ),
-        //use this for the header and footer
+        //use this for subtitle's on cards
         subtitle: base.subtitle.copyWith(
           fontFamily: 'Roboto-Light',
-          fontSize: 20.0,
+          fontSize: 24.0,
           color: Colors.black,
         ),
         //use this for cards
         body1: base.body1.copyWith(
-          fontFamily: 'Roboto-Regular',
-          fontSize: 22.0,
+          fontFamily: 'Roboto-Light',
+          fontSize: 20.0,
           color: Colors.black,
         ),
+        //use this for the header and footer
+        display4: base.display4.copyWith(
+          fontFamily: 'Roboto-Light',
+          fontSize: 20.0,
+          color: Colors.black,
+        ),
+
         button: base.button.copyWith(
             fontFamily: 'Roboto-Light', fontSize: 16.0, color: Colors.white));
     return newTheme;
