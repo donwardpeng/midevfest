@@ -13,15 +13,24 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
         .speakers
         .forEach((key, speaker) => {speakersList.add(speaker)});
 
+    // set the number of elements in the gridview crossaxis count
+    int gridViewCount = 4;
+    var size = MediaQuery.of(context).size;
+    //make the cards 1/2 the height of the view
+    final double cardHeight = size.height / 2;
+    //make the card the scaled to the width divided by the number of gridview elements across
+    final double cardWidth = size.width / gridViewCount;
+
     return Stack(children: <Widget>[
       Padding(
           padding: EdgeInsets.fromLTRB(24, 8, 8, 24),
           child: Text('Our Speakers',
               style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(8, 64, 8, 0),
+          padding: EdgeInsets.fromLTRB(8, 72, 8, 0),
           child: GridView.count(
-              crossAxisCount: 3,
+              crossAxisCount: gridViewCount,
+              childAspectRatio: (cardWidth/cardHeight),
               children: speakersList
                   .map((speaker) => FlipCard(
                       direction: FlipDirection.VERTICAL, // default

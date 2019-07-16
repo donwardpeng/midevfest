@@ -19,7 +19,7 @@ class SponsorsPageLargeBodyWidget extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(24, 8, 8, 16),
           child: Text('Sponsors', style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(8, 64, 8, 24),
+          padding: EdgeInsets.fromLTRB(8, 72, 8, 24),
           child: GridView.count(
               crossAxisCount: 3,
               children: appState.sponsorList.levels[0].logos

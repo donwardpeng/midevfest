@@ -13,7 +13,7 @@ class TeamPageLargeBodyWidget extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(24, 8, 8, 4),
           child: Text('The Team', style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(8, 64, 8, 0),
+          padding: EdgeInsets.fromLTRB(8, 72, 8, 0),
           child: GridView.count(
               crossAxisCount: 4,
               children: StateWidget.of(context)
