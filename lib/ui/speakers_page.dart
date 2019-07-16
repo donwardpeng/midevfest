@@ -57,7 +57,7 @@ class SpeakerPageState extends State<SpeakerPage> {
             largeChild: LargeFooterWidget(), smallChild: SmallFooterWidget()),
         body: ResponsiveLayout(
           largeChild: SpeakerPageLargeBodyWidget(),
-          smallChild: TeamPageSmallBodyWidget(),
+          smallChild: SpeakerPageSmallBodyWidget(),
         ));
   }
 }

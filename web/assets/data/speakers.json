@@ -4,14 +4,35 @@
     {
       "id": 1,
       "featured": true,
+      "name": "Gary Coburn",
+      "title": "",
+      "company": "Google",
+      "companyLogo": "",
+      "country": "",
+      "photoUrl": "images/speakers/people/gary_coburn.jpeg",
+      "shortBio": "Gary is a Cloud Customer Engineer within Google's Customer Engineering group.",
+      "bio": "Gary is a Cloud Customer Engineer within Google's Customer Engineering group. In the past he has been purely infrastructure focused, architecting the entire storage and virtualization environment for a global manufacturing company through custom Dev/Ops and application development. He now spends time working in West Michigan to enable enterprise customers to utilize all of the great technology that Google has.",
+      "tags": ["GCP"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/coburngary"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "featured": true,
       "name": "Scott Stoll",
       "title": "",
       "company": "Flutter Productions",
       "companyLogo": "",
       "country": "Greater Cleveland / Akron, Ohio. USA",
-      "photoUrl": "/images/people/scott_stoll.png",
+      "photoUrl": "images/speakers/people/scott_stoll.png",
       "shortBio": "Scott is an American mobile application developer, author, speaker, trainer and Flutter evangelist.",
-      "bio": "Scott is an American mobile application developer, author, speaker, trainer and Flutter evangelist. A jack of most trades technical, his own past training ranges from 4000 hours of formal schooling as a U.S. Navy Electronics Technician to being a trained public speaker and self taught application developer.         Today, he is the creator and facilitator of \"HumpDayQandA\", a weekly \"Office Hours\" every Wednesday where anyone can come in for help with Flutter; which has advisers available in seven languages and counting. He is also one of several people behind the \"Flutter Community\" on Medium.com He is available for team training session and various talks including the ever-popular Flutter 101, \"Flutter: Beyond Hello World\", Animation, State Management Approaches and using Firebase with Flutter. He can be reached at scott@flutter.productions, @ScottS2017 on Twitter, is known as Scott in the FSG Slack group and can usually be found in the Flutter Community Zoom meeting at https://zoom.us/j/6592194465 , Monday - Friday between the hours of 12:00 and 21:00 UTC.",
+      "bio": "Scott is an American mobile application developer, author, speaker, trainer and Flutter evangelist. A jack of most trades technical, his own past training ranges from 4000 hours of formal schooling as a U.S. Navy Electronics Technician to being a trained public speaker and self taught application developer. Today, he is the creator and facilitator of \"HumpDayQandA\", a weekly \"Office Hours\" every Wednesday where anyone can come in for help with Flutter; which has advisers available in seven languages and counting. He is also one of several people behind the \"Flutter Community\" on Medium.com He is available for team training session and various talks including the ever-popular Flutter 101, \"Flutter: Beyond Hello World\", Animation, State Management Approaches and using Firebase with Flutter.",
       "tags": ["Flutter"],
       "badges": [],
       "socials": [
@@ -23,14 +44,14 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "featured": true,
       "name": "Godfrey Nolan",
       "title": "Founder and President of RIIS, LLC",
       "company": "RIIS",
       "companyLogo": "",
       "country": "Detroit, Michigan, USA",
-      "photoUrl": "/images/people/godfrey_nolan.jpg",
+      "photoUrl": "images/speakers/people/godfrey_nolan.jpg",
       "shortBio": "Godfrey Nolan is founder and president of RIIS LLC, a mobile development firm in Troy. He is also...",
       "bio": "Godfrey Nolan is founder and president of RIIS LLC, a mobile development firm in Troy. He is also author of \"Agile Android\", \"Bulletproof Android\", \"Android Best Practices\", \"Decompiling Android\" and \"Decompiling Java.\" Godfrey has spoken at DroidCon, AnDevcon as well as JavaOne, ASP-Connections, VSLive, Codemash, Code PaLOUsa, 1DevDay and many local Java and .Net user groups on a wide range of topics such as Continuous Integration, Unit Testing and mobile security.",
       "tags": ["Machine Learning"],

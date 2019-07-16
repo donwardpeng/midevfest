@@ -15,13 +15,13 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
 
     return Stack(children: <Widget>[
       Padding(
-          padding: EdgeInsets.fromLTRB(24, 8, 8, 4),
+          padding: EdgeInsets.fromLTRB(24, 8, 8, 24),
           child: Text('Our Speakers',
               style: Theme.of(context).textTheme.headline)),
       Padding(
           padding: EdgeInsets.fromLTRB(8, 64, 8, 0),
           child: GridView.count(
-              crossAxisCount: 4,
+              crossAxisCount: 3,
               children: speakersList
                   .map((speaker) => FlipCard(
                       direction: FlipDirection.VERTICAL, // default
@@ -34,22 +34,23 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
                       back: Padding(
                           padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
                           child: Card(
-                              child: SingleChildScrollView(
-                                  child: Column(
+                              child: Scrollbar(
+                                  child: SingleChildScrollView(
+                                      child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Padding(
-                                  padding: EdgeInsets.all(10),
+                                  padding: EdgeInsets.all(16),
                                   child: Text('About ' + speaker.name,
                                       style: Theme.of(context)
                                           .textTheme
                                           .subtitle)),
                               Padding(
-                                  padding: EdgeInsets.all(10),
+                                  padding: EdgeInsets.all(16),
                                   child: Text(speaker.bio,
-                                      style: Theme.of(context).textTheme.body1))
+                                      style: Theme.of(context).textTheme.body1, textAlign: TextAlign.justify,))
                             ],
-                          ))))))
+                          )))))))
                   .toList())),
     ]);
   }
