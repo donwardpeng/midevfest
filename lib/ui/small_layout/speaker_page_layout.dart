@@ -1,13 +1,12 @@
 import 'package:flutter_web/material.dart';
 import '../../widgets/speaker_card_front.dart';
-import '../../widgets/flip_card.dart';
 import '../../widgets/state_widget.dart';
 import '../../models/speaker.dart';
 
 class SpeakerPageSmallBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Speaker> speakersList = new List<Speaker>();
+    List<Speaker> speakersList = List<Speaker>();
     StateWidget.of(context)
         .state
         .speakers
@@ -16,8 +15,8 @@ class SpeakerPageSmallBodyWidget extends StatelessWidget {
 // set the number of elements in the gridview crossaxis count
     int gridViewCount = 1;
     var size = MediaQuery.of(context).size;
-    //make the cards 2 the height of the view
-    final double cardHeight = size.height / 2;
+    //make the cards the height of the view
+    final double cardHeight = size.height/2;
     //make the card the scaled to the width divided by the number of gridview elements across
     final double cardWidth = size.width / gridViewCount;
 
@@ -27,7 +26,7 @@ class SpeakerPageSmallBodyWidget extends StatelessWidget {
           child: Text('Our Speakers',
               style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(8, 64, 8, 0),
+          padding: EdgeInsets.fromLTRB(8, 84, 8, 0),
           child: GridView.count(
               crossAxisCount: gridViewCount,
               childAspectRatio: (cardWidth / cardHeight),
@@ -37,7 +36,7 @@ class SpeakerPageSmallBodyWidget extends StatelessWidget {
                       speaker: speaker,
                       twitter: getSocialURL('Twitter', speaker),
                       github: getSocialURL('GitHub', speaker),
-                      smallCard: false,
+                      smallCard: true,
                     ),
                   )
                   .toList())),

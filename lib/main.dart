@@ -19,7 +19,7 @@ import './values/constants.dart';
 import './helper/firebase_cloud_storage_resolver.dart';
 
 void main() {
-  runApp(new StateWidget(
+  runApp(StateWidget(
       child: FutureBuilder<SiteData>(
     future: readFromJson(),
     builder: (BuildContext context, AsyncSnapshot<SiteData> snapshot) {
@@ -117,7 +117,7 @@ class MyApp extends StatelessWidget {
     StateWidget.of(context).state.generalInfo = theData.theSchedule.generalInfo;
 
     //map out the speakers
-    StateWidget.of(context).state.speakers = new Map<int, Speaker>();
+    StateWidget.of(context).state.speakers = Map<int, Speaker>();
     for (Speaker speaker in theData.theSpeakers.listOfSpeakers) {
       StateWidget.of(context)
           .state
@@ -127,7 +127,7 @@ class MyApp extends StatelessWidget {
     }
 
     //map out the sessions
-    StateWidget.of(context).state.sessions = new Map<int, Session>();
+    StateWidget.of(context).state.sessions = Map<int, Session>();
     for (Session session in theData.theSessions.listOfSessions) {
       StateWidget.of(context)
           .state
@@ -137,7 +137,7 @@ class MyApp extends StatelessWidget {
     }
 
     //map out the timeslots
-    StateWidget.of(context).state.timeslots = new Map<String, Timeslot>();
+    StateWidget.of(context).state.timeslots = Map<String, Timeslot>();
     for (Timeslot timeslot in theData.theSchedule.timeslots) {
       StateWidget.of(context)
           .state

@@ -37,7 +37,7 @@ class TeamPageState extends State<TeamPage> {
     appState.currentPage = Constants.PAGES['team'];
     bool displayDrawer = appState.isSmallScreen(context);
     final GlobalKey<ScaffoldState> _scaffoldKey =
-        new GlobalKey<ScaffoldState>();
+        GlobalKey<ScaffoldState>();
 
     return Scaffold(
         key: _scaffoldKey,

@@ -1,6 +1,4 @@
 import 'package:midevfest/models/general_info.dart';
-import 'package:midevfest/models/schedule.dart';
-import 'package:midevfest/models/sessions.dart';
 
 import 'team.dart';
 import 'sponsor_list.dart';

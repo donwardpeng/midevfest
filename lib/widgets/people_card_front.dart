@@ -13,6 +13,7 @@ class peopleCardView extends StatelessWidget {
   String _twitter;
   String _github;
   bool _smallCard;
+
   peopleCardView(
       {String name,
       String image,
@@ -25,8 +26,9 @@ class peopleCardView extends StatelessWidget {
     _github = github;
     _smallCard = smallCard;
     _iconSize = _smallCard ? SMALL_ICON_SIZE : LARGE_ICON_SIZE;
-    _headshotSize = smallCard ? 100 : 150;
+    _headshotSize = smallCard ? 200 : 175;
   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -36,12 +38,12 @@ class peopleCardView extends StatelessWidget {
           Padding(
               padding: EdgeInsets.all(15),
               child: Container(
-                  width: _headshotSize,
+                  width: double.infinity,
                   height: _headshotSize,
-                  decoration: new BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: new DecorationImage(
-                          fit: BoxFit.fill,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
                           image: NetworkImage(FirebaseCloudStorageURLResolver()
                               .getCloudStorageURL(
                                   Constants.DEVFEST_BUCKET, _image)))))),
@@ -51,38 +53,44 @@ class peopleCardView extends StatelessWidget {
           Padding(
               padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   (_twitter != null && _twitter.contains('twitter'))
-                      ? InkWell(
-                          child: Image.asset(
-                            'twitter.png',
-                            height: _iconSize,
-                            width: _iconSize,
-                          ),
-                          onTap: () {
-                            window.open(_twitter, 'Twitter');
-                          },
-                        )
+                      ? Padding(
+                          padding: EdgeInsets.only(left: 8, right: 8),
+                          child: InkWell(
+                            child: Image.asset(
+                              'twitter.png',
+                              height: _iconSize,
+                              width: _iconSize,
+                            ),
+                            onTap: () {
+                              window.open(_twitter, 'Twitter');
+                            },
+                          ))
                       : Container(),
                   (_github != null && _github.contains('github'))
-                      ? InkWell(
-                          child: Image.asset(
-                            'github.png',
-                            height: _iconSize,
-                            width: _iconSize,
-                          ),
-                          onTap: () {
-                            window.open(_github, 'Github');
-                          },
-                        )
+                      ? Padding(
+                          padding: EdgeInsets.only(left: 8, right: 8),
+                          child: InkWell(
+                            child: Image.asset(
+                              'github.png',
+                              height: _iconSize,
+                              width: _iconSize,
+                            ),
+                            onTap: () {
+                              window.open(_github, 'Github');
+                            },
+                          ))
                       : Container(),
                   InkWell(
-                    child: Image.asset(
-                      '/icons/more_vert.png',
-                      height: _iconSize,
-                      width: _iconSize,
-                    ),
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 8, right: 8),
+                        child: Image.asset(
+                          '/icons/more_vert.png',
+                          height: _iconSize,
+                          width: _iconSize,
+                        )),
                   ),
                 ],
               )),

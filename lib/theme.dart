@@ -4,7 +4,7 @@ ThemeData buildTheme() {
   // We're going to define all of our font styles
   // in this method:
   TextTheme _buildTextTheme(TextTheme base) {
-    TextTheme newTheme = new TextTheme();
+    TextTheme newTheme = TextTheme();
 
     newTheme = base.copyWith(
         headline: base.headline.copyWith(

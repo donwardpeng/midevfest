@@ -49,7 +49,7 @@ class HomePageState extends State<MainPage> {
     appState.currentPage = Constants.PAGES['main'];
     bool displayDrawer = appState.isSmallScreen(context);
     final GlobalKey<ScaffoldState> _scaffoldKey =
-        new GlobalKey<ScaffoldState>();
+        GlobalKey<ScaffoldState>();
 
     return Scaffold(
         key: _scaffoldKey,

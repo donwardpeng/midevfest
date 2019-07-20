@@ -1,4 +1,3 @@
-import 'dart:html';
 import '../values/constants.dart';
 
 // This helper class resolves the URL to a resource in Firebase Cloud Storage to be able to retrieve it.

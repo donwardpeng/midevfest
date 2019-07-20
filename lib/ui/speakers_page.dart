@@ -37,7 +37,7 @@ class SpeakerPageState extends State<SpeakerPage> {
     appState.currentPage = Constants.PAGES['speakers'];
     bool displayDrawer = appState.isSmallScreen(context);
     final GlobalKey<ScaffoldState> _scaffoldKey =
-        new GlobalKey<ScaffoldState>();
+        GlobalKey<ScaffoldState>();
 
     return Scaffold(
         key: _scaffoldKey,

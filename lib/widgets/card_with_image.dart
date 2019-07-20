@@ -1,5 +1,4 @@
 import 'package:flutter_web/material.dart';
-import 'dart:html';
 
 class ImageCardView extends StatelessWidget {
   String _image;

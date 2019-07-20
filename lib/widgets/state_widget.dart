@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:flutter_web/foundation.dart';
 import 'package:flutter_web/material.dart';
 import '../models/state.dart';
@@ -21,7 +20,7 @@ class StateWidget extends StatefulWidget {
   }
 
   @override
-  _StateWidgetState createState() => new _StateWidgetState();
+  _StateWidgetState createState() => _StateWidgetState();
 }
 
 class _StateWidgetState extends State<StateWidget> {
@@ -33,13 +32,13 @@ class _StateWidgetState extends State<StateWidget> {
     if (widget.state != null) {
       state = widget.state;
     } else {
-      state = new StateModel(currentPage: 'main');
+      state = StateModel(currentPage: 'main');
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return new _StateDataWidget(
+    return _StateDataWidget(
       data: this,
       child: widget.child,
     );

@@ -29,7 +29,7 @@ class header_button extends StatelessWidget {
     this._url = url;
     this._urlName = urlName;
     this._route = route;
-    this._currentPage = currentPage;
+    this._currentPage = _currentPage;
     this._buttonTextStyle = buttonTextStyle;
   }
 

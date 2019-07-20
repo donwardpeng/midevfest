@@ -30,7 +30,7 @@ class SponsorPageState extends State<SponsorsPage> {
     appState.currentPage = Constants.PAGES['sponsors'];
     bool displayDrawer = appState.isSmallScreen(context);
     final GlobalKey<ScaffoldState> _scaffoldKey =
-        new GlobalKey<ScaffoldState>();
+        GlobalKey<ScaffoldState>();
 
     return Scaffold(
         key: _scaffoldKey,

@@ -7,7 +7,7 @@ import '../../models/speaker.dart';
 class SpeakerPageLargeBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Speaker> speakersList = new List<Speaker>();
+    List<Speaker> speakersList = List<Speaker>();
     StateWidget.of(context)
         .state
         .speakers
@@ -23,11 +23,11 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
 
     return Stack(children: <Widget>[
       Padding(
-          padding: EdgeInsets.fromLTRB(24, 8, 8, 24),
+          padding: EdgeInsets.fromLTRB(24, 8, 8, 36),
           child: Text('Our Speakers',
               style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(8, 72, 8, 0),
+          padding: EdgeInsets.fromLTRB(8, 84, 8, 0),
           child: GridView.count(
               crossAxisCount: gridViewCount,
               childAspectRatio: (cardWidth/cardHeight),
