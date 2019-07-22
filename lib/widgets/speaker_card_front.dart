@@ -100,25 +100,42 @@ class speakerCardView extends StatelessWidget {
                         //this right here
                         child: Container(
                             height: 500.0,
-                            width: 400.0,
+                            width: 500.0,
                             child: Scrollbar(
                                 child: SingleChildScrollView(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: <Widget>[
+                                  Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        InkWell(
+                                            onTap: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: Padding(
+                                              padding: EdgeInsets.only(
+                                                  left: 8, right: 8),
+                                              child: Image.asset(
+                                                '/icons/close.png',
+                                                height: _iconSize,
+                                                width: _iconSize,
+                                              ),
+                                            )),
+                                      ]),
                                   Padding(
                                       padding: EdgeInsets.only(
                                           top: 16,
-                                          left: 24,
+                                          left: 16,
                                           bottom: 8,
-                                          right: 24),
+                                          right: 16),
                                       child: Container(
                                           width: double.infinity,
-                                          height: _headshotSize,
+                                          height: 300,
                                           decoration: BoxDecoration(
                                               shape: BoxShape.rectangle,
                                               image: DecorationImage(
-                                                  fit: BoxFit.cover,
+                                                  fit: BoxFit.fitWidth,
                                                   image: NetworkImage(
                                                       FirebaseCloudStorageURLResolver()
                                                           .getCloudStorageURL(
@@ -127,37 +144,53 @@ class speakerCardView extends StatelessWidget {
                                                               _speaker
                                                                   .photoUrl)))))),
                                   Padding(
-                                      padding:
-                                          EdgeInsets.only(bottom: 16, left: 24),
+                                      padding: EdgeInsets.only(
+                                          bottom: 16, left: 16, right: 16),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: <Widget>[
-                                          Text(_speaker.name,
+                                          Text(
+                                              _speaker.name +
+                                                  ', ' +
+                                                  _speaker.company,
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .title),
-                                          Text(_speaker.company,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .subtitle),
-                                          Text(_speakerSession.title,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .body1),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: 4, bottom: 4),
+                                              child: Text(_speakerSession.title,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .subtitle)),
+                                          (_speakerSession.description != null)
+                                              ? Text(
+                                                  _speakerSession.description,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .body1,
+                                                  textAlign: TextAlign.justify,
+                                                )
+                                              : Container(),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: 16, bottom: 4),
+                                              child: Text(
+                                                  'About ' + _speaker.name,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .subtitle)),
+                                          Text(
+                                            _speaker.bio,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .body1,
+                                            textAlign: TextAlign.justify,
+                                          )
                                         ],
                                       )),
                                   Padding(padding: EdgeInsets.only(top: 50.0)),
-                                  FlatButton(
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                      },
-                                      child: Text(
-                                        'Got It!',
-                                        style: TextStyle(
-                                            color: Colors.purple,
-                                            fontSize: 18.0),
-                                      ))
                                 ],
                               ),
                             ))),
@@ -172,11 +205,11 @@ class speakerCardView extends StatelessWidget {
 
   void findSession(BuildContext context) {
     var sessions = StateWidget.of(context).state.sessions.values;
-    sessions.forEach((session){
-      if(session.speakers.contains(_speaker.id)) {
+    sessions.forEach((session) {
+      if (session.speakers.contains(_speaker.id)) {
         _speakerSession = session;
       }
     });
-            //(f)=>print('Found non null speakers - ' + f.speakers.toString()));
+    //(f)=>print('Found non null speakers - ' + f.speakers.toString()));
   }
 }

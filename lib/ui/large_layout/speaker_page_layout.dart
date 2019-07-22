@@ -60,7 +60,7 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
 //                                  padding: EdgeInsets.all(16),
 //                                  child: Text(speaker.bio,
 //                                      style: Theme.of(context).textTheme.body1, textAlign: TextAlign.justify,))
-//                            ],
+//                             ],
 //                          )))))))
                   )
                   .toList())),
