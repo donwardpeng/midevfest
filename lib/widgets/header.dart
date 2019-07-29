@@ -58,9 +58,9 @@ class Header {
             url: Constants.CODE_OF_CONDUCT_URL,
             urlName: 'Code of Conduct'),
         header_button(
-            buttonText: 'Call For Papers',
-            url: 'https://www.papercall.io/midevfest2019',
-            urlName: 'Call for Papers'),
+            buttonText: 'Get Your Ticket Now!',
+            url: 'https://michigandevfest.eventbrite.com',
+            urlName: 'Get Your Ticket Now!'),
       ],
     );
   }
