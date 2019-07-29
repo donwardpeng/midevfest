@@ -74,9 +74,9 @@ class DevFestDrawer {
                 .display1
                 .apply(color: Colors.blue)),
         header_button(
-            buttonText: 'call for papers',
-            url: 'https://www.papercall.io/midevfest2019',
-            urlName: 'Call for Papers',
+            buttonText: 'register',
+            url: 'https://michigandevfest.eventbrite.com',
+            urlName: 'Register Here',
             buttonTextStyle: Theme.of(theContext)
                 .textTheme
                 .display1

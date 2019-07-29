@@ -58,9 +58,9 @@ class Header {
             url: Constants.CODE_OF_CONDUCT_URL,
             urlName: 'Code of Conduct'),
         header_button(
-            buttonText: 'Get Your Ticket Now!',
+            buttonText: 'Register Here!',
             url: 'https://michigandevfest.eventbrite.com',
-            urlName: 'Get Your Ticket Now!'),
+            urlName: 'Register Here!'),
       ],
     );
   }
