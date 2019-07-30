@@ -23,5 +23,6 @@ class Constants {
     'code': 'code',
     'sponsors': 'sponsors',
     'speakers': 'speakers',
+    'sessions': 'sessions',
   };
 }

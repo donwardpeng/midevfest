@@ -1,16 +1,17 @@
 import 'package:flutter_web/material.dart';
-import '../../widgets/speaker_card_front.dart';
+import '../../widgets/session_card_front.dart';
 import '../../widgets/state_widget.dart';
+import '../../models/session.dart';
 import '../../models/speaker.dart';
 
-class SpeakerPageSmallBodyWidget extends StatelessWidget {
+class SessionsPageSmallBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Speaker> speakersList = List<Speaker>();
+    List<Session> speakersList = List<Session>();
     StateWidget.of(context)
         .state
-        .speakers
-        .forEach((key, speaker) => {speakersList.add(speaker)});
+        .sessions
+        .forEach((key, session) => {speakersList.add(session)});
 
 // set the number of elements in the gridview crossaxis count
     int gridViewCount = 1;
@@ -23,25 +24,23 @@ class SpeakerPageSmallBodyWidget extends StatelessWidget {
     return Stack(children: <Widget>[
       Padding(
           padding: EdgeInsets.fromLTRB(24, 8, 8, 24),
-          child: Text('Our Speakers',
+          child: Text('Our Sessions',
               style: Theme.of(context).textTheme.headline)),
-      Padding(
-          padding: EdgeInsets.fromLTRB(8, 84, 8, 64),
-          child: GridView.count(
-              crossAxisCount: gridViewCount,
-              childAspectRatio: (cardWidth / cardHeight),
-              children: speakersList
-                  .map(
-                    (speaker) => speakerCardView(
-                      speaker: speaker,
-                      twitter: getSocialURL('Twitter', speaker),
-                      github: getSocialURL('GitHub', speaker),
-                      smallCard: true,
-                      parentWidth: cardWidth,
-                      parentHeight: cardHeight,
-                    ),
-                  )
-                  .toList())),
+      // Padding(
+      //     padding: EdgeInsets.fromLTRB(8, 84, 8, 64),
+      //     child: GridView.count(
+      //         crossAxisCount: gridViewCount,
+      //         childAspectRatio: (cardWidth / cardHeight),
+      //         children: speakersList
+      //             .map(
+      //               (speaker) => speakerCardView(
+      //                 speaker: speaker,
+      //                 twitter: getSocialURL('Twitter', speaker),
+      //                 github: getSocialURL('GitHub', speaker),
+      //                 smallCard: true,
+      //               ),
+      //             )
+      //             .toList())),
     ]);
   }
   // ));}

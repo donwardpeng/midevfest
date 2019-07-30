@@ -38,19 +38,24 @@ class Header {
         smallChild: Text(''),
       ),
       actions: <Widget>[
+        // header_button(
+        //   buttonText: 'Sessions',
+        //   route: Constants.PAGES['sessions'],
+        //   currentPage: appState.currentPage,
+        // ),
         header_button(
           buttonText: 'Speakers',
           route: Constants.PAGES['speakers'],
           currentPage: appState.currentPage,
         ),
         header_button(
-          buttonText: 'Team',
-          route: Constants.PAGES['team'],
+          buttonText: 'Sponsors',
+          route: Constants.PAGES['sponsors'],
           currentPage: appState.currentPage,
         ),
         header_button(
-          buttonText: 'Sponsors',
-          route: Constants.PAGES['sponsors'],
+          buttonText: 'Team',
+          route: Constants.PAGES['team'],
           currentPage: appState.currentPage,
         ),
         header_button(

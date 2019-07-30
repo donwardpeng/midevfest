@@ -9,6 +9,7 @@ import '../transitions/scale_route.dart';
 import '../values/constants.dart';
 import '../ui/sponsors_page.dart';
 import '../ui/speakers_page.dart';
+import '../ui/sessions_page.dart';
 
 class header_button extends StatelessWidget {
   String _buttonText = '';
@@ -66,6 +67,11 @@ class header_button extends StatelessWidget {
                     context,
                     ScaleRoute(
                         page: SpeakerPage(title: EN_Strings.devFestName)));
+              } else if (_route == Constants.PAGES['sessions']) {
+                Navigator.push(
+                    context,
+                    ScaleRoute(
+                        page: SessionPage(title: EN_Strings.devFestName)));
               }
             }));
   }
