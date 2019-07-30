@@ -38,6 +38,8 @@ class TeamPageLargeBodyWidget extends StatelessWidget {
                         twitter: getSocialURL('Twitter', member),
                         github: getSocialURL('GitHub', member),
                         smallCard: false,
+                        height: cardHeight,
+                        width: cardWidth,
                       ),
                       back: Container(
                         child: ImageCardView(image: member.gdgLogoUrl),

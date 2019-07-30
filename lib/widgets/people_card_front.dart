@@ -13,13 +13,17 @@ class peopleCardView extends StatelessWidget {
   String _twitter;
   String _github;
   bool _smallCard;
+  double _parentWidth;
+  double _parentHeight;
 
   peopleCardView(
       {String name,
       String image,
       String twitter,
       String github,
-      bool smallCard}) {
+      bool smallCard,
+      double height,
+      double width}) {
     _name = name;
     _image = image;
     _twitter = twitter;
@@ -27,6 +31,8 @@ class peopleCardView extends StatelessWidget {
     _smallCard = smallCard;
     _iconSize = _smallCard ? SMALL_ICON_SIZE : LARGE_ICON_SIZE;
     _headshotSize = smallCard ? 200 : 175;
+    _parentHeight = height;
+    _parentWidth = width;
   }
 
   @override
@@ -34,24 +40,33 @@ class peopleCardView extends StatelessWidget {
     return Padding(
         padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
         child: Card(
-            child: Column(children: <Widget>[
-          Padding(
-              padding: EdgeInsets.all(15),
-              child: Container(
-                  width: double.infinity,
-                  height: _headshotSize,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: NetworkImage(FirebaseCloudStorageURLResolver()
-                              .getCloudStorageURL(
-                                  Constants.DEVFEST_BUCKET, _image)))))),
-          Padding(
-              padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
-              child: Text(_name, style: Theme.of(context).textTheme.title)),
-          Padding(
-              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+            child: Stack(children: <Widget>[
+          Positioned(
+              top: 0.0,
+              left: 0.0,
+              child: Column(children: <Widget>[
+                Padding(
+                    padding: EdgeInsets.all(15),
+                    child: Container(
+                        width: _parentWidth - 30,
+                        height: _parentHeight / 1.75,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    FirebaseCloudStorageURLResolver()
+                                        .getCloudStorageURL(
+                                            Constants.DEVFEST_BUCKET,
+                                            _image)))))),
+                Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+                    child:
+                        Text(_name, style: Theme.of(context).textTheme.title))
+              ])),
+          Positioned(
+              bottom: 8.0,
+              right: 8.0,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[

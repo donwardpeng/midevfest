@@ -31,6 +31,8 @@ class TeamPageSmallBodyWidget extends StatelessWidget {
                   twitter: getSocialURL('Twitter', member),
                   github: getSocialURL('GitHub', member),
                   smallCard: true,
+                  height: cardHeight,
+                  width: cardWidth,
                 ),
                 back: Container(
                   child: ImageCardView(image: member.gdgLogoUrl),

@@ -3,6 +3,9 @@ import '../../config_values/en_strings.dart';
 import '../../widgets/flutter_swiper.dart';
 
 class MainPageLargeBodyLayout extends StatelessWidget {
+double _height;
+double _width;
+
   List<String> imagesList = [
     'carousel/devfest2018_photo_1.jpg',
     'carousel/devfest2018_photo_2.jpg',
@@ -13,6 +16,10 @@ class MainPageLargeBodyLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    _height = size.height;
+    _width = size.height;
+
     return SingleChildScrollView(
         child: Stack(children: <Widget>[
       Center(
@@ -26,8 +33,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: SizedBox(
-                        width: 500,
-                        height: 300,
+                        width: _width/2,
+                        height: _height/3,
                         child: Card(
                           child: Padding(
                               padding: EdgeInsets.all(15),
@@ -39,12 +46,9 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                       flex: 2,
                       child: Swiper(
                           autoplay: true,
-                          // outer: true,
                           layout: SwiperLayout.STACK,
-                          itemHeight: 290,
-                          itemWidth: 325,
-                          // scrollDirection: Axis.vertical,
-                          // onIndexChanged: (n) => setState(() => fi = imagesList[n]),
+                          itemHeight: _height/3, //290,
+                          itemWidth: _width/2, //325,
                           itemCount: imagesList.length,
                           itemBuilder: (cx, i) {
                             return Container(

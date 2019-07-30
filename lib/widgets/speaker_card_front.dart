@@ -10,23 +10,26 @@ class speakerCardView extends StatelessWidget {
   final double SMALL_ICON_SIZE = 30;
   final double LARGE_ICON_SIZE = 36;
   double _iconSize;
-  double _headshotSize;
   Speaker _speaker;
   bool _smallCard;
   String _twitter;
   String _github;
-  Session _speakerSession;
+  List<Session> _speakerSession = List<Session>();
   double _parentWidth;
-  double  _parentHeight;
+  double _parentHeight;
 
   speakerCardView(
-      {Speaker speaker, String twitter, String github, bool smallCard, parentWidth, parentHeight}) {
+      {Speaker speaker,
+      String twitter,
+      String github,
+      bool smallCard,
+      parentWidth,
+      parentHeight}) {
     _speaker = speaker;
     _twitter = twitter;
     _github = github;
     _smallCard = smallCard;
     _iconSize = _smallCard ? SMALL_ICON_SIZE : LARGE_ICON_SIZE;
-    _headshotSize = smallCard ? 200 : 175;
     _parentWidth = parentWidth;
     _parentHeight = parentHeight;
   }
@@ -37,84 +40,96 @@ class speakerCardView extends StatelessWidget {
         //outer padding for Cardview
         padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
         child: Card(
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-              Padding(
-                  padding:
-                      EdgeInsets.only(top: 8, left: 24, bottom: 8, right: 24),
-                  child: Container(
-                      width: double.infinity,
-                      height: _parentHeight/1.75,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  FirebaseCloudStorageURLResolver()
-                                      .getCloudStorageURL(
-                                          Constants.DEVFEST_BUCKET,
-                                          _speaker.photoUrl)))))),
-              Padding(
-                  padding: EdgeInsets.only(bottom: 16, left: 24),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(_speaker.name,
-                          style: Theme.of(context).textTheme.title),
-                      Text(_speaker.company,
-                          style: Theme.of(context).textTheme.subtitle),
-                    ],
-                  )),
-              Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
-                (_twitter != null && _twitter.contains('twitter'))
-                    ? Padding(
-                        padding: EdgeInsets.only(left: 8, right: 8),
-                        child: InkWell(
-                          child: Image.asset(
-                            'twitter.png',
-                            height: _iconSize,
-                            width: _iconSize,
-                          ),
-                          onTap: () {
-                            window.open(_twitter, 'Twitter');
-                          },
+            child: Stack(children: <Widget>[
+          Positioned(
+              top: 0.0,
+              left: 0.0,
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                        padding: EdgeInsets.only(
+                            top: 8, left: 24, bottom: 8, right: 24),
+                        child: Container(
+                            width: _parentWidth - 48,
+                            height: _parentHeight / 1.75,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: NetworkImage(
+                                        FirebaseCloudStorageURLResolver()
+                                            .getCloudStorageURL(
+                                                Constants.DEVFEST_BUCKET,
+                                                _speaker.photoUrl)))))),
+                    Padding(
+                        padding: EdgeInsets.only(bottom: 16, left: 24),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(_speaker.name,
+                                style: Theme.of(context).textTheme.title),
+                            Text(_speaker.company,
+                                style: Theme.of(context).textTheme.subtitle),
+                          ],
                         ))
-                    : Container(),
-                (_github != null && _github.contains('github'))
-                    ? Padding(
+                  ])),
+          Positioned(
+              bottom: 8.0,
+              right: 8.0,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    (_twitter != null && _twitter.contains('twitter'))
+                        ? Padding(
+                            padding: EdgeInsets.only(left: 8, right: 8),
+                            child: InkWell(
+                              child: Image.asset(
+                                'twitter.png',
+                                height: _iconSize,
+                                width: _iconSize,
+                              ),
+                              onTap: () {
+                                window.open(_twitter, 'Twitter');
+                              },
+                            ))
+                        : Container(),
+                    (_github != null && _github.contains('github'))
+                        ? Padding(
+                            padding: EdgeInsets.only(left: 8, right: 8),
+                            child: InkWell(
+                              child: Image.asset(
+                                'github.png',
+                                height: _iconSize,
+                                width: _iconSize,
+                              ),
+                              onTap: () {
+                                window.open(_github, 'Github');
+                              },
+                            ))
+                        : Container(),
+                    Padding(
                         padding: EdgeInsets.only(left: 8, right: 8),
-                        child: InkWell(
-                          child: Image.asset(
-                            'github.png',
-                            height: _iconSize,
-                            width: _iconSize,
-                          ),
-                          onTap: () {
-                            window.open(_github, 'Github');
-                          },
-                        ))
-                    : Container(),
-                Padding(
-                    padding: EdgeInsets.only(left: 8, right: 8),
-                    child: OutlineButton(
-                        child: Text('Session Info'),
-                        onPressed: () {
-                          findSession(context);
-                          Dialog sessionDialog = getDialog(context);
-                          showDialog(
-                              context: context,
-                              builder: (BuildContext context) => sessionDialog);
-                        }))
-              ])
-            ])));
+                        child: OutlineButton(
+                            child: Text('Session Info'),
+                            textColor: Colors.blue,
+                            onPressed: () {
+                              findSession(context);
+                              Dialog sessionDialog = getDialog(context);
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      sessionDialog);
+                            }))
+                  ]))
+        ])));
   }
 
   void findSession(BuildContext context) {
     var sessions = StateWidget.of(context).state.sessions.values;
     sessions.forEach((session) {
       if (session.speakers.contains(_speaker.id)) {
-        _speakerSession = session;
+        _speakerSession.add(session);
       }
     });
     //(f)=>print('Found non null speakers - ' + f.speakers.toString()));
@@ -175,17 +190,26 @@ class speakerCardView extends StatelessWidget {
                       children: <Widget>[
                         Text(_speaker.name + ', ' + _speaker.company,
                             style: Theme.of(context).textTheme.title),
-                        Padding(
-                            padding: EdgeInsets.only(top: 4, bottom: 4),
-                            child: Text(_speakerSession.title,
-                                style: Theme.of(context).textTheme.subtitle)),
-                        (_speakerSession.description != null)
-                            ? Text(
-                                _speakerSession.description,
-                                style: Theme.of(context).textTheme.body1,
-                                textAlign: TextAlign.justify,
-                              )
-                            : Container(),
+                        for (Session session in _speakerSession)
+                          (Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Padding(
+                                    padding:
+                                        EdgeInsets.only(top: 16, bottom: 4),
+                                    child: Text(session.title,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .subtitle)),
+                                (session.description != null)
+                                    ? Text(
+                                        session.description,
+                                        style:
+                                            Theme.of(context).textTheme.body1,
+                                        textAlign: TextAlign.justify,
+                                      )
+                                    : Container(),
+                              ])),
                         Padding(
                             padding: EdgeInsets.only(top: 16, bottom: 4),
                             child: Text('About ' + _speaker.name,

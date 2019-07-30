@@ -27,7 +27,7 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
           child: Text('Our Speakers',
               style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(8, 84, 8, 84),
+          padding: EdgeInsets.fromLTRB(8, 84, 8, 0),
           child: GridView.count(
               crossAxisCount: gridViewCount,
               childAspectRatio: (cardWidth / cardHeight),
