@@ -127,6 +127,7 @@ class speakerCardView extends StatelessWidget {
 
   void findSession(BuildContext context) {
     var sessions = StateWidget.of(context).state.sessions.values;
+      _speakerSession.clear();
     sessions.forEach((session) {
       if (session.speakers.contains(_speaker.id)) {
         _speakerSession.add(session);
