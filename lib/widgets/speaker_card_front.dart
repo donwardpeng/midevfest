@@ -127,7 +127,7 @@ class speakerCardView extends StatelessWidget {
 
   void findSession(BuildContext context) {
     var sessions = StateWidget.of(context).state.sessions.values;
-      _speakerSession.clear();
+    _speakerSession.clear();
     sessions.forEach((session) {
       if (session.speakers.contains(_speaker.id)) {
         _speakerSession.add(session);
@@ -139,7 +139,7 @@ class speakerCardView extends StatelessWidget {
   Dialog getDialog(BuildContext context) {
     var size = MediaQuery.of(context).size;
     final double height = size.height;
-    final double width = size.width / 3;
+    final double width = _smallCard ? size.width: size.width / 2.5;
 
     return Dialog(
       elevation: 8,
@@ -174,11 +174,12 @@ class speakerCardView extends StatelessWidget {
                         top: 16, left: 16, bottom: 8, right: 16),
                     child: Container(
                         width: double.infinity,
-                        height: 300,
+                        height: height/2.5,
                         decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             image: DecorationImage(
-                                fit: BoxFit.fitWidth,
+                                alignment: Alignment.center,
+                                fit: BoxFit.cover,
                                 image: NetworkImage(
                                     FirebaseCloudStorageURLResolver()
                                         .getCloudStorageURL(

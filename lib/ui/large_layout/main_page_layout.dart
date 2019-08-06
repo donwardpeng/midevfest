@@ -70,8 +70,7 @@ double _width;
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(20, 16, 20, 20),
                   child: SizedBox(
-                    width: 800,
-                    // height: 300,
+                    width: _width,
                     child: Card(
                         elevation: 4,
                         child: Column(
@@ -82,7 +81,7 @@ double _width;
                               padding: EdgeInsets.fromLTRB(20, 16, 20, 16),
                               child: Text(
                                 EN_Strings.devFestNameMainPageBlurb,
-                                style: Theme.of(context).textTheme.body1,
+                                style: Theme.of(context).textTheme.subtitle,
                               ),
                             )
                           ],

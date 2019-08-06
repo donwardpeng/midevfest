@@ -4,6 +4,7 @@ import '../../widgets/flip_card.dart';
 import '../../widgets/state_widget.dart';
 import '../../models/speaker.dart';
 
+
 class SpeakerPageLargeBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
     return Stack(children: <Widget>[
       Padding(
           padding: EdgeInsets.fromLTRB(24, 8, 8, 36),
-          child: Text('Our Speakers',
+          child: Text('Meet our Speakers (more coming soon!)',
               style: Theme.of(context).textTheme.headline)),
       Padding(
           padding: EdgeInsets.fromLTRB(8, 84, 8, 0),

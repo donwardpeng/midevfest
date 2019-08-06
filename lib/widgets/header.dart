@@ -32,20 +32,20 @@ class Header {
           EN_Strings.devFestName,
           style: Theme.of(theContext)
               .textTheme
-              .display4
+              .subtitle
               .apply(color: Colors.white),
         ),
         smallChild: Text(''),
       ),
       actions: <Widget>[
-        // header_button(
-        //   buttonText: 'Sessions',
-        //   route: Constants.PAGES['sessions'],
-        //   currentPage: appState.currentPage,
-        // ),
         header_button(
           buttonText: 'Speakers',
           route: Constants.PAGES['speakers'],
+          currentPage: appState.currentPage,
+        ),
+        header_button(
+          buttonText: 'Schedule',
+          route: Constants.PAGES['sessions'],
           currentPage: appState.currentPage,
         ),
         header_button(

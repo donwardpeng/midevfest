@@ -10,12 +10,12 @@ ThemeData buildTheme() {
         headline: base.headline.copyWith(
           fontFamily: 'Roboto-Light',
           fontSize: 60.0,
-          color: Colors.black87,
+          color: Colors.black,
         ),
-        display1: base.headline.copyWith(
+        display1: base.display1.copyWith(
           fontFamily: 'Roboto-Light',
           fontSize: 36.0,
-          color: Colors.black87,
+          color: Colors.black,
         ),
         //use this for the people's names
         title: base.title.copyWith(

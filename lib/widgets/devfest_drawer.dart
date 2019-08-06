@@ -49,14 +49,14 @@ class DevFestDrawer {
                 .textTheme
                 .display1
                 .apply(color: Colors.blue)),
-        // header_button(
-        //     buttonText: 'sessions',
-        //     route: Constants.PAGES['sessions'],
-        //     currentPage: appState.currentPage,
-        //     buttonTextStyle: Theme.of(theContext)
-        //         .textTheme
-        //         .display1
-        //         .apply(color: Colors.blue)),
+        header_button(
+            buttonText: 'schedule',
+            route: Constants.PAGES['sessions'],
+            currentPage: appState.currentPage,
+            buttonTextStyle: Theme.of(theContext)
+                .textTheme
+                .display1
+                .apply(color: Colors.blue)),
         header_button(
             buttonText: 'sponsors',
             route: Constants.PAGES['sponsors'],

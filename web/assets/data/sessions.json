@@ -85,7 +85,7 @@
     {
       "id": 302,
       "title": "An Intro to Flutter",
-      "description": "",
+      "description": "Let's cut the buzzwords. You don't care about phrases created by Marketing people, you care about what you could do with Flutter, if it really is faster and easier than what you're doing now, and if it's worth the time and expense it would take to get productive with it.\n\nScott Stoll has been around Flutter since its 9th commit, 0.0.14 Alpha. He does not possess a marketing degree nor is he certified in buzzword, but if you want straight answers to questions about Flutter, he's your guy.\n",
       "speakers": [2],
       "language": "English",
       "complexity": "",
@@ -99,6 +99,96 @@
       "language": "English",
       "complexity": "",
       "tags": ["Testing"]
+    },
+    {
+      "id": 304,
+      "title": "Getting Comfortable with Google Analytics  - from Tag Manager to Data Studio",
+      "description": "Many developers need analytics for marketing their services or apps but do not know how to use the reports or where to start.  This session will cover the best technical and analysis practices for Google Analytics, Google Tag Manager, and other solutions for email, social media, and digital ads.\n",
+      "speakers": [4],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Google Analytics"]
+    },
+    {
+      "id": 305,
+      "title": "TensorFlow in R Programming; A Beginnerâ€™s Primer For Machine Learning",
+      "description": "TensorFlow provides developers with a capacity for developing deep learning models.   Long available for Python, TensorFlow became available for R programming in 2018.  This session is a straightforward overview of how to best manage data for machine learning using TensorFlow and R.\n",
+      "speakers": [4],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Testing"]
+    },
+    {
+      "id": 306,
+      "title": "Google Flutter: The Next Frontier in Mobile Development",
+      "description": "Since its release in late 2018, Flutter has become one of the fastest growing programming languages. It is projected to grow in leaps and bounds with the release of Flutter for Web. In this presentation, I will talk about some new and exciting developments in the Flutter universe. I will demonstrate the following topics through some practical use cases.\n\nI. animations with Flutter - An explanation of key animation concepts\nII. Webviews in Flutter - An explanation of the plugin with an example\nIII. State Management - best practices in state management\nIV. Flutter for Web - exciting development with which the single codebase is now extensible to web applications\nV. Interesting Flutter Packages - showcases some of the latest packages\n\nWith each use case, the audience will discover the strength and utility of Flutter when applied to real-world programming instances. The presentation will not only introduce what is latest, but it would also show when and where to use the tools when coding with Flutter.\n",
+      "speakers": [5],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Flutter"]
+    },
+    {
+      "id": 307,
+      "title": "Working Effectively with Non-Technical Co-Workers",
+      "description": "Almost every thriving organization needs a variety of successful role players. A rational developer wants the sales person to succeed, not to mention the PMs, marketing, etc. If a PM or client manager is mixing up the terms \"platform\" and \"framework\" in front of a more tech-savvy customer, it could be embarrassing. Marketing people may come back a number of times to ask similar questions about a process or system the company offers. \n\nThe answer to these potentially frustrating situations lies in communications skills that acknowledge a shared purpose and reality - which is simpler than that sounds. The ability to \"translate\" technical matters in to understandable language or concepts for non-techies is a less recognized but highly valued skill. Similarly, the non-techie that can articulate tech matters and be credible in their environment is also highly valued and is really good for the organization. \n\nIn this talk, Baxtresser will provide some guideposts for these interactions that will result in communications that are clearer and more meaningful which will benefit you, your non-technical co-worker, and your organization or customer. When a successful question or situation dialog is resolved and finishes with greater understanding and increased retention, there are positive effects downstream internally, as well as with customers and/or users. Those good results will enable a greater degree of trust and respect in the professional relationship and in the organization.\n",
+      "speakers": [6],
+      "language": "English",
+      "complexity": "",
+      "tags": ["People"]
+    },
+    {
+      "id": 308,
+      "title": "Blinded With Data Science: Extract Meaning from Chaos with Google Colaboratory",
+      "description": "Google Colaboratory is the fastest & easiest way to get up to speed with data science. Dive into the mechanics of machine learning as you write & execute live code alongside Scott, in any browser. Extract & polish unclean data, prep data for operations, run algorithms that create meaning from chaos.\n",
+      "speakers": [7],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Data Science"]
+    },
+    {
+      "id": 309,
+      "title": "How to get Developer-Ready Assets from Designers",
+      "description": "Sometimes getting the right assets from your designers is a big pain. Missing bucket sizes, vectors that just don't work correctly, getting told that it'll take them days to resize the icons from Photoshop or Illustrator. Even if you suggest a tool to help them help you, they're unwilling to learn and set in their process.\n\nAdobe XD exports assets in a way that developers can use right away. The best part is that it already integrates with the Creative Suite products that designers already use, making it much more likely they'll actually use it. We'll go through what you can expect from Adobe XD as a developer, as well as exploring the designer's side so you can win them over and make ASSETS_FINAL_FINAL.zip a thing of the past.\n",
+      "speakers": [8],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Design"]
+    },
+    {
+      "id": 310,
+      "title": "Machine Learning on GCP 2019: AI Platform - AI for Everything",
+      "description": "This presentation will provide a broad overview of how someone can utilize the GCP AI Platform.  There is A LOT to cover!  Off-the-shelf features (like Vision and Natural Language), using general features (like the virtual machine, Storage, and Dataflow) to spin up your own machine learning models, hosted notebooks, notebook templates for quick-starting most AI projects, end-to-end AI pipelines, enterprise sharing capabilities, all kinds of container templates optimized for AI, automated ML (AutoML), and much more.  So yes, definitely, AI for everything!\n\nWe won't just list what's available though, you get can get that from the website.  We'll also provide in-depth coverage of how to get started, what to use in different scenarios, and where the secret gems are on that platform to take your AI efforts to the next level.  And last, we'll cover a couple extra Google-related services that aren't in the AI Platform, but may also be helpful to be aware of for optimal AI efforts!\n",
+      "speakers": [9],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Machine Learning", "TensorFlow", "GCP"]
+    },
+    {
+      "id": 311,
+      "title": "Flutter: Don't be afraid, State Management is your Friend",
+      "description": "In this talk I will talk about some architectures in Flutter, to then show an example application and how it can be more complicated if we do not use an appropriate pattern.\n\nFinally I will implement an architecture based on the Provider package and as if making minimal changes in the code, we can reduce the complexity.\n",
+      "speakers": [2],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Mobile", "Flutter"]
+    },
+    {
+      "id": 312,
+      "title": "Comprehensive Voice/Chat Interactions using Dialogflow",
+      "description": "In recent years, virtual assistants have had a massive boost in large scale usage with Siri, Alexa and Google Assistant being household names. This surge has brought more interest in expanding the implementations of such assistants and their ease of integration for common services such as customer service chatbots. Google created its very own voice development suite, Dialogflow, which uses standard voice concepts like intents, entities and context in its framework. We'll learn how to implement not only a basic chatbot, but take it further and see just how creative we can get by taking advantage of the advancements in voice development technology.",
+      "speakers": [10],
+      "language": "English",
+      "complexity": "",
+      "tags": ["DialogFlow"]
+    },
+    {
+      "id": 313,
+      "title": "Our DevFest Website - Flutter for Web and What I Learned",
+      "description": "The Michigan DevFest website you are currently viewing this abstract on was built in Flutter for Web by Don Ward. \n\nIn this talk, we will talk about the current state of Flutter for Web and considerations for developing a website using it.",
+      "speakers": [11],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Flutter"]
     }
   ]
 }
