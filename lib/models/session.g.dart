@@ -8,13 +8,14 @@ part of 'session.dart';
 
 Session _$SessionFromJson(Map<String, dynamic> json) {
   return Session(
-      id: json['id'] as int,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      speakers: (json['speakers'] as List)?.map((e) => e as int)?.toList(),
-      language: json['language'] as String,
-      complexity: json['complexity'] as String,
-      tags: (json['tags'] as List)?.map((e) => e as String)?.toList());
+    id: json['id'] as int,
+    title: json['title'] as String,
+    description: json['description'] as String,
+    speakers: (json['speakers'] as List)?.map((e) => e as int)?.toList(),
+    language: json['language'] as String,
+    complexity: json['complexity'] as String,
+    tags: (json['tags'] as List)?.map((e) => e as String)?.toList(),
+  );
 }
 
 Map<String, dynamic> _$SessionToJson(Session instance) => <String, dynamic>{
@@ -24,5 +25,5 @@ Map<String, dynamic> _$SessionToJson(Session instance) => <String, dynamic>{
       'speakers': instance.speakers,
       'language': instance.language,
       'complexity': instance.complexity,
-      'tags': instance.tags
+      'tags': instance.tags,
     };

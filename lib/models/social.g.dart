@@ -8,13 +8,14 @@ part of 'social.dart';
 
 Social _$SocialFromJson(Map<String, dynamic> json) {
   return Social(
-      icon: json['icon'] as String,
-      link: json['link'] as String,
-      name: json['name'] as String);
+    icon: json['icon'] as String,
+    link: json['link'] as String,
+    name: json['name'] as String,
+  );
 }
 
 Map<String, dynamic> _$SocialToJson(Social instance) => <String, dynamic>{
       'icon': instance.icon,
       'link': instance.link,
-      'name': instance.name
+      'name': instance.name,
     };

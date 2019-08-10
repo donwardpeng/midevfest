@@ -111,7 +111,7 @@
     },
     {
       "id": 305,
-      "title": "TensorFlow in R Programming; A Beginnerâ€™s Primer For Machine Learning",
+      "title": "TensorFlow in R Programming; A Beginner's Primer For Machine Learning",
       "description": "TensorFlow provides developers with a capacity for developing deep learning models.   Long available for Python, TensorFlow became available for R programming in 2018.  This session is a straightforward overview of how to best manage data for machine learning using TensorFlow and R.\n",
       "speakers": [4],
       "language": "English",
@@ -174,7 +174,7 @@
     },
     {
       "id": 312,
-      "title": "Comprehensive Voice/Chat Interactions using Dialogflow",
+      "title": "Comprehensive Voice/Chat Interactions for Google Assistant",
       "description": "In recent years, virtual assistants have had a massive boost in large scale usage with Siri, Alexa and Google Assistant being household names. This surge has brought more interest in expanding the implementations of such assistants and their ease of integration for common services such as customer service chatbots. Google created its very own voice development suite, Dialogflow, which uses standard voice concepts like intents, entities and context in its framework. We'll learn how to implement not only a basic chatbot, but take it further and see just how creative we can get by taking advantage of the advancements in voice development technology.",
       "speakers": [10],
       "language": "English",

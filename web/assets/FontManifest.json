@@ -6,13 +6,21 @@
         "asset": "fonts/Roboto-Light.ttf"
       }
     ]
-    },
-    {
-      "family": "Roboto-Regular",
-      "fonts": [
-        {
-          "asset": "fonts/Roboto-Regular.ttf"
-        }
-      ]
+  },
+  {
+    "family": "Roboto-Regular",
+    "fonts": [
+      {
+        "asset": "fonts/Roboto-Regular.ttf"
       }
+    ]
+  },
+  {
+    "family": "Open-Sans-Extra-Bold",
+    "fonts": [
+      {
+        "asset": "fonts/OpenSans-ExtraBold.ttf"
+      }
+    ]
+  }
 ]

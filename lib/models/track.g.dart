@@ -7,8 +7,11 @@ part of 'track.dart';
 // **************************************************************************
 
 Track _$TrackFromJson(Map<String, dynamic> json) {
-  return Track(title: json['title'] as String);
+  return Track(
+    title: json['title'] as String,
+  );
 }
 
-Map<String, dynamic> _$TrackToJson(Track instance) =>
-    <String, dynamic>{'title': instance.title};
+Map<String, dynamic> _$TrackToJson(Track instance) => <String, dynamic>{
+      'title': instance.title,
+    };

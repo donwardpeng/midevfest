@@ -8,12 +8,15 @@ part of 'team.dart';
 
 Team _$TeamFromJson(Map<String, dynamic> json) {
   return Team(
-      title: json['title'] as String,
-      members: (json['members'] as List)
-          ?.map((e) =>
-              e == null ? null : TeamMember.fromJson(e as Map<String, dynamic>))
-          ?.toList());
+    title: json['title'] as String,
+    members: (json['members'] as List)
+        ?.map((e) =>
+            e == null ? null : TeamMember.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
 }
 
-Map<String, dynamic> _$TeamToJson(Team instance) =>
-    <String, dynamic>{'title': instance.title, 'members': instance.members};
+Map<String, dynamic> _$TeamToJson(Team instance) => <String, dynamic>{
+      'title': instance.title,
+      'members': instance.members,
+    };
