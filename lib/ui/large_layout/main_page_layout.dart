@@ -1,12 +1,30 @@
 import 'package:flutter_web/material.dart';
 import '../../config_values/en_strings.dart';
 import '../../widgets/flutter_swiper.dart';
+import 'dart:async';
 
-class MainPageLargeBodyLayout extends StatelessWidget {
+class MainPageLargeBodyLayout extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MainPageLargeBodyLayoutState();
+  }
+}
+
+class MainPageLargeBodyLayoutState extends State<MainPageLargeBodyLayout> {
   double _height;
   double _width;
   double _heightToShrink = 900;
   double _ShrinkFactor = 1;
+  int _attendeeCount = 0;
+  int _tracksCount = 0;
+  int _sessionsCount = 0;
+  int _daysCount = 0;
+
+  Timer _attendeeCountTimer;
+  Timer _tracksCountTimer;
+  Timer _sessionsCountTimer;
+  Timer _daysCountTimer;
+
   List<String> imagesList = [
     'carousel/devfest2018_photo_1.jpg',
     'carousel/devfest2018_photo_2.jpg',
@@ -15,12 +33,95 @@ class MainPageLargeBodyLayout extends StatelessWidget {
     'carousel/devfest2018_photo_5.png'
   ];
 
+  void startAttendeeCountTimer() {
+    const oneSec = const Duration(milliseconds: 1);
+    _attendeeCountTimer = new Timer.periodic(
+      oneSec,
+      (Timer timer) => setState(
+        () {
+          if (_attendeeCount > 200) {
+            timer.cancel();
+          } else {
+            _attendeeCount = _attendeeCount + 1;
+          }
+        },
+      ),
+    );
+  }
+
+  void startTrackCountTimer() {
+    const oneSec = const Duration(milliseconds: 250);
+    _tracksCountTimer = new Timer.periodic(
+      oneSec,
+      (Timer timer) => setState(
+        () {
+          if (_tracksCount > 3) {
+            timer.cancel();
+          } else {
+            _tracksCount = _tracksCount + 1;
+          }
+        },
+      ),
+    );
+  }
+
+ void startSessionsCountTimer() {
+    const oneSec = const Duration(milliseconds: 50);
+    _sessionsCountTimer = new Timer.periodic(
+      oneSec,
+      (Timer timer) => setState(
+        () {
+          if (_sessionsCount > 200) {
+            timer.cancel();
+          } else {
+            _sessionsCount = _sessionsCount + 1;
+          }
+        },
+      ),
+    );
+  }
+
+void startDaysCountTimer() {
+    const oneSec = const Duration(seconds: 1);
+    _daysCountTimer = new Timer.periodic(
+      oneSec,
+      (Timer timer) => setState(
+        () {
+          if (_daysCount > 0) {
+            timer.cancel();
+          } else {
+            _daysCount = _daysCount + 1;
+          }
+        },
+      ),
+    );
+  }
+
+
+  @override
+  void dispose() {
+    _attendeeCountTimer.cancel();
+    _tracksCountTimer.cancel();
+    _sessionsCountTimer.cancel();
+    _daysCountTimer.cancel();
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    startAttendeeCountTimer();
+    startTrackCountTimer();
+    startSessionsCountTimer();
+    startDaysCountTimer();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     _height = size.height;
     _width = size.height;
-    _ShrinkFactor = (1-((_heightToShrink - _height) / _heightToShrink));
+    _ShrinkFactor = (1 - ((_heightToShrink - _height) / _heightToShrink));
 
     return Scrollbar(
         child: ListView(children: <Widget>[
@@ -112,7 +213,9 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: '200+\n',
+                                            text: _attendeeCount <= 200
+                                                ? '$_attendeeCount\n'
+                                                : '200+\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -120,7 +223,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                    fontSizeFactor: 2.5 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        2.5 * _ShrinkFactor)),
                                         TextSpan(
                                             text: 'ATTENDEES',
                                             style: Theme.of(context)
@@ -130,7 +234,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                        fontSizeFactor: 1.0 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        1.0 * _ShrinkFactor)),
                                       ]),
                                       textAlign: TextAlign.center),
                                 )),
@@ -142,7 +247,7 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: '4\n',
+                                            text: '$_tracksCount\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -150,7 +255,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                    fontSizeFactor: 2.5 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        2.5 * _ShrinkFactor)),
                                         TextSpan(
                                             text: 'TRACKS',
                                             style: Theme.of(context)
@@ -160,7 +266,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                        fontSizeFactor: 1.0 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        1.0 * _ShrinkFactor)),
                                       ]),
                                       textAlign: TextAlign.center),
                                 )),
@@ -172,7 +279,9 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: '20+\n',
+                                            text: _sessionsCount <= 20
+                                                ? '$_sessionsCount\n'
+                                                : '20+\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -180,7 +289,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                    fontSizeFactor: 2.5 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        2.5 * _ShrinkFactor)),
                                         TextSpan(
                                             text: 'SESSIONS',
                                             style: Theme.of(context)
@@ -190,7 +300,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                        fontSizeFactor: 1.0 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        1.0 * _ShrinkFactor)),
                                       ]),
                                       textAlign: TextAlign.center),
                                 )),
@@ -202,7 +313,7 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: '1\n',
+                                            text: '$_daysCount\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -210,7 +321,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                    fontSizeFactor: 2.5 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        2.5 * _ShrinkFactor)),
                                         TextSpan(
                                             text: 'DAY',
                                             style: Theme.of(context)
@@ -220,7 +332,8 @@ class MainPageLargeBodyLayout extends StatelessWidget {
                                                     color: Colors.white,
                                                     fontFamily:
                                                         'Open-Sans-Extra-Bold',
-                                                        fontSizeFactor: 1.0 * _ShrinkFactor)),
+                                                    fontSizeFactor:
+                                                        1.0 * _ShrinkFactor)),
                                       ]),
                                       textAlign: TextAlign.center),
                                 ))
