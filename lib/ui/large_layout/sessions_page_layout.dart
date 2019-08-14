@@ -1,7 +1,4 @@
-import 'package:flutter_web/gestures.dart';
 import 'package:flutter_web/material.dart';
-import '../../widgets/state_widget.dart';
-import '../../models/session.dart';
 import '../../transitions/scale_route.dart';
 import '../../ui/speakers_page.dart';
 import '../../config_values/en_strings.dart';
@@ -9,17 +6,10 @@ import '../../config_values/en_strings.dart';
 class SessionsPageLargeBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Session> sessionsList = List<Session>();
-    StateWidget.of(context)
-        .state
-        .sessions
-        .forEach((key, session) => {sessionsList.add(session)});
-
     // set the number of elements in the gridview crossaxis count
-    int gridViewCount = 4;
     var size = MediaQuery.of(context).size;
     final double _height = size.height / 2;
-    final double _width = size.width / gridViewCount;
+    final double _width = size.width;
 
     return Container(
         child: Center(

@@ -28,13 +28,20 @@ class Header {
                 : print(''); // do nothing if on main page
           }),
       title: ResponsiveLayout(
-        largeChild: Text(
-          EN_Strings.devFestName,
-          style: Theme.of(theContext)
-              .textTheme
-              .subtitle
-              .apply(color: Colors.white),
-        ),
+        largeChild: InkWell(
+            child: Text(
+              EN_Strings.devFestName,
+              style: Theme.of(theContext)
+                  .textTheme
+                  .subtitle
+                  .apply(color: Colors.white),
+            ),
+            onTap: () {
+              currentPage != Constants.PAGES['main']
+                  ? Navigator.push(theContext,
+                      ScaleRoute(page: MainPage(title: EN_Strings.devFestName)))
+                  : print(''); // do nothing if on main page
+            }),
         smallChild: Text(''),
       ),
       actions: <Widget>[
