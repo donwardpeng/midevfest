@@ -22,7 +22,7 @@ class TeamPageLargeBodyWidget extends StatelessWidget {
           child: Text('The Team', style: Theme.of(context).textTheme.headline)),
       Padding(
           padding: EdgeInsets.fromLTRB(8, 72, 8, 0),
-          child: GridView.count(
+          child: Scrollbar(child:GridView.count(
               crossAxisCount: gridViewCount,
               childAspectRatio: (cardWidth / cardHeight),
               children: StateWidget.of(context)
@@ -46,7 +46,7 @@ class TeamPageLargeBodyWidget extends StatelessWidget {
                       ),
                     ),
                   )
-                  .toList())),
+                  .toList()))),
     ]);
   }
 

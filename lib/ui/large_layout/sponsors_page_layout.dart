@@ -1,4 +1,6 @@
 import 'package:flutter_web/material.dart';
+import 'package:midevfest/models/sponsor.dart';
+import 'package:midevfest/models/sponsor_level.dart';
 import '../../widgets/state_widget.dart';
 import '../../models/state.dart';
 import 'dart:html';
@@ -14,52 +16,89 @@ class SponsorsPageLargeBodyWidget extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     final double height = size.height;
     final double width = size.width;
-
-    print('Building Large Body Widget');
-    print(
-        'Results for StateWidget SponsorsList - ' + appState.sponsorList.title);
-    return Stack(children: <Widget>[
+    //populate list of financial sponsors
+    List<Sponsor> financialSponsors = List<Sponsor>();
+    for(SponsorLevel level in appState.sponsorList.levels) {
+      if(level.title.contains('Financial')){
+        for(Sponsor sponsor in level.logos){
+        financialSponsors.add(sponsor);
+        }
+      }
+    }
+    //populate list of financial sponsors
+    List<Sponsor> communityPartners = List<Sponsor>();
+    for(SponsorLevel level in appState.sponsorList.levels) {
+      if(level.title.contains('Community')){
+        for(Sponsor partner in level.logos){
+        communityPartners.add(partner);
+        }
+      }
+    }
+    return Scrollbar(child:ListView(children: <Widget>[
       Padding(
-          padding: EdgeInsets.fromLTRB(24, 8, 8, 16),
+          padding: EdgeInsets.fromLTRB(24, 16, 8, 16),
           child: Text('Thank you to our sponsors!', style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(8, 84, 8, 24),
-          child: GridView.count(
-              crossAxisCount: 3,
-              children: appState.sponsorList.levels[0].logos
+          padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+          child:
+      GridView.count(
+              crossAxisCount: 4,
+              shrinkWrap: true,
+              children: financialSponsors
                   .map((sponsor) => InkWell(
                       onTap: () {
                         window.open(sponsor.url, sponsor.name);
                       },
                       child: Padding(
-                
                         padding: EdgeInsets.all(16),
                         child: Card(
-                          
                           elevation: 4,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Image.network(
                                 FirebaseCloudStorageURLResolver().getCloudStorageURL(Constants.DEVFEST_BUCKET, sponsor.logoUrl),
-                                // width: sponsor.width.roundToDouble(),
-                                // height: sponsor.height.roundToDouble(),
                                 width: double.infinity,
-                                height: height/3,
+                                height: height/5,
                                 alignment: Alignment.center,
                               ),
-                              // Padding(
-                              //   padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
-                              //   child: Text(sponsor.name,
-                              //       style: Theme.of(context).textTheme.title),
-                              // )
                             ],
                           ),
                         ),
                       )))
                   .toList())),
-    ]);
+        Padding(
+          padding: EdgeInsets.fromLTRB(24, 16, 8, 16),
+          child: Text('Thank you to our community partners!', style: Theme.of(context).textTheme.headline)),
+       Padding(
+          padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+          child:
+      GridView.count(
+              crossAxisCount: 4,
+              shrinkWrap: true,
+              children: communityPartners
+                  .map((sponsor) => InkWell(
+                      onTap: () {
+                        window.open(sponsor.url, sponsor.name);
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Card(
+                          elevation: 4,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Image.network(
+                                FirebaseCloudStorageURLResolver().getCloudStorageURL(Constants.DEVFEST_BUCKET, sponsor.logoUrl),
+                                width: double.infinity,
+                                height: height/5,
+                                alignment: Alignment.center,
+                              ),
+                            ],
+                          ),
+                        ),
+                      )))
+                  .toList())),
+    ]));
   }
-  // ));}
-
 }

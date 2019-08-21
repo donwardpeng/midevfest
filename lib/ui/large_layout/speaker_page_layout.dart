@@ -29,7 +29,7 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
               style: Theme.of(context).textTheme.headline)),
       Padding(
           padding: EdgeInsets.fromLTRB(8, 84, 8, 0),
-          child: GridView.count(
+          child: Scrollbar(child:GridView.count(
               crossAxisCount: gridViewCount,
               childAspectRatio: (cardWidth / cardHeight),
               children: speakersList
@@ -43,7 +43,7 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
                       parentHeight: cardHeight,
                     ),
                   )
-                  .toList())),
+                  .toList()))),
     ]);
   }
 

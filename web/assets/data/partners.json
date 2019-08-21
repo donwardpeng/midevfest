@@ -2,7 +2,7 @@
   "title": "sponsors",
   "levels": [
     {
-      "title": "Platinum",
+      "title": "Financial",
       "logos": [
         {
           "name": "Google",
@@ -24,12 +24,38 @@
           "logoUrl": "images/partners/arbormoonlogo-full.png",
           "width": 250,
           "height": 250
+        },
+        {
+          "name": "RIIS",
+          "url": "https://www.riis.com/",
+          "logoUrl": "images/partners/RIIS.png",
+          "width": 250,
+          "height": 250
         }
       ]
     },
     {
-      "title": "Gold",
+      "title": "Community",
       "logos": [
+        {
+          "name": "Detroit Meets",
+          "url": "https://detroitmeets.com/",
+          "logoUrl": "images/partners/detroit_meets.png",
+          "width": 250,
+          "height": 250
+        }
+      ]
+    },
+    {
+      "title": "Unused For Now",
+      "logos": [
+        {
+          "name": "Google",
+          "url": "https://www.google.com/",
+          "logoUrl": "/logos/google.png",
+          "width": 170,
+          "height": 170
+        },
         {
           "name": "Quicken Loans",
           "url": "https://www.quickenloans.com/",
@@ -40,41 +66,10 @@
         {
           "name": "",
           "url": "",
-          "logoUrl": "/logos/BlankSpace.png",
-          "width": 50
-        },
-        {
-          "name": "Google",
-          "url": "https://www.google.com/",
-          "logoUrl": "/logos/google.png",
-          "width": 170,
-          "height": 170
-        }
-      ]
-    },
-    {
-      "title": "Silver",
-      "logos": [
-        {
-          "name": "RIIS",
-          "url": "https://www.riis.com/",
-          "logoUrl": "/logos/RIIS.png",
-          "width": 170,
-          "height": 170
-        },
-        {
-          "name": "",
-          "url": "",
           "logoUrl": "../images/logos/BlankSpace.png",
-          "width": 50
-        },
-        {
-          "name": "Little Caesars",
-          "url": "https://littlecaesars.com/en-us/",
-          "logoUrl": "/logos/Core_Caesar_RGB.png",
-          "width": 170,
-          "height": 170
-        }
+          "width": 50,
+          "height": 250
+        } 
       ]
     }
   ]
