@@ -43,6 +43,13 @@
           "logoUrl": "images/partners/detroit_meets.png",
           "width": 250,
           "height": 250
+        },
+        {
+          "name": "Mobile Monday Motor City",
+          "url": "https://www.meetup.com/MoMoMotorCity/",
+          "logoUrl": "images/partners/mmmc.jpg",
+          "width": 250,
+          "height": 250
         }
       ]
     },
