@@ -1,21 +1,27 @@
 {
   "title": "Schedule",
   "generalInfo": {
-    "date": "2018-11-10",
-    "dateReadable": "November 10, 2018",
+    "date": "2019-09-21",
+    "dateReadable": "September 21, 2019",
     "tracks": [
       {
         "title": "Room 1"
       },
       {
         "title": "Room 2"
+      },
+      {
+        "title": "Room 3"
+      },
+      {
+        "title": "Room 4"
       }
     ]
   },
   "timeslots": [
     {
-      "startTime": "08:15",
-      "endTime": "8:45",
+      "startTime": "08:00",
+      "endTime": "08:45",
       "sessions": [[101], [102]]
     },
     {
@@ -26,17 +32,17 @@
     {
       "startTime": "9:00",
       "endTime": "9:50",
-      "sessions": [[301], [302]]
+      "sessions": [[301]]
     },
     {
       "startTime": "10:00",
       "endTime": "10:50",
-      "sessions": [[303], [308]]
+      "sessions": [[302], [303], [304], [305]]
     },
     {
       "startTime": "11:00",
       "endTime": "11:50",
-      "sessions": [[305], [310]]
+      "sessions": [[306], [307], [308], [309]]
     },
     {
       "startTime": "12:00",
@@ -46,22 +52,22 @@
     {
       "startTime": "1:00",
       "endTime": "1:50",
-      "sessions": [[307], [306]]
+      "sessions": [[310]]
     },
     {
       "startTime": "2:00",
       "endTime": "2:50",
-      "sessions": [[311], [306]]
+      "sessions": [[311]]
     },
     {
       "startTime": "3:00",
       "endTime": "3:50",
-      "sessions": [[313], [312]]
+      "sessions": [[312]]
     },
     {
       "startTime": "4:00",
       "endTime": "4:50",
-      "sessions": [[315], [314]]
+      "sessions": [[313]]
     },
     {
       "startTime": "5:00",

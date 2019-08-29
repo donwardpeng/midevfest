@@ -5,7 +5,7 @@
       "id": 13,
       "featured": true,
       "name": "Susan Anspaugh",
-      "title": "VP, Business Development",
+      "title": "",
       "company": "Little Caesars",
       "companyLogo": "",
       "country": "",
@@ -32,7 +32,7 @@
       "country": "",
       "photoUrl": "images/speakers/people/Robert_Baxtresser.jpeg",
       "shortBio": "Rob Baxtresser is VP, Business Development at Arbormoon Software.",
-      "bio": "Rob Baxtresser is VP, Business Development at Arbormoon Software. His first career was in healthcare informatics where he led sales efforts and product development at several industry-leading companies (Medstat, United Healthcare) and had a thriving consulting practice with clients including the Mayo Clinic and Boston University Health System.\n\nOnce his attention was turned to mobile tech he started as a free-lance QA analyst on several large mobile projects, he has performed numerous roles at Arbormoon. He is now leveraging his previous experience towards expanding the portfolio there, particularly in connected health.\n\nBaxtresser has had 4 apps in Google Play and the App Store for which he performed or managed every step of the product life cycle from concept to deployment and ongoing maintenance and marketing. The apps have over 100,000 downloads in 90 countries, achieved Featured App status, and numerous favorable mentions in media.\n\nBaxtresser has given the talk “How to Thrive in Tech When You’re Not a Techie” at events including Detroit Tech Startup Week.",
+      "bio": "Rob Baxtresser is VP, Business Development at Arbormoon Software. His first career was in healthcare informatics where he led sales efforts and product development at several industry-leading companies (Medstat, United Healthcare) and had a thriving consulting practice with clients including the Mayo Clinic and Boston University Health System.\nOnce his attention was turned to mobile tech he started as a free-lance QA analyst on several large mobile projects, he has performed numerous roles at Arbormoon. He is now leveraging his previous experience towards expanding the portfolio there, particularly in connected health.\nBaxtresser has had 4 apps in Google Play and the App Store for which he performed or managed every step of the product life cycle from concept to deployment and ongoing maintenance and marketing. The apps have over 100,000 downloads in 90 countries, achieved Featured App status, and numerous favorable mentions in media.\nBaxtresser has given the talk \"How to Thrive in Tech When YouÃ¢â‚¬â„¢re Not a Techie\" at events including Detroit Tech Startup Week.",
       "tags": ["People"],
       "badges": [],
       "socials": [
@@ -40,6 +40,27 @@
           "icon": "twitter",
           "name": "Twitter",
           "link": "https://twitter.com/baxination "
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "featured": true,
+      "name": "Megan Boczar",
+      "title": "",
+      "company": "Pluralsight",
+      "companyLogo": "",
+      "country": "",
+      "photoUrl": "images/speakers/people/Megan_Boczar.png",
+      "shortBio": "Megan currently works as a Salesforce Developer at Pluralsight. ",
+      "bio": "Megan Boczar has been a software developer since way back in November 2017. She worked a ton of customer service and admin jobs before finally jumping into a bootcamp at Grand Circus in Detroit. After landing a job as a dev in Ann Arbor, she took on a new passion for accessibility and good front end design. Megan currently works as a Salesforce Developer at Pluralsight. She now serves as a co-founder and Director of Learning for tech[inclusive], a non-profit organization providing safe and accessible learning opportunities and networking events for underrepresented people in tech and their allies.\n\nWhen she's not coding, Megan enjoys playing board games, keeping up on Netflix, and attempting to read one book per week. Megan loves all manner of nerdy things Star Wars to Buffy to Dungeons and Dragons.",
+      "tags": ["People"],
+      "badges": [],
+      "socials": [
+        {
+          "icon": "twitter",
+          "name": "Twitter",
+          "link": "https://twitter.com/meganboczar "
         }
       ]
     },
@@ -53,7 +74,7 @@
       "country": "",
       "photoUrl": "images/speakers/people/Keith_Bourne.jpeg",
       "shortBio": "Keith Bourne is the founder of Gradient Valley, focused on machine learning consulting and development.",
-      "bio": "Keith Bourne is the founder of Gradient Valley, focused on machine learning consulting and development. He has been on the forefront of cutting edge technology since the 90ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢s, with extensive management and technical experience in web, mobile, and machine learning.  His focus has been on all aspects of building and selling incredible technology products and services, including a deep knowledge of user experience, agile programming methods, technology marketing, and most of the most popular programming languages and their capabilities. He holds an MBA from Babson College where he focused on technology entrepreneurship and marketing, which has provided a strong analytical base for approaching machine learning problems with an organizationÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢s overall strategic direction in mind.  He has served in diverse roles in high growth start up environments, including Senior Software Engineer, Marketing Director, Chief Operations Officer, and Founder/Chief Executive Officer.",
+      "bio": "Keith Bourne is the founder of Gradient Valley, focused on machine learning consulting and development. He has been on the forefront of cutting edge technology since the 90Ã¢â‚¬â„¢s, with extensive management and technical experience in web, mobile, and machine learning.  His focus has been on all aspects of building and selling incredible technology products and services, including a deep knowledge of user experience, agile programming methods, technology marketing, and most of the most popular programming languages and their capabilities. He holds an MBA from Babson College where he focused on technology entrepreneurship and marketing, which has provided a strong analytical base for approaching machine learning problems with an organizationÃ¢â‚¬â„¢s overall strategic direction in mind.  He has served in diverse roles in high growth start up environments, including Senior Software Engineer, Marketing Director, Chief Operations Officer, and Founder/Chief Executive Officer.",
       "tags": ["Machine Learning", "TensorFlow"],
       "badges": [],
       "socials": [
@@ -95,7 +116,7 @@
       "country": "",
       "photoUrl": "images/speakers/people/Lucas_Collins.jpg",
       "shortBio": "Lucas is a Technical Engineer and Flutter enthusiast on the Mobile Development team at Little Caesars Enterprises, Inc..",
-      "bio": "Lucas is a Technical Engineer and Flutter enthusiast on the Mobile Development team at Little Caesars Enterprises, Inc. His passion for cross-platform mobile development began as a two-term summer intern with the organization while still attending EMU â€“ gaining experience first with React Native in 2017, and then beginning his journey with Googleâ€™s Flutter SDK in May of 2018.\n\nSince becoming a full-time colleague, Lucas has enjoyed being a driving force for the awareness and adoption of Flutter throughout Little Caesars - including in his role in the development of â€œGateway Mobileâ€, a mobile app adaptation of the organizationâ€™s enterprise portal. He is currently involved in active research and experimentation to implement more Flutter solutions and further streamline front-end development at Little Caesars.",
+      "bio": "Lucas is a Technical Engineer and Flutter enthusiast on the Mobile Development team at Little Caesars Enterprises, Inc. His passion for cross-platform mobile development began as a two-term summer intern with the organization while still attending EMU Ã¢â‚¬â€œ gaining experience first with React Native in 2017, and then beginning his journey with GoogleÃ¢â‚¬â„¢s Flutter SDK in May of 2018.\n\nSince becoming a full-time colleague, Lucas has enjoyed being a driving force for the awareness and adoption of Flutter throughout Little Caesars - including in his role in the development of \"Gateway Mobile\", a mobile app adaptation of the organizationÃ¢â‚¬â„¢s enterprise portal. He is currently involved in active research and experimentation to implement more Flutter solutions and further streamline front-end development at Little Caesars.",
       "tags": ["Flutter"],
       "badges": [],
       "socials": [
@@ -197,7 +218,7 @@
       "country": "Greater Detroit Area",
       "photoUrl": "images/speakers/people/Peter_Lauwers.jpg",
       "shortBio": "Peter Lauwers is the CEO of orangesplash technologies inc.",
-      "bio": "Peter Lauwers is the CEO of orangesplash technologies inc. and oversees product design, architecture, and UI/UX. His career started 25 years ago, with two major branches that he successfully wove together: Printed advertising/design, marketing, and branding and IT/Database architecture and design. This combination helped Peter effectively manage and support creative teams in a number of large and small advertising agencies and design firms. As the digital era began to rise, PeterÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢s creative and technical background was ideal to embrace the changes taking place in the advertising and marketing fields as well as forge the path of internet and mobile app development.\n\nPeter has led design and development of many successful IT and mobile projects. A few accolades include: Highest yearly ecommerce revenue award from General Motors and a Project of the Year award from Little Caesars for their mobile app, a project Peter led from its inception.",
+      "bio": "Peter Lauwers is the CEO of orangesplash technologies inc. and oversees product design, architecture, and UI/UX. His career started 25 years ago, with two major branches that he successfully wove together: Printed advertising/design, marketing, and branding and IT/Database architecture and design. This combination helped Peter effectively manage and support creative teams in a number of large and small advertising agencies and design firms. As the digital era began to rise, PeterÃ¢â‚¬â„¢s creative and technical background was ideal to embrace the changes taking place in the advertising and marketing fields as well as forge the path of internet and mobile app development.\n\nPeter has led design and development of many successful IT and mobile projects. A few accolades include: Highest yearly ecommerce revenue award from General Motors and a Project of the Year award from Little Caesars for their mobile app, a project Peter led from its inception.",
       "tags": ["Design"],
       "badges": [],
       "socials": [
@@ -281,7 +302,7 @@
       "country": "Greater Cleveland / Akron, Ohio. USA",
       "photoUrl": "images/speakers/people/scott_stoll.png",
       "shortBio": "Scott is a co-founder of several programs within the Flutter Community organization, owner of the Flutter Community public Slack and creator of the weekly, remote office hours for Flutter, #HumpDayQandA.",
-      "bio": "Scott is a co-founder of several programs within the Flutter Community organization, owner of the Flutter Community public Slack and creator of the weekly, remote office hours for Flutter, #HumpDayQandA.\n\nHeÃ¢â‚¬â„¢s spoken at groups and events throughout the United States, as well as in the United Kingdom, and is available to speak both nationally and internationally.\n\nHeÃ¢â‚¬â„¢s also the organizer of GDG Cleveland, the real mastermind behind BrainÃ¢â‚¬â„¢s Ultimate Plan for World Domination, and a consumer of entirely too much overpriced airport pizza. In his spare time, he enjoys making (or trying to make) his own VR apps for Google Daydream and finding new ways to make nummy things and thoroughly trash the kitchen.",
+      "bio": "Scott is a co-founder of several programs within the Flutter Community organization, owner of the Flutter Community public Slack and creator of the weekly, remote office hours for Flutter, #HumpDayQandA. \n\nHeÃ¢â‚¬â„¢s spoken at groups and events throughout the United States, as well as in the United Kingdom, and is available to speak both nationally and internationally.\n\nHeÃ¢â‚¬â„¢s also the organizer of GDG Cleveland, the real mastermind behind BrainÃ¢â‚¬â„¢s Ultimate Plan for World Domination, and a consumer of entirely too much overpriced airport pizza. In his spare time, he enjoys making (or trying to make) his own VR apps for Google Daydream and finding new ways to make nummy things and thoroughly trash the kitchen.",
       "tags": ["Flutter"],
       "badges": [],
       "socials": [
@@ -289,6 +310,24 @@
           "icon": "twitter",
           "name": "Twitter",
           "link": "https://twitter.com/scottstoll2017"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "featured": true,
+      "name": "James Thompson",
+      "title": "",
+      "company": "StackRox",
+      "companyLogo": "",
+      "country": "",
+      "photoUrl": "images/speakers/people/James_Thompson.jpg",
+      "shortBio": "Solutions Engineer at StackRox",
+      "bio": "Now, this is a story about how my life got flipped upside down...\nIn Michigan, born and raised\nOn the asphalt poppin' wheelies on my Huffy and playing Sega where I spent my first 16 years\nThe next 15 years I spent hustling the inter-webs and keeping it up and running\nFor the last 5 years I’ve been selling free software and securing k8s",
+      "tags": ["Kubernetes"],
+      "badges": [],
+      "socials": [
+        {
         }
       ]
     },

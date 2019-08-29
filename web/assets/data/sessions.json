@@ -189,6 +189,33 @@
       "language": "English",
       "complexity": "",
       "tags": ["Flutter"]
+    },
+    {
+      "id": 314,
+      "title": "Demystifying Data Science",
+      "description": "Today's world generates different kinds of data at unbelievably rapid rates. This has resulted in a shift away from traditional software development towards Data Science. This talk gives an overview of Data Science and delves deep into the pipeline data scientists use - right from fetching the data, the tools and frameworks used to creating models, gaining insights and telling a story. The session is aimed towards aspiring data scientists - hobbyists and professionals alike. Data-curious folks interested in knowing what the field of Data Science entails are welcome to attend too.\n* Trivia about data / need for data science\n* Explaining Buzzwords / clearing out the jargon\n* Capabilities of data science\n* Applications of data science across industries\n* Overview of the data science pipeline\n* What questions can data science answer?\n* Different sources of data\n* Data wrangling and cleaning\n* Data exploration\n* Building models and using algorithms\n* Data visualization and storytelling\n* Ethics in Data Science\n* Additional resources\n\nBy the end of this session, audience members will have a better grasp of the capabilities and processes of Data Science. They will be familiar with the general structure of a Data Science pipeline and will develop a strong foundation to continue learning and experimenting in Data Science.\n",
+      "speakers": [12],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Data Science"]
+    },
+    {
+      "id": 315,
+      "title": "What Little Caesars is Doing with Flutter",
+      "description": "Little Caesars took the leap and built a full business facing app in Flutter. In this session, we’ll demonstrate our modern Flutter app and tips and tricks on:\n* How we built the\n\to Calendar\n\to Image banners\n\to Lists\n* What we love best about Flutter\n\to Speed of development\n\to Ease of learning DART\n\to Performance of app\n* What Flutter made easier for us\n\to Single code base for Apple and Android\n\to Flutter modules, rather than having to use native iOS and Android modules\n* Lessons learned\n\to How we solved issues such as how Flutter loads the page hierarchy (which caused performance issues).\n* Frankenstein Flutter\n\to Our experiments with mixing Flutter and native Android and iOS\n\nWe’ll also discuss:\n* The Flutter vs. React Native debate and reveal why we ultimately chose Flutter.\n* The future of Flutter, its community, and what we’re really excited about.\n\nAnd demo:\n* How to get started!  (Code demo, installation demo, etc.)\n",
+      "speakers": [13,14],
+      "language": "English",
+      "complexity": "",
+      "tags": ["Flutter"]
+    },
+    {
+      "id": 316,
+      "title": "Microaggressions in the Workplace",
+      "description": "Let’s face it. You’ve probably had some stuff said to you at work that made you feel crappy. But did the person who said it know how crappy it actually was? Microaggressions are small, often seemingly harmless comments that can make people in any kind of underrepresented community feel out of place or talked down to. Maybe you’ve observed this behavior from other coworkers, but haven’t known how to go about correcting them? This session is for folks of all genders, races, sexual orientations, and ages who want to be a little more conscious about the way they treat one another. You’ll leave with plenty of examples of how to recognize microaggressions and how to deal, whether you’re the recipient, the supplier, or the passer-by.\n",
+      "speakers": [16],
+      "language": "English",
+      "complexity": "",
+      "tags": ["People"]
     }
   ]
 }
