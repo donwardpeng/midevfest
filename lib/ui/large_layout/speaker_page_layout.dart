@@ -1,6 +1,5 @@
 import 'package:flutter_web/material.dart';
 import '../../widgets/speaker_card_front.dart';
-import '../../widgets/flip_card.dart';
 import '../../widgets/state_widget.dart';
 import '../../models/speaker.dart';
 
