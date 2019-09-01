@@ -1,10 +1,16 @@
 import 'package:flutter_web/material.dart';
+import 'package:midevfest/models/session.dart';
 import 'package:midevfest/models/timeslot.dart';
 import '../../widgets/state_widget.dart';
 import '../../models/speaker.dart';
 import '../../models/track.dart';
+import '../../helper/firebase_cloud_storage_resolver.dart';
+import '../../values/constants.dart';
 
 class SessionsPageLargeBodyWidget extends StatelessWidget {
+  double _heightToShrink = 800;
+  double _ShrinkFactor = 1;
+
   @override
   Widget build(BuildContext context) {
     List<Timeslot> _timeSlots = List<Timeslot>();
@@ -38,13 +44,13 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
       _timeSlotsWithSessions.add(timeSlotWithSessions);
     }
 
-    // set the number of elements in the gridview crossaxis count
-    int gridViewCount = 5;
     var size = MediaQuery.of(context).size;
     //make the cards 1/2 the height of the view
     final double _height = size.height;
     //make the card the scaled to the width divided by the number of gridview elements across
     final double _width = size.width;
+
+    _ShrinkFactor = (1 - ((_heightToShrink - _height) / _heightToShrink));
 
     return Scrollbar(
         child: ListView(children: <Widget>[
@@ -53,7 +59,7 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
           child: Text('Tentative Schedule',
               style: Theme.of(context).textTheme.headline)),
       Padding(
-          padding: EdgeInsets.fromLTRB(24, 0, 8, 0),
+          padding: EdgeInsets.fromLTRB(24, 0, 8, 20),
           child: Text('(this will be finalized one week before the event)',
               style: Theme.of(context).textTheme.title)),
       Padding(
@@ -62,28 +68,29 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
             alignment: WrapAlignment.start,
             direction: Axis.horizontal,
             children: <Widget>[
-              //TODO: Add scaling for text of this
               SizedBox(
                   width: _width / 5.5,
-                  height: _height / 15,
+                  height: _height / 12,
                   child: Card(
                       color: Colors.lightBlueAccent,
                       child: Padding(
                           padding: EdgeInsets.only(top: 8, bottom: 8),
-                          child: Text(
-                            'Time Slot',
-                            style: Theme.of(context).textTheme.title,
-                          )))),
+                          child: Text('Time Slot',
+                              style: Theme.of(context).textTheme.title.apply(
+                                  fontSizeFactor: 1.0 * _ShrinkFactor))))),
               for (var track in _tracks)
                 SizedBox(
                     width: _width / 5.5,
-                    height: _height / 15,
+                    height: _height / 12,
                     child: Card(
                       color: Colors.lightBlueAccent,
                       child: Padding(
                           padding: EdgeInsets.only(top: 8, bottom: 8),
                           child: Text(track.title,
-                              style: Theme.of(context).textTheme.title)),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .title
+                                  .apply(fontSizeFactor: 1.0 * _ShrinkFactor))),
                     )),
               // Expanded()
             ],
@@ -97,7 +104,9 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
               children: <Widget>[
                 SizedBox(
                     width: _width / 5.5,
-                    height: _height / 10,
+                    height: (timeslot._sessions.length > 1)
+                        ? (_height / 4)
+                        : (_height / 12),
                     child: Card(
                       color: Colors.lightBlue[100],
                       child: Padding(
@@ -106,20 +115,48 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
                             timeslot._timeslot.startTime +
                                 ' - ' +
                                 timeslot._timeslot.endTime,
-                            style: Theme.of(context).textTheme.subtitle,
+                            style: Theme.of(context)
+                                .textTheme
+                                .subtitle
+                                .apply(fontSizeFactor: 1.0 * _ShrinkFactor),
                           )),
                     )),
                 for (var session in timeslot._sessions)
                   SizedBox(
-                      width: _width / 5.5,
-                      height: _height / 10,
+                      width: (timeslot._sessions.length == 1)
+                          ? (_width / (5.5 / 4))
+                          : (_width / 5.5),
+                      height: (timeslot._sessions.length > 1)
+                          ? (_height / 4)
+                          : (_height / 12),
                       child: Card(
-                        color: Colors.lightBlue[100],
-                        child: Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Text(session._sessionTitle,
-                                style: Theme.of(context).textTheme.subtitle)),
-                      )),
+                          color: Colors.lightBlue[100],
+                          child: InkWell(
+                            onTap: () {
+                              if (timeslot._sessions.length > 1) {
+                                print(session._sessionTitle);
+                              Dialog sessionDialog = getDialog(context, session);
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      sessionDialog);    
+                              }
+                            },
+                            child: Padding(
+                                padding: EdgeInsets.all(8),
+                                child: Text(
+                                    (timeslot._sessions.length == 1)
+                                        ? (session._sessionTitle)
+                                        : (session._sessionTitle +
+                                            ' by ' +
+                                            session._speakerName),
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .subtitle
+                                        .apply(
+                                            fontSizeFactor:
+                                                1.0 * _ShrinkFactor))),
+                          ))),
               ],
             ))
     ]));
@@ -153,6 +190,8 @@ class SessionInfo {
   String _speakerName = '';
   String _speakerCompany;
   String _speakerBio;
+  String _speakerPhotoURL;
+  
 
   int get sessionId => _sessionId;
 
@@ -170,9 +209,13 @@ class SessionInfo {
       var speakers = StateWidget.of(_context).state.speakers.values;
       speakers.forEach((speaker) {
         if (speaker.id == speakerId) {
-          _speakerName = _speakerName.isNotEmpty
-              ? _speakerName + ', ' + speaker.name
-              : speaker.name;
+          _speakerName = speaker.name;
+          _speakerCompany = speaker.company; 
+          _speakerPhotoURL = speaker.photoUrl;
+          _speakerBio = speaker.bio;
+          // _speakerName = _speakerName.isNotEmpty
+          //     ? _speakerName + ', ' + speaker.name
+          //     : speaker.name;
         }
       });
     }
@@ -194,4 +237,96 @@ class TimeSlotsWithSessions {
   List<SessionInfo> getSessions() {
     return _sessions;
   }
+}
+
+Dialog getDialog(BuildContext context, SessionInfo session) {
+  var size = MediaQuery.of(context).size;
+  final double height = size.height;
+  final double width = size.width / 2.5;
+  double _iconSize = 36;
+  // _smallCard ? size.width: size.width / 2.5;
+
+  print('In Dialog - session = ' + session._sessionTitle );
+  return Dialog(
+    elevation: 8,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+    //this right here
+    child: Container(
+        height: height,
+        width: width,
+        child: Scrollbar(
+            child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
+                InkWell(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 8, right: 8),
+                      child: Image.asset(
+                        '/icons/close.png',
+                        height: _iconSize,
+                        width: _iconSize,
+                      ),
+                    )),
+              ]),
+              Padding(
+                  padding:
+                      EdgeInsets.only(top: 16, left: 16, bottom: 8, right: 16),
+                  child: Container(
+                      width: double.infinity,
+                      height: height / 2.5,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          image: DecorationImage(
+                              alignment: Alignment.center,
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  FirebaseCloudStorageURLResolver()
+                                      .getCloudStorageURL(
+                                          Constants.DEVFEST_BUCKET,
+                                          session._speakerPhotoURL)))))),
+              Padding(
+                  padding: EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(session._speakerName + ', ' + session._speakerCompany,
+                          style: Theme.of(context).textTheme.title),
+                        (Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Padding(
+                                  padding: EdgeInsets.only(top: 16, bottom: 4),
+                                  child: Text(session._sessionTitle,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .subtitle)),
+                              (session._sessionDescription != null)
+                                  ? Text(
+                                      session._sessionDescription,
+                                      style: Theme.of(context).textTheme.body1,
+                                      textAlign: TextAlign.justify,
+                                    )
+                                  : Container(),
+                            ])),
+                      Padding(
+                          padding: EdgeInsets.only(top: 16, bottom: 4),
+                          child: Text('About ' + session._speakerName,
+                              style: Theme.of(context).textTheme.subtitle)),
+                      Text(
+                        session._speakerBio,
+                        style: Theme.of(context).textTheme.body1,
+                        textAlign: TextAlign.justify,
+                      )
+                    ],
+                  )),
+              Padding(padding: EdgeInsets.only(top: 50.0)),
+            ],
+          ),
+        ))),
+  );
 }

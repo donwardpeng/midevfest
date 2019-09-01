@@ -20,59 +20,54 @@
   },
   "timeslots": [
     {
-      "startTime": "08:00",
-      "endTime": "08:45",
+      "startTime": "8:00am",
+      "endTime": "8:45am",
       "sessions": [[101]]
     },
     {
-      "startTime": "08:45",
-      "endTime": "9:00",
-      "sessions": [[201], [211]]
+      "startTime": "8:45am",
+      "endTime": "9:00am",
+      "sessions": [[201]]
     },
     {
-      "startTime": "9:00",
-      "endTime": "9:50",
-      "sessions": [[301]]
+      "startTime": "9:00am",
+      "endTime": "9:50am",
+      "sessions": [[300]]
     },
     {
-      "startTime": "10:00",
-      "endTime": "10:50",
-      "sessions": [[302], [303], [304], [305]]
+      "startTime": "10:00am",
+      "endTime": "10:50am",
+      "sessions": [[310], [302], [318], [301]]
     },
     {
-      "startTime": "11:00",
-      "endTime": "11:50",
-      "sessions": [[306], [307], [308], [309]]
+      "startTime": "11:00am",
+      "endTime": "11:50am",
+      "sessions": [[303], [306], [312], [317]]
     },
     {
-      "startTime": "12:00",
-      "endTime": "12:50",
-      "sessions": [[202], [212]]
+      "startTime": "12:00pm",
+      "endTime": "12:50pm",
+      "sessions": [[202]]
     },
     {
-      "startTime": "1:00",
-      "endTime": "1:50",
-      "sessions": [[310]]
+      "startTime": "1:00pm",
+      "endTime": "1:50pm",
+      "sessions": [[305], [315], [309], [304]]
     },
     {
-      "startTime": "2:00",
-      "endTime": "2:50",
-      "sessions": [[311]]
+      "startTime": "2:00pm",
+      "endTime": "2:50pm",
+      "sessions": [[314], [313], [316], [307]]
     },
     {
-      "startTime": "3:00",
-      "endTime": "3:50",
-      "sessions": [[312]]
+      "startTime": "3:00pm",
+      "endTime": "3:50pm",
+      "sessions": [[308], [311]]
     },
     {
-      "startTime": "4:00",
-      "endTime": "4:50",
-      "sessions": [[313]]
-    },
-    {
-      "startTime": "5:00",
-      "endTime": "5:30",
-      "sessions": [[203], [203]]
+      "startTime": "4:00pm",
+      "endTime": "4:30pm",
+      "sessions": [[203]]
     }
   ]
 }
