@@ -1,13 +1,10 @@
 import 'package:flutter_web/material.dart';
-import '../../transitions/scale_route.dart';
-import '../../ui/speakers_page.dart';
-import '../../config_values/en_strings.dart';
-
+import 'dart:html';
 
 class SessionsPageSmallBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-      var size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
     final double _height = size.height;
     final double _width = size.width;
 
@@ -17,7 +14,7 @@ class SessionsPageSmallBodyWidget extends StatelessWidget {
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: <
                     Widget>[
       Padding(
-        padding: EdgeInsets.only(top:_height/4),
+          padding: EdgeInsets.only(top: _height / 4),
           child: Card(
               elevation: 24,
               child: Column(
@@ -28,30 +25,29 @@ class SessionsPageSmallBodyWidget extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
                       child: InkWell(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                ScaleRoute(
-                                    page: SpeakerPage(
-                                        title: EN_Strings.devFestName)));
+                            window.open('https://firebasestorage.googleapis.com/v0/b/midevfest.appspot.com/o/images%2Fschedule%2Fschedule.jpg?alt=media&token=125be4ba-b89e-4adc-9710-585f83abf754', 'Schedule');
                           },
                           child: RichText(
                               text: TextSpan(children: [
                             TextSpan(
-                              text:
-                                  'Our complete schedule will be published shortly before the event. \n\nIn the meantime, you can check out all of our speakers',
+                              text: 'Tentative Schedule can be downloaded',
                               style: Theme.of(context).textTheme.title,
                             ),
                             TextSpan(
-                                text: ' here!',
+                                text: ' here. ',
                                 style: Theme.of(context)
                                     .textTheme
                                     .title
                                     .apply(color: Colors.blue)),
+                            TextSpan(
+                              text:
+                                  'We will finalize the schedule one week before the event.',
+                              style: Theme.of(context).textTheme.title,
+                            ),
                           ]))))
                 ],
               ))),
     ])) // This trailing comma makes auto-formatting nicer for build methods.
         );
- 
   }
 }

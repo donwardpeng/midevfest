@@ -2,6 +2,8 @@ import 'package:flutter_web/material.dart';
 import '../../config_values/en_strings.dart';
 import '../../widgets/flutter_swiper.dart';
 import 'dart:async';
+import '../../models/state.dart';
+import '../../widgets/state_widget.dart';
 
 class MainPageLargeBodyLayout extends StatefulWidget {
   @override
@@ -41,6 +43,7 @@ class MainPageLargeBodyLayoutState extends State<MainPageLargeBodyLayout> {
         () {
           if (_attendeeCount > 200) {
             timer.cancel();
+            StateWidget.of(context).state.setHasDisplayedMainScreenTrue();
           } else {
             _attendeeCount = _attendeeCount + 1;
           }
@@ -65,7 +68,7 @@ class MainPageLargeBodyLayoutState extends State<MainPageLargeBodyLayout> {
     );
   }
 
- void startSessionsCountTimer() {
+  void startSessionsCountTimer() {
     const oneSec = const Duration(milliseconds: 50);
     _sessionsCountTimer = new Timer.periodic(
       oneSec,
@@ -81,7 +84,7 @@ class MainPageLargeBodyLayoutState extends State<MainPageLargeBodyLayout> {
     );
   }
 
-void startDaysCountTimer() {
+  void startDaysCountTimer() {
     const oneSec = const Duration(seconds: 1);
     _daysCountTimer = new Timer.periodic(
       oneSec,
@@ -96,7 +99,6 @@ void startDaysCountTimer() {
       ),
     );
   }
-
 
   @override
   void dispose() {
@@ -213,9 +215,13 @@ void startDaysCountTimer() {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: _attendeeCount <= 200
-                                                ? '$_attendeeCount\n'
-                                                : '200+\n',
+                                            text: StateWidget.of(context)
+                                                    .state
+                                                    .hasDisplayedMainScreen()
+                                                ? '200+\n'
+                                                : _attendeeCount <= 200
+                                                    ? '$_attendeeCount\n'
+                                                    : '200+\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -247,7 +253,11 @@ void startDaysCountTimer() {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: '$_tracksCount\n',
+                                            text: StateWidget.of(context)
+                                                    .state
+                                                    .hasDisplayedMainScreen()
+                                                ? '4\n'
+                                                : '$_tracksCount\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -279,9 +289,13 @@ void startDaysCountTimer() {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: _sessionsCount <= 20
-                                                ? '$_sessionsCount\n'
-                                                : '20+\n',
+                                            text: StateWidget.of(context)
+                                                    .state
+                                                    .hasDisplayedMainScreen()
+                                                ? '20+\n'
+                                                : _sessionsCount <= 20
+                                                    ? '$_sessionsCount\n'
+                                                    : '20+\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -313,7 +327,9 @@ void startDaysCountTimer() {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text: '$_daysCount\n',
+                                            text:StateWidget.of(context).state.hasDisplayedMainScreen()?
+                                            '1\n':                                             
+                                            '$_daysCount\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
