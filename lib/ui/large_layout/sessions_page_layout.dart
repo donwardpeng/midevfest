@@ -36,7 +36,9 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
       for (var nextSessionToAdd in timeslot.sessions) {
         print('next session = ' + nextSessionToAdd.toString());
         for (var session in _sessions) {
-          if (nextSessionToAdd.toString().contains(session.sessionId.toString())) {
+          if (nextSessionToAdd
+              .toString()
+              .contains(session.sessionId.toString())) {
             timeSlotWithSessions.addSession(session);
             print("Added session - " +
                 session._sessionId.toString() +
@@ -154,7 +156,7 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
                                         ? (session._sessionTitle)
                                         : (session._sessionTitle +
                                             ' by ' +
-                                            session._speakerName),
+                                            session._sessionSpeakerList),
                                     style: Theme.of(context)
                                         .textTheme
                                         .subtitle
@@ -192,10 +194,11 @@ class SessionInfo {
   List<int> _speakerId;
   String _sessionTitle;
   String _sessionDescription;
-  String _speakerName = '';
-  String _speakerCompany;
-  String _speakerBio;
-  String _speakerPhotoURL;
+  String _sessionSpeakerList = '';
+  List<String> _speakerNameAndBio = new List<String>();
+  List<String> _speakerCompany = new List<String>();
+  List<String> _speakerBio = new List<String>();
+  List<String> _speakerPhotoURL = new List<String>();
 
   int get sessionId => _sessionId;
 
@@ -213,13 +216,13 @@ class SessionInfo {
       var speakers = StateWidget.of(_context).state.speakers.values;
       speakers.forEach((speaker) {
         if (speaker.id == speakerId) {
-          _speakerName = speaker.name;
-          _speakerCompany = speaker.company;
-          _speakerPhotoURL = speaker.photoUrl;
-          _speakerBio = speaker.bio;
-          // _speakerName = _speakerName.isNotEmpty
-          //     ? _speakerName + ', ' + speaker.name
-          //     : speaker.name;
+          _speakerNameAndBio.add(speaker.name + '\n\n' + speaker.bio);
+          _speakerCompany.add(speaker.company);
+          _speakerPhotoURL.add(speaker.photoUrl);
+          _speakerBio.add(speaker.bio);
+          _sessionSpeakerList = _sessionSpeakerList.isNotEmpty
+              ? _sessionSpeakerList + ' and ' + speaker.name
+              : speaker.name;
         }
       });
     }
@@ -254,7 +257,6 @@ Dialog getDialog(BuildContext context, SessionInfo session) {
   return Dialog(
     elevation: 8,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-    //this right here
     child: Container(
         height: height,
         width: width,
@@ -277,29 +279,32 @@ Dialog getDialog(BuildContext context, SessionInfo session) {
                       ),
                     )),
               ]),
-              Padding(
-                  padding:
-                      EdgeInsets.only(top: 16, left: 16, bottom: 8, right: 16),
-                  child: Container(
-                      width: double.infinity,
-                      height: height / 2.5,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          image: DecorationImage(
-                              alignment: Alignment.center,
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  FirebaseCloudStorageURLResolver()
-                                      .getCloudStorageURL(
-                                          Constants.DEVFEST_BUCKET,
-                                          session._speakerPhotoURL)))))),
+              //handle multiple speakers for the speaker image
+              Row(children: <Widget>[
+                for (var speakerPhotoURL in session._speakerPhotoURL)
+                  Padding(
+                      padding: EdgeInsets.only(
+                          top: 16, left: 4, bottom: 8, right: 4),
+                      child: Container(
+                          width: (width - 20) / session._speakerPhotoURL.length,
+                          height: height / 2.5,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              image: DecorationImage(
+                                  alignment: Alignment.center,
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(
+                                      FirebaseCloudStorageURLResolver()
+                                          .getCloudStorageURL(
+                                              Constants.DEVFEST_BUCKET,
+                                              speakerPhotoURL)))))),
+              ]),
               Padding(
                   padding: EdgeInsets.only(bottom: 16, left: 16, right: 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                          session._speakerName + ', ' + session._speakerCompany,
+                      Text(session._sessionSpeakerList,
                           style: Theme.of(context).textTheme.title),
                       (Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -317,15 +322,11 @@ Dialog getDialog(BuildContext context, SessionInfo session) {
                                   )
                                 : Container(),
                           ])),
-                      Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 4),
-                          child: Text('About ' + session._speakerName,
-                              style: Theme.of(context).textTheme.subtitle)),
-                      Text(
-                        session._speakerBio,
-                        style: Theme.of(context).textTheme.body1,
-                        textAlign: TextAlign.justify,
-                      )
+                      for (var speakerNameAndBio in session._speakerNameAndBio)
+                        Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 4),
+                            child: Text('About ' + speakerNameAndBio,
+                                style: Theme.of(context).textTheme.body1)),
                     ],
                   )),
               Padding(padding: EdgeInsets.only(top: 50.0)),
