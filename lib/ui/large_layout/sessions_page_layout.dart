@@ -30,15 +30,19 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
         List<TimeSlotsWithSessions>();
     for (var timeslot in _timeSlots) {
       var timeSlotWithSessions = new TimeSlotsWithSessions(timeslot);
-      for (var session in _sessions) {
-        if (timeslot.sessions
-            .toString()
-            .contains(session.sessionId.toString())) {
-          timeSlotWithSessions.addSession(session);
-          print("Added session - " +
-              session._sessionId.toString() +
-              " to " +
-              timeslot.startTime.toString());
+
+      print('Sessions = ' + timeslot.sessions.toString());
+
+      for (var nextSessionToAdd in timeslot.sessions) {
+        print('next session = ' + nextSessionToAdd.toString());
+        for (var session in _sessions) {
+          if (nextSessionToAdd.toString().contains(session.sessionId.toString())) {
+            timeSlotWithSessions.addSession(session);
+            print("Added session - " +
+                session._sessionId.toString() +
+                " to " +
+                timeslot.startTime.toString());
+          }
         }
       }
       _timeSlotsWithSessions.add(timeSlotWithSessions);
@@ -135,11 +139,12 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
                             onTap: () {
                               if (timeslot._sessions.length > 1) {
                                 print(session._sessionTitle);
-                              Dialog sessionDialog = getDialog(context, session);
-                              showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) =>
-                                      sessionDialog);    
+                                Dialog sessionDialog =
+                                    getDialog(context, session);
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        sessionDialog);
                               }
                             },
                             child: Padding(
@@ -191,7 +196,6 @@ class SessionInfo {
   String _speakerCompany;
   String _speakerBio;
   String _speakerPhotoURL;
-  
 
   int get sessionId => _sessionId;
 
@@ -210,7 +214,7 @@ class SessionInfo {
       speakers.forEach((speaker) {
         if (speaker.id == speakerId) {
           _speakerName = speaker.name;
-          _speakerCompany = speaker.company; 
+          _speakerCompany = speaker.company;
           _speakerPhotoURL = speaker.photoUrl;
           _speakerBio = speaker.bio;
           // _speakerName = _speakerName.isNotEmpty
@@ -246,7 +250,7 @@ Dialog getDialog(BuildContext context, SessionInfo session) {
   double _iconSize = 36;
   // _smallCard ? size.width: size.width / 2.5;
 
-  print('In Dialog - session = ' + session._sessionTitle );
+  print('In Dialog - session = ' + session._sessionTitle);
   return Dialog(
     elevation: 8,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
@@ -294,25 +298,25 @@ Dialog getDialog(BuildContext context, SessionInfo session) {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(session._speakerName + ', ' + session._speakerCompany,
+                      Text(
+                          session._speakerName + ', ' + session._speakerCompany,
                           style: Theme.of(context).textTheme.title),
-                        (Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-                                  padding: EdgeInsets.only(top: 16, bottom: 4),
-                                  child: Text(session._sessionTitle,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .subtitle)),
-                              (session._sessionDescription != null)
-                                  ? Text(
-                                      session._sessionDescription,
-                                      style: Theme.of(context).textTheme.body1,
-                                      textAlign: TextAlign.justify,
-                                    )
-                                  : Container(),
-                            ])),
+                      (Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(
+                                padding: EdgeInsets.only(top: 16, bottom: 4),
+                                child: Text(session._sessionTitle,
+                                    style:
+                                        Theme.of(context).textTheme.subtitle)),
+                            (session._sessionDescription != null)
+                                ? Text(
+                                    session._sessionDescription,
+                                    style: Theme.of(context).textTheme.body1,
+                                    textAlign: TextAlign.justify,
+                                  )
+                                : Container(),
+                          ])),
                       Padding(
                           padding: EdgeInsets.only(top: 16, bottom: 4),
                           child: Text('About ' + session._speakerName,
