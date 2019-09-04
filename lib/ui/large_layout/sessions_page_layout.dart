@@ -154,9 +154,11 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
                                 child: Text(
                                     (timeslot._sessions.length == 1)
                                         ? (session._sessionTitle)
-                                        : (session._sessionTitle +
-                                            ' by ' +
-                                            session._sessionSpeakerList),
+                                        : (session._sessionTitle.contains('TBD')
+                                            ? (session._sessionTitle)
+                                            : (session._sessionTitle +
+                                                ' by ' +
+                                                session._sessionSpeakerList)),
                                     style: Theme.of(context)
                                         .textTheme
                                         .subtitle
