@@ -15,6 +15,7 @@ class StateModel {
   Map<int, Session> sessions; //key = id
   GeneralInfo generalInfo;
   Map<String, Timeslot> timeslots; //key = start time
+  bool _hasDisplayedMainScreen = false;
 
   final double largeBreakPoint = 800.0;
   final double mediumBreakPoint = 600.0;
@@ -26,6 +27,14 @@ class StateModel {
     } else {
       return true;
     }
+  }
+
+  void setHasDisplayedMainScreenTrue(){
+    _hasDisplayedMainScreen = true;
+  }
+
+  bool hasDisplayedMainScreen(){
+    return _hasDisplayedMainScreen;
   }
 
   StateModel({
