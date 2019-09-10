@@ -133,7 +133,6 @@ class speakerCardView extends StatelessWidget {
         _speakerSession.add(session);
       }
     });
-    //(f)=>print('Found non null speakers - ' + f.speakers.toString()));
   }
 
   Dialog getDialog(BuildContext context) {
@@ -144,7 +143,6 @@ class speakerCardView extends StatelessWidget {
     return Dialog(
       elevation: 8,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-      //this right here
       child: Container(
           height: height,
           width: width,

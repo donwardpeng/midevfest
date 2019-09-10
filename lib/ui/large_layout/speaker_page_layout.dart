@@ -24,7 +24,7 @@ class SpeakerPageLargeBodyWidget extends StatelessWidget {
     return Stack(children: <Widget>[
       Padding(
           padding: EdgeInsets.fromLTRB(24, 8, 8, 36),
-          child: Text('Meet our Speakers (more coming soon!)',
+          child: Text('Meet our Speakers',
               style: Theme.of(context).textTheme.headline)),
       Padding(
           padding: EdgeInsets.fromLTRB(8, 84, 8, 0),
