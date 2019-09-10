@@ -139,8 +139,10 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
                           color: Colors.lightBlue[100],
                           child: InkWell(
                             onTap: () {
-                              if ((timeslot._sessions.length > 1)
-                              || (timeslot._sessions.length == 1 && timeslot._sessions[0]._sessionTitle.contains('Keynote')) ) {
+                              if ((timeslot._sessions.length > 1) ||
+                                  (timeslot._sessions.length == 1 &&
+                                      timeslot._sessions[0]._sessionTitle
+                                          .contains('Keynote'))) {
                                 print(session._sessionTitle);
                                 Dialog sessionDialog =
                                     getDialog(context, session);
@@ -153,7 +155,10 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
                             child: Padding(
                                 padding: EdgeInsets.all(8),
                                 child: Text(
-                                    (timeslot._sessions.length == 1)
+                                    ((timeslot._sessions.length == 1) &&
+                                            (!timeslot
+                                                ._sessions[0]._sessionTitle
+                                                .contains('Keynote')))
                                         ? (session._sessionTitle)
                                         : (session._sessionTitle.contains('TBD')
                                             ? (session._sessionTitle)
