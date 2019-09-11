@@ -141,8 +141,10 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
                             onTap: () {
                               if ((timeslot._sessions.length > 1) ||
                                   (timeslot._sessions.length == 1 &&
-                                      timeslot._sessions[0]._sessionTitle
-                                          .contains('Keynote'))) {
+                                          (timeslot._sessions[0]._sessionTitle
+                                              .contains('Keynote')) ||
+                                      (timeslot._sessions[0]._sessionTitle
+                                          .contains('EXTRA BONUS')))) {
                                 print(session._sessionTitle);
                                 Dialog sessionDialog =
                                     getDialog(context, session);
