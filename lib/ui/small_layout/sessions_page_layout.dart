@@ -25,7 +25,7 @@ class SessionsPageSmallBodyWidget extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
                       child: InkWell(
                           onTap: () {
-                            window.open('https://firebasestorage.googleapis.com/v0/b/midevfest.appspot.com/o/images%2Fschedule%2Fschedule.jpg?alt=media&token=125be4ba-b89e-4adc-9710-585f83abf754', 'Schedule');
+                            window.open('https://firebasestorage.googleapis.com/v0/b/midevfest.appspot.com/o/images%2Fschedule%2Fschedule.jpg?alt=media&token=74f79d57-2eb2-4128-a40e-f001b132074a', 'Schedule');
                           },
                           child: RichText(
                               text: TextSpan(children: [

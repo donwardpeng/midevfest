@@ -256,7 +256,7 @@ class MainPageLargeBodyLayoutState extends State<MainPageLargeBodyLayout> {
                                             text: StateWidget.of(context)
                                                     .state
                                                     .hasDisplayedMainScreen()
-                                                ? '4\n  '
+                                                ? '4\n'
                                                 : '$_tracksCount\n',
                                             style: Theme.of(context)
                                                 .textTheme
