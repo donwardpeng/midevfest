@@ -2,8 +2,8 @@ import 'package:flutter_web/material.dart';
 import '../../config_values/en_strings.dart';
 import '../../widgets/flutter_swiper.dart';
 import 'dart:async';
-import '../../models/state.dart';
 import '../../widgets/state_widget.dart';
+import '../../widgets/count_down_timer_widget.dart';
 
 class MainPageLargeBodyLayout extends StatefulWidget {
   @override
@@ -327,9 +327,11 @@ class MainPageLargeBodyLayoutState extends State<MainPageLargeBodyLayout> {
                                   child: Text.rich(
                                       TextSpan(children: [
                                         TextSpan(
-                                            text:StateWidget.of(context).state.hasDisplayedMainScreen()?
-                                            '1\n':                                             
-                                            '$_daysCount\n',
+                                            text: StateWidget.of(context)
+                                                    .state
+                                                    .hasDisplayedMainScreen()
+                                                ? '1\n'
+                                                : '$_daysCount\n',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .title
@@ -352,7 +354,7 @@ class MainPageLargeBodyLayoutState extends State<MainPageLargeBodyLayout> {
                                                         1.0 * _ShrinkFactor)),
                                       ]),
                                       textAlign: TextAlign.center),
-                                ))
+                                )),
                           ],
                         ))
                   ],

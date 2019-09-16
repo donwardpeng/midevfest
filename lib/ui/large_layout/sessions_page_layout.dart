@@ -61,13 +61,9 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
     return Scrollbar(
         child: ListView(children: <Widget>[
       Padding(
-          padding: EdgeInsets.fromLTRB(24, 0, 8, 0),
-          child: Text('Tentative Schedule',
+          padding: EdgeInsets.fromLTRB(24, 8, 8, 8),
+          child: Text('The Schedule',
               style: Theme.of(context).textTheme.headline)),
-      Padding(
-          padding: EdgeInsets.fromLTRB(24, 0, 8, 20),
-          child: Text('(this will be finalized one week before the event)',
-              style: Theme.of(context).textTheme.title)),
       Padding(
           padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
           child: Wrap(
