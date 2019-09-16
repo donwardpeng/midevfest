@@ -72,7 +72,7 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
             children: <Widget>[
               SizedBox(
                   width: _width / 5.5,
-                  height: _height / 12,
+                  height: _height / 9,
                   child: Card(
                       color: Colors.lightBlueAccent,
                       child: Padding(
@@ -83,7 +83,7 @@ class SessionsPageLargeBodyWidget extends StatelessWidget {
               for (var track in _tracks)
                 SizedBox(
                     width: _width / 5.5,
-                    height: _height / 12,
+                    height: _height / 9,
                     child: Card(
                       color: Colors.lightBlueAccent,
                       child: Padding(
