@@ -81,14 +81,14 @@ class DevFestDrawer {
                 .textTheme
                 .display1
                 .apply(color: Colors.blue)),
-        header_button(
-            buttonText: 'register',
-            url: 'https://michigandevfest.eventbrite.com',
-            urlName: 'Register Here',
-            buttonTextStyle: Theme.of(theContext)
-                .textTheme
-                .display1
-                .apply(color: Colors.blue)),
+        // header_button(
+        //     buttonText: 'register',
+        //     url: 'https://michigandevfest.eventbrite.com',
+        //     urlName: 'Register Here',
+        //     buttonTextStyle: Theme.of(theContext)
+        //         .textTheme
+        //         .display1
+        //         .apply(color: Colors.blue)),
       ],
     ));
   }

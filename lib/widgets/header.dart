@@ -69,10 +69,10 @@ class Header {
             buttonText: 'Code of Conduct',
             url: Constants.CODE_OF_CONDUCT_URL,
             urlName: 'Code of Conduct'),
-        header_button(
-            buttonText: 'Register Here!',
-            url: 'https://michigandevfest.eventbrite.com',
-            urlName: 'Register Here!'),
+        // header_button(
+        //     buttonText: 'Register Here!',
+        //     url: 'https://michigandevfest.eventbrite.com',
+        //     urlName: 'Register Here!'),
       ],
     );
   }
