@@ -17,6 +17,7 @@ class speakerCardView extends StatelessWidget {
   List<Session> _speakerSession = List<Session>();
   double _parentWidth;
   double _parentHeight;
+  String _sessionLink;
 
   speakerCardView(
       {Speaker speaker,
@@ -24,7 +25,8 @@ class speakerCardView extends StatelessWidget {
       String github,
       bool smallCard,
       parentWidth,
-      parentHeight}) {
+      parentHeight,
+      sessionLink}) {
     _speaker = speaker;
     _twitter = twitter;
     _github = github;
@@ -32,6 +34,7 @@ class speakerCardView extends StatelessWidget {
     _iconSize = _smallCard ? SMALL_ICON_SIZE : LARGE_ICON_SIZE;
     _parentWidth = parentWidth;
     _parentHeight = parentHeight;
+    _sessionLink = sessionLink;
   }
 
   @override
@@ -120,8 +123,22 @@ class speakerCardView extends StatelessWidget {
                                   context: context,
                                   builder: (BuildContext context) =>
                                       sessionDialog);
-                            }))
-                  ]))
+                            })),
+                    (_sessionLink != null && _sessionLink.length > 0)
+                        ? Padding(
+                            padding: EdgeInsets.only(left: 8, right: 8),
+                            child: OutlineButton(
+                                child: Text('Slides'),
+                                textColor: Colors.blue,
+                                onPressed: () {
+                                  if (_sessionLink != null &&
+                                      _sessionLink.contains('http')) {
+                                    // Use the dart:html window class to open a new browser window
+                                    window.open(_sessionLink, _sessionLink);
+                                  }
+                                }))
+                        : Container()
+                  ])),
         ])));
   }
 
@@ -138,7 +155,7 @@ class speakerCardView extends StatelessWidget {
   Dialog getDialog(BuildContext context) {
     var size = MediaQuery.of(context).size;
     final double height = size.height;
-    final double width = _smallCard ? size.width: size.width / 2.5;
+    final double width = _smallCard ? size.width : size.width / 2.5;
 
     return Dialog(
       elevation: 8,
@@ -172,7 +189,7 @@ class speakerCardView extends StatelessWidget {
                         top: 16, left: 16, bottom: 8, right: 16),
                     child: Container(
                         width: double.infinity,
-                        height: height/2.5,
+                        height: height / 2.5,
                         decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             image: DecorationImage(

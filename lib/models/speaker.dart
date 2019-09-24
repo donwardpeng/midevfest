@@ -18,6 +18,7 @@ class Speaker {
       this.bio,
       this.tags,
       this.badges,
+      this.sessionLink,
       this.socials});
   final int id;
   final bool featured;
@@ -31,6 +32,7 @@ class Speaker {
   final String bio;
   final List<String> tags;
   final List<String> badges;
+  final String sessionLink;
   final List<Social> socials;
 
   factory Speaker.fromJson(Map<String, dynamic> json) => _$SpeakerFromJson(json);

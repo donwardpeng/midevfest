@@ -24,5 +24,6 @@ class Constants {
     'sponsors': 'sponsors',
     'speakers': 'speakers',
     'sessions': 'sessions',
+    'slides':'slides'
   };
 }

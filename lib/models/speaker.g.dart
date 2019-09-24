@@ -20,6 +20,7 @@ Speaker _$SpeakerFromJson(Map<String, dynamic> json) {
     bio: json['bio'] as String,
     tags: (json['tags'] as List)?.map((e) => e as String)?.toList(),
     badges: (json['badges'] as List)?.map((e) => e as String)?.toList(),
+    sessionLink: json['sessionLink'] as String,
     socials: (json['socials'] as List)
         ?.map((e) =>
             e == null ? null : Social.fromJson(e as Map<String, dynamic>))
@@ -40,5 +41,6 @@ Map<String, dynamic> _$SpeakerToJson(Speaker instance) => <String, dynamic>{
       'bio': instance.bio,
       'tags': instance.tags,
       'badges': instance.badges,
+      'sessionLink': instance.sessionLink,
       'socials': instance.socials,
     };

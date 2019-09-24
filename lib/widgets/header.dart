@@ -51,6 +51,11 @@ class Header {
           currentPage: appState.currentPage,
         ),
         header_button(
+          buttonText: 'Session Slides',
+          route: Constants.PAGES['slides'],
+          currentPage: appState.currentPage,
+        ),
+        header_button(
           buttonText: 'Schedule',
           route: Constants.PAGES['sessions'],
           currentPage: appState.currentPage,
